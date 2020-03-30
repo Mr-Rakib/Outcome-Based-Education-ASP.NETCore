@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "R:\\UB\\Research\\Software\\OBETools\\OBETools\\OBETools.csproj": {}
+    "R:\\University Period\\Research\\Bitbucket\\obetools\\OBETools\\OBETools.csproj": {}
   },
   "projects": {
-    "R:\\UB\\Research\\Software\\OBETools\\OBETools\\OBETools.csproj": {
+    "R:\\University Period\\Research\\Bitbucket\\obetools\\OBETools\\OBETools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "R:\\UB\\Research\\Software\\OBETools\\OBETools\\OBETools.csproj",
+        "projectUniqueName": "R:\\University Period\\Research\\Bitbucket\\obetools\\OBETools\\OBETools.csproj",
         "projectName": "OBETools",
-        "projectPath": "R:\\UB\\Research\\Software\\OBETools\\OBETools\\OBETools.csproj",
+        "projectPath": "R:\\University Period\\Research\\Bitbucket\\obetools\\OBETools\\OBETools.csproj",
         "packagesPath": "C:\\Users\\mrhas\\.nuget\\packages\\",
-        "outputPath": "R:\\UB\\Research\\Software\\OBETools\\OBETools\\obj\\",
+        "outputPath": "R:\\University Period\\Research\\Bitbucket\\obetools\\OBETools\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mrhas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,6 +41,10 @@
             "Microsoft.AspNetCore.Session": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.1, )"
             }
           },
           "imports": [

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8wCg37YpgcbyY1R2Y0vMlDdqqvrV5T/62Emr8kdRQrsTAbNT94PUb5/SpOV5QGtEJWyt8zSU40wTulEbSmmXAQ==",
+  "dgSpecHash": "Rm+OHT2M+h8UYcLGpaazX4TW1dvyrlcCpbVSjF0IJuIDagyFEvDYZokV664Z4AiWHJW7KgtVPndpZb8KNZCEZg==",
   "success": true,
-  "projectFilePath": "R:\\UB\\Research\\Software\\OBETools\\OBETools\\OBETools.csproj",
+  "projectFilePath": "R:\\University Period\\Research\\Bitbucket\\obetools\\OBETools\\OBETools.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrhas\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.2.0\\microsoft.aspnetcore.cryptography.internal.2.2.0.nupkg.sha512",
     "C:\\Users\\mrhas\\.nuget\\packages\\microsoft.aspnetcore.dataprotection\\2.2.0\\microsoft.aspnetcore.dataprotection.2.2.0.nupkg.sha512",

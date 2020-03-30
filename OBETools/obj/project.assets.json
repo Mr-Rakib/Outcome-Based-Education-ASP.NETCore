@@ -1032,11 +1032,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "R:\\UB\\Research\\Software\\OBETools\\OBETools\\OBETools.csproj",
+      "projectUniqueName": "R:\\University Period\\Research\\Bitbucket\\obetools\\OBETools\\OBETools.csproj",
       "projectName": "OBETools",
-      "projectPath": "R:\\UB\\Research\\Software\\OBETools\\OBETools\\OBETools.csproj",
+      "projectPath": "R:\\University Period\\Research\\Bitbucket\\obetools\\OBETools\\OBETools.csproj",
       "packagesPath": "C:\\Users\\mrhas\\.nuget\\packages\\",
-      "outputPath": "R:\\UB\\Research\\Software\\OBETools\\OBETools\\obj\\",
+      "outputPath": "R:\\University Period\\Research\\Bitbucket\\obetools\\OBETools\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mrhas\\AppData\\Roaming\\NuGet\\NuGet.Config",

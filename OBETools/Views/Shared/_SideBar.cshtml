@@ -5,8 +5,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a class="navbar-brand pt-0" asp-action="Index" asp-controller="Dashboard">
-            <img src="@Url.Content("~/Content/img/icons/mainlogo.png")" class="navbar-brand-img" alt="...">
+       
+
+        <a  asp-action="Index" asp-controller="Dashboard">
+            <img id="mainLogo" src="@Url.Content("~/Content/img/brand/ulogo.jpg")" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -64,7 +66,7 @@
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a asp-action="Index" asp-controller="Dashboard">
-                            <img src="@Url.Content("~/Content/img/brand/logo.png")">
+                            <img src="@Url.Content("~/Content/img/icons/mainIcon.png")">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
