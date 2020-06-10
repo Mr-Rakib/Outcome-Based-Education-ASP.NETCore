@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29911.84
+VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBETools", "OBETools\OBETools.csproj", "{24DD0F2E-B738-43B1-89F5-FCEC271CF019}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBETools", "OBETools\OBETools.csproj", "{D2868928-77A4-458F-9F9A-077A3AD48782}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{24DD0F2E-B738-43B1-89F5-FCEC271CF019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24DD0F2E-B738-43B1-89F5-FCEC271CF019}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24DD0F2E-B738-43B1-89F5-FCEC271CF019}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24DD0F2E-B738-43B1-89F5-FCEC271CF019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2868928-77A4-458F-9F9A-077A3AD48782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2868928-77A4-458F-9F9A-077A3AD48782}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2868928-77A4-458F-9F9A-077A3AD48782}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2868928-77A4-458F-9F9A-077A3AD48782}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C82CC4FF-A879-4537-9489-C3901C71A8C3}
+		SolutionGuid = {C3B9F84C-B048-4B0A-A319-B030724822A0}
 	EndGlobalSection
 EndGlobal

@@ -2,31 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>@ViewBag.Title - CVLinked Admin Panel</title>
-    <!-- Favicon -->
-    <link href="@Url.Content("~/Content/img/fav.png")" rel="icon" type="image/png">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <!-- Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
-    <!-- CSS Files -->
-    <link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Login</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/DataTables-1.10.20/css/dataTables.bootstrap4.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 </head>
-<body class="" style="background-color:#172b4d !important ">
-    <div class="main-content">
-        <!-- Navbar -->
-        <!-- End Navbar -->
-        <div class="main">
-            <div class="container-fluid pt-4">
-                
-                @RenderBody()
-            </div>
-        </div>
+<body class="sb-nav-fixed" style="background-color:#111111">
+
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
     </div>
-    <!--   Core   -->
-    <script src="@Url.Content("~/Content/js/plugins/jquery/dist/jquery.min.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Content/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Content/js/argon-dashboard.min.js?v=1.1.0")" type="text/javascript"></script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="~/js/JavaScript.js"></script>
 </body>
 </html>

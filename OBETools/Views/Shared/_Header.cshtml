@@ -1,48 +1,28 @@
-﻿<nav class="navbar navbar-top navbar-expand-md navbar-dark bg-gradient-success" id="navbar-main">
-    <div class="container-fluid">
-        <!-- Brand Header Text -->
-        <span class="h4 mb-0 text-white text d-none d-lg-inline-block">@ViewBag.Title</span>
-        <!-- Form -->
-        <!-- User -->
-        <ul class="navbar-nav align-items-center d-none d-md-flex">
-            <li class="nav-item dropdown">
-                <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <div class="media align-items-center">
-                        <span class="avatar avatar-sm rounded-circle">
-                            <img alt="Image placeholder" src="~/Content/img/icons/userlogo.png" />
-                        </span>
-                        <div class="media-body ml-2 d-none d-lg-block">
-                            @*<span class="mb-0 text-sm  font-weight-bold">@Context.Session.GetString("username")</span>*@
-                        </div>
-                    </div>
-                </a>
-                <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-                    <div class=" dropdown-header noti-title">
-                        <h6 class="text-overflow m-0">Welcome!</h6>
-                    </div>
-                    <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-single-02"></i>
-                        <span>My profile</span>
-                    </a>
-                    <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-settings-gear-65"></i>
-                        <span>Settings</span>
-                    </a>
-                    <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-calendar-grid-58"></i>
-                        <span>Activity</span>
-                    </a>
-                    <a href="./examples/profile.html" class="dropdown-item">
-                        <i class="ni ni-support-16"></i>
-                        <span>Support</span>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a asp-action="Logout" asp-controller="Login" class="dropdown-item">
-                        <i class="ni ni-user-run"></i>
-                        <span>Logout</span>
-                    </a>
-                </div>
-            </li>
-        </ul>
-    </div>
+﻿<nav id="headernav" class="sb-topnav navbar navbar-expand navbar-dark bg-success">
+
+    <button onclick=" OpenHeader()" class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#">
+        <i class="fas fa-bars"></i>
+    </button>
+    <a class="navbar-brand" asp-action="Index" asp-controller="Dashboard">Smart Gowala</a><!-- Navbar Search-->
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </form>
+    <!-- Navbar-->
+    <ul class="navbar-nav ml-auto ml-md-0">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="~/images/userlogo.png" class="user-icon"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-danger" asp-action="Logout" asp-controller="Login">Logout</a>
+            </div>
+        </li>
+    </ul>
 </nav>

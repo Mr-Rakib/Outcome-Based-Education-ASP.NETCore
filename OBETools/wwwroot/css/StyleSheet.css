@@ -1,0 +1,33 @@
+﻿#headernav {
+    transform: translateX(225px);
+    transition: transform 0.15s ease-in-out;
+    right: 225px;
+}
+
+    #headernav.active {
+        transform: translateX(0);
+        width: 100%;
+        transition: transform 0.15s ease-in-out;
+    }
+.user-icon{
+    width:25px;
+}
+.main-logo{
+    width:100%;
+}
+.logo-div{
+    background:#fff;
+    padding:8px;
+    margin-bottom:10px;
+}
+
+@media (max-width: 991px) {
+ body{
+     font-size:12px;
+ }
+    
+    #headernav {
+        transform: translateX(0);
+        width: 100%;
+    }
+}

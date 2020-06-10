@@ -1,0 +1,17 @@
+-----------Exception Details on  6/11/2020 12:49:36 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/11/2020 12:49:36 AM
+
+File Name       :  R:\University Period\Research\Bitbucket\OBETools\OBETools\Controllers\LoginController.cs
+Methods Name    :  Login
+Error Line No   :  33
+Coulumn Number  :  21
+Error Message   :  SqlException
+Exception Type  :  System.Data.SqlClient.SqlException
+Error Location  :  Could not find stored procedure 'sp_getAllLogin'.
+
+--------------------------------*End*------------------------------------------
+
+
