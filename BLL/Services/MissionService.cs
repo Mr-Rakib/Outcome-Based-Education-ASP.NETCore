@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OBETools.BLL.Services
 {
-    public class AcademyService : IAcademy
+    public class MissionService : ICRUD<Mission>
     {
         private static MissionRepository MissionRepository = new MissionRepository();
 
@@ -39,9 +39,9 @@ namespace OBETools.BLL.Services
         {
             if (FindById(mission.Id, CurrentUsername) == null)
             {
-                return MissionRepository.Save(mission) ? null : Messages.IssueInDatabase; 
+                return MissionRepository.Save(mission) ? null : Messages.IssueInDatabase;
             }
-            else return Messages.NotFound;
+            else return Messages.Exist;
         }
 
         public string Update(Mission mission, string CurrentUsername)
@@ -52,6 +52,5 @@ namespace OBETools.BLL.Services
             }
             else return Messages.NotFound;
         }
-        
     }
 }

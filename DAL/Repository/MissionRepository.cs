@@ -20,15 +20,15 @@ namespace OBETools.DAL.Repository
 
         public List<Mission> FindAll()
         {
-            List<Mission> MissionList = new List<Mission>();
+            List<Mission> allMission = new List<Mission>();
             try
             {
                 using (connection = Database.GetConnection())
                 {
                     using (command = new MySqlCommand(Views.ALLMission, connection))
                     {
-                        connection.Open();
                         command.CommandType = CommandType.Text;
+                        connection.Open();
                         using (reader = command.ExecuteReader())
                         {
                             while (reader.Read())
@@ -36,11 +36,10 @@ namespace OBETools.DAL.Repository
                                 Mission Mission = new Mission
                                 {
                                     Id = reader.GetInt32("id"),
-                                    Name = reader.GetString("MissionName"),
-                                    Description = reader.GetString("descriptions"),
-
+                                    Name = reader.GetString("Name"),
+                                    Description = reader.GetString("descriptions")
                                 };
-                                MissionList.Add(Mission);
+                                allMission.Add(Mission);
                             }
                         }
                     }
@@ -50,9 +49,10 @@ namespace OBETools.DAL.Repository
             {
                 Logger.Log(ex);
             }
-            return MissionList;
+            return allMission;
         }
 
+        
         public bool Update(Mission Mission)
         {
             int status = 0;

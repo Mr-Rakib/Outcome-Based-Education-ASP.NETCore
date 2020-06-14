@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OBETools.BLL.Interface
 {
-    interface IAcademy : ICRUD<Mission>
+    interface IAcademy
     {
     }
 }

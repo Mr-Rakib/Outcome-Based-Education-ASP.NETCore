@@ -5,12 +5,11 @@ using System.Threading.Tasks;
 
 namespace OBETools.Models
 {
-    public class Program
+    public class PEO
     {
         public int Id { get; set; }
+        public Programs Program { get; set; }
         public string Name { get; set; }
-        public float CreditHour { get; set; }
-        public string Durations { get; set; }
-        public Department Department { get; set; }
+        public string Description { get; set; }
     }
 }

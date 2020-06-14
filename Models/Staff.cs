@@ -9,7 +9,7 @@ namespace OBETools.Models
     {
         public int Id { get; set; }
         public string staff_id { get; set; }
-        public Department Department { get; set; }
+        public Departments Department { get; set; }
         public PersonalInformation PersonalInformation { get; set; }
         public Login Login { get; set; }
     }

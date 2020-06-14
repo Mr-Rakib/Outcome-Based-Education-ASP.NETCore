@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\RAKIB\\Documents\\Personal\\Research\\Software\\obetools\\OBETools\\OBETools.csproj": {}
+    "E:\\Bitbucket\\obetools\\OBETools.csproj": {}
   },
   "projects": {
-    "E:\\RAKIB\\Documents\\Personal\\Research\\Software\\obetools\\OBETools\\OBETools.csproj": {
+    "E:\\Bitbucket\\obetools\\OBETools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\RAKIB\\Documents\\Personal\\Research\\Software\\obetools\\OBETools\\OBETools.csproj",
+        "projectUniqueName": "E:\\Bitbucket\\obetools\\OBETools.csproj",
         "projectName": "OBETools",
-        "projectPath": "E:\\RAKIB\\Documents\\Personal\\Research\\Software\\obetools\\OBETools\\OBETools.csproj",
+        "projectPath": "E:\\Bitbucket\\obetools\\OBETools.csproj",
         "packagesPath": "C:\\Users\\mrhas\\.nuget\\packages\\",
-        "outputPath": "E:\\RAKIB\\Documents\\Personal\\Research\\Software\\obetools\\OBETools\\obj\\",
+        "outputPath": "E:\\Bitbucket\\obetools\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

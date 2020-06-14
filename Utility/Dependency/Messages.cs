@@ -11,21 +11,20 @@ namespace OBETools.Utility
         public static string warning        = "You have an warning to access this data";
         public static string invalid        = "Invalid field! Please fill the right informations";
         public static string invalid_login  = "Invalid username or password !";
-        public static string create         = "Congratulation, Successfully Created!";
-        public static string update         = "Data has been Updated!";
-        public static string remove         = "Data removed succesfully";
+        public static string Created        = "Congratulation, Successfully Created!";
+        public static string Updated        = "Data has been Updated!";
+        public static string Removed        = "Data removed succesfully";
 
-        public static string Empty = "No data found ! It's Empty";
-        public static string Enable = "User successfully Enabled !";
-        public static string Disable = "User successfully disabled !";
-        public static string NotActive = "Item not Active now";
+        public static string Empty          = "No data found ! It's Empty";
+        public static string Enable         = "User successfully Enabled !";
+        public static string Disable        = "User successfully disabled !";
+        public static string NotActive      = "Item not Active now";
 
-        public static string Saved = "Items successfully saved !";
-        public static string Updated = "Items successfully updated !";
-        public static string Deleted = "Items successfully deleted !";
+        public static string Saved          = "Items successfully saved !";
+        public static string Deleted        = "Items successfully deleted !";
         public static string PasswordUpdated = "Password successfully Updated !";
 
-        public static string AccessDenied = "You are unable to access this property !";
+        public static string AccessDenied   = "You are unable to access this property !";
         public static string InstitutionNotActive = "Your institution unable to access this property!";
 
         public static string Exist = "Items already exist !";
@@ -44,18 +43,18 @@ namespace OBETools.Utility
         public static string SubjectManagerNotExist = "Subject Manager Not Exist !";
         public static string ExamInformationNotExit = "Exam Information is not Exist !";
 
-        public static string Issue = "There are some issue happen !";
-        public static string NotFound = "Items not found !";
-        public static string InvalidUser = "Invalid username or password";
-        public static string InvalidField = "Invalid input filds !";
-        public static string IssueInTracer = "Opps, There are some issue to save tracer";
-        public static string IssueInDatabase = "Opps, There are some issue in database";
-        public static string InvalidImageSize = "Image Size not more than 200KB";
-        public static string InvalidInformation = "Invalid Information! Please provide the valid information.";
-        public static string InvalidPasswordField = "Invalid password field";
-        public static string InvalidSubjectManager = "Invalid ! Subject or Class or Batch are not from same institution";
-        public static string InvaldFileExtrension = "Invalid Extension! Only (.docs, .pdf, .txt) extentions are allowed ";
-        public static string InvaldImageExtrension = "Invalid Extension! Only (.jpg, .jpeg, .png) extentions are allowed ";
+        public static string Issue                  = "There are some issue happen !";
+        public static string NotFound               = "Items not found !";
+        public static string InvalidUser            = "Invalid username or password";
+        public static string InvalidField           = "Invalid input filds !";
+        public static string IssueInTracer          = "Opps, There are some issue to save tracer";
+        public static string IssueInDatabase        = "Opps, There are some issue in database";
+        public static string InvalidImageSize       = "Image Size not more than 200KB";
+        public static string InvalidInformation     = "Invalid Information! Please provide the valid information.";
+        public static string InvalidPasswordField   = "Invalid password field";
+        public static string InvalidSubjectManager  = "Invalid ! Subject or Class or Batch are not from same institution";
+        public static string InvaldFileExtrension   = "Invalid Extension! Only (.docs, .pdf, .txt) extentions are allowed ";
+        public static string InvaldImageExtrension  = "Invalid Extension! Only (.jpg, .jpeg, .png) extentions are allowed ";
         public static string InvalidStudentAdmission = "Invalid ! Student and Subject Manager are not from same institution";
         //Large-Parts
         public static string InvalidExamManagerInformation = "Invalid Exam Manager. Please provide the valid information.";
@@ -64,5 +63,7 @@ namespace OBETools.Utility
         public static string DuplicateExamManager = "Duplicate Exam! Exam manager already exist.";
         public static string DuplicateFeesCollection = "Student already paid for this month !";
 
+        public static string ProgramNotFound    = "Program Not Found";
+        public static string DepartmentNotFound = "Department Not Found";
     }
 }

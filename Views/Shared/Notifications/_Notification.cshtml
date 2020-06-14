@@ -1,24 +1,22 @@
 ﻿
-@if (TempData["DeleteError"] != null)
+@if (TempData["Error"] != null)
 {
 
-    <div class="alert alert-succes" role="alert">
+    <div class="alert alert-succes" style="font-size:10px" role="alert">
         @TempData["Error"].ToString()
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
 }
-@if (TempData["EditSuccess"] != null)
+@if (TempData["Success"] != null)
 {
-
     <div class="alert alert-success" role="alert">
-        @TempData["EditSuccess"].ToString()
+        @TempData["Success"].ToString()
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-
 }
 
 @if (ViewData["Error"] != null)
@@ -32,14 +30,12 @@
 }
 @if (ViewData["Success"] != null)
 {
-
     <div class="alert alert-success" role="alert">
         @ViewData["Success"].ToString()
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-
 }
 @if (ViewData["Warning"] != null)
 {

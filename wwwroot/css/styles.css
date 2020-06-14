@@ -159,9 +159,9 @@ sup {
 }
 
 a {
-  color: #007bff;
-  text-decoration: none;
-  background-color: transparent;
+    color: #28a745;
+    text-decoration: none;
+    background-color: transparent;
 }
 a:hover {
   color: #0056b3;
@@ -6128,7 +6128,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #ffffff !important;
 }
 
 a.bg-light:hover, a.bg-light:focus,

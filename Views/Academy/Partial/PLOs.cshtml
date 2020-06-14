@@ -1,0 +1,38 @@
+﻿
+@model IEnumerable<OBETools.Models.PLO>
+
+<div class="text-right col-md-12 pb-2">
+    <a class="btn btn-info btn-custom-style" asp-action="Create" asp-controller="Mission"><i class="fas fa-user-plus"></i>&nbsp;Create User</a>
+</div>
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered display MultipleDataTable" id="dataTable_User" width="100%" cellspacing="0">
+                <thead>
+                    <tr class="custom-table-user text-center">
+                        <th class="text-left">@Html.DisplayNameFor(model => model.Id)</th>
+                        <th>@Html.DisplayNameFor(model => model.Name)</th>
+                        <th>@Html.DisplayNameFor(model => model.Description)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                            <td class="text-center" style="font-size: .75em">
+                                @Html.ActionLink("", "EditMission", new { id = item.Id }, new { @class = "fas fa-edit text-secondery" }) &nbsp;
+                                @Html.ActionLink("", "DetailsMission", new { id = item.Id }, new { @class = "fas fa-eye text-warning" })  &nbsp;
+                                @Html.ActionLink("", "DeleteMission", new { id = item.Id }, new { onClick = "return confirm('Are you sure to delete ?')", @class = "fas fa-trash-alt text-danger" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -63,7 +63,6 @@ namespace OBETools.Controllers
             return (!String.IsNullOrEmpty(User.Identity.Name)) ? true : false; 
         }
 
-        [HttpPost]
         public IActionResult Logout()
         {
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);

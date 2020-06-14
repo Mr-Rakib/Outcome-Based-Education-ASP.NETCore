@@ -1,37 +1,35 @@
 ﻿@model IEnumerable<Mission>
+@{
+    int i = 1;
+ }
 
+<div class="text-right col-md-12 pb-2">
+    <a class="btn btn-info btn-custom-style" asp-action="CreateMission" asp-controller="Academy"><i class="fas fa-user-plus"></i>&nbsp;Create Mission</a>
+</div>
 <div class="card mb-4">
-    <div class="card-header"><i class="fas fa-table mr-1"></i>Mission</div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <table class="table table-bordered display MultipleDataTable" id="dataTable_User" width="100%" cellspacing="0">
+                <thead>
+                    <tr class="custom-table-user text-center">
+                        <th class="text-left">Sl No.</th>
                         <th>@Html.DisplayNameFor(model => model.Name)</th>
                         <th>@Html.DisplayNameFor(model => model.Description)</th>
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tfoot>
-                    <tr>
-                        <th>@Html.DisplayNameFor(model => model.Id)</th>
-                        <th>@Html.DisplayNameFor(model => model.Name)</th>
-                        <th>@Html.DisplayNameFor(model => model.Description)</th>
-                        <th>Action</th>
-                    </tr>
-                </tfoot>
+                
                 <tbody>
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                            <td>@(i++)</td>
                             <td>@Html.DisplayFor(modelItem => item.Name)</td>
                             <td>@Html.DisplayFor(modelItem => item.Description)</td>
-                            <td class="text-center">
-                                @Html.ActionLink("", "Edit", new { id = item.Id }, new { @class = "fas fa-edit text-primary" }) &nbsp;
-                                @Html.ActionLink("", "Details", new { id = item.Id }, new { @class = "fas fa-eye text-success" })  &nbsp;
-                                @Html.ActionLink("", "Delete", new { id = item.Id }, new { onClick = "return confirm('Are you sure to delete ?')", @class = "fas fa-trash-alt text-danger" })
+                            <td class="text-center" style="font-size: .75em">
+                                <a class="p-1" asp-action="EditMission" asp-controller="Academy" asp-route-id="@item.Id"><i class="far fa-edit text-info"></i></a>
+                                <a class="p-2" title="View Details" data-toggle="modal" data-target="#view-profile-modal" data-id="@item.Id"><i class="far fa-eye text-secondery"></i></a>
+                                <a class="p-1" onclick="return confirm('Are you sure you want to delete?')" asp-action="DeleteMission" asp-controller="Academy" asp-route-id="@item.Id"><i class="far fa-trash-alt text-danger"></i></a>
                             </td>
                         </tr>
                     }
