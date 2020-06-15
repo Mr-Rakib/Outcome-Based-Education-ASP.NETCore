@@ -293,7 +293,7 @@ CREATE TABLE `departments` (
   `name` varchar(60) NOT NULL,
   `descriptions` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -372,7 +372,7 @@ CREATE TABLE `missions` (
   `name` varchar(100) NOT NULL,
   `descriptions` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -381,7 +381,7 @@ CREATE TABLE `missions` (
 
 LOCK TABLES `missions` WRITE;
 /*!40000 ALTER TABLE `missions` DISABLE KEYS */;
-INSERT INTO `missions` VALUES (11,'Mission 1','MI'),(12,'Mission 2','sdasdas');
+INSERT INTO `missions` VALUES (13,'Mission 1','Achieve successful learning management in academic career  ');
 /*!40000 ALTER TABLE `missions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -423,7 +423,7 @@ CREATE TABLE `peo` (
   `name` varchar(100) NOT NULL,
   `descriptions` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -432,6 +432,7 @@ CREATE TABLE `peo` (
 
 LOCK TABLES `peo` WRITE;
 /*!40000 ALTER TABLE `peo` DISABLE KEYS */;
+INSERT INTO `peo` VALUES (1,1,'PEO 1','PEO 1 Descriptions');
 /*!40000 ALTER TABLE `peo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -558,7 +559,7 @@ CREATE TABLE `programs` (
   `duration` varchar(10) NOT NULL,
   `department_id` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -567,7 +568,7 @@ CREATE TABLE `programs` (
 
 LOCK TABLES `programs` WRITE;
 /*!40000 ALTER TABLE `programs` DISABLE KEYS */;
-INSERT INTO `programs` VALUES (1,'BSC in CSE',144,'4 Yeaers',1);
+INSERT INTO `programs` VALUES (1,'BSC in CSE',144,'4 Yeaers',1),(2,'BSC in EEE',144,'4 Years',1);
 /*!40000 ALTER TABLE `programs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1178,13 +1179,13 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_savePEO`(
 	IN ProgramId INT,
     IN Name VARCHAR(100),
-    IN Descriptions VARCHAR(200)
+    IN Description VARCHAR(200)
 	
 )
 BEGIN
 	INSERT INTO peo
     (
-		peo.progrma_id 	,
+		peo.program_id 	,
         peo.name 		,
         peo.descriptions 
     )
@@ -1192,7 +1193,7 @@ BEGIN
     (	
 		ProgramId,
         Name ,
-        Descriptions
+        Description
     );
 END ;;
 DELIMITER ;
@@ -1634,4 +1635,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-14 18:14:03
+-- Dump completed on 2020-06-15 18:14:37

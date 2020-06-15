@@ -9,11 +9,7 @@ function ActiveConfirmation() {
 }
 
 function DeleteConfirmation() {
-    var x = confirm("Are you sure you want to delete?");
-    if (x)
-        return true;
-    else
-        return false;
+    confirm("Are you sure you want to delete?");
 }
 
 $(document).ready(function () {
@@ -22,17 +18,24 @@ $(document).ready(function () {
 
 
 
-$('#view-profile-modal').on('show.bs.modal',
+$('#view-mission-modal').on('show.bs.modal',
     function (e) {
         var Id = $(e.relatedTarget).attr('data-id');
-        $('#viewprofilemodal').load('/Academy/DetailsMission?id=' + Id);
+        $('#viewmissionmodal').load('/Academy/DetailsMission?id=' + Id);
     }
 );
 
-$('#view-edit-modal').on('show.bs.modal',
+$('#view-peo-modal').on('show.bs.modal',
     function (e) {
-        var employeeId = $(e.relatedTarget).attr('data-id');
-        $('#vieweditmodal').load('/User/Edit?id=' + employeeId);
+        var Id = $(e.relatedTarget).attr('data-id');
+        $('#viewpeomodal').load('/Academy/DetailsPEO?id=' + Id);
+    }
+);
+
+$('#view-plo-modal').on('show.bs.modal',
+    function (e) {
+        var Id = $(e.relatedTarget).attr('data-id');
+        $('#viewplomodal').load('/Academy/DetailsPLO?id=' + Id);
     }
 );
 

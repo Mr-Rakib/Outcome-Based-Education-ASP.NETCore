@@ -1742,3 +1742,6 @@ E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\Partial\PLOs.c
 E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\CreateMission.cshtml.g.cs
 E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\EditMission.cshtml.g.cs
 E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\Partial\MissionDetails.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\Partial\PEODetails.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\Partial\PLODEtails.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\CreatePEO.cshtml.g.cs

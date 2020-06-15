@@ -92,7 +92,7 @@ namespace OBETools.DAL.Repository
                     using (command = new MySqlCommand(Procedures.SavePEO, connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add(new MySqlParameter("@program_id", PEO.Program.Id));
+                        command.Parameters.Add(new MySqlParameter("@programId", PEO.Program.Id));
                         command.Parameters.Add(new MySqlParameter("@name", PEO.Name));
                         command.Parameters.Add(new MySqlParameter("@Description", PEO.Description));
 

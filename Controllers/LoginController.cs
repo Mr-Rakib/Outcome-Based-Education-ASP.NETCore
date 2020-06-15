@@ -36,7 +36,7 @@ namespace OBETools.Controllers
                 if (String.IsNullOrEmpty(message))
                 {
                     login = loginService.FindByUsername(login.Username, User.Identity.Name);
-                    if (GetLogin(login))
+                    if (GetLogin(login).IsCompleted)
                     {
                         return RedirectToAction("Index", "Home");
                     }
@@ -48,7 +48,7 @@ namespace OBETools.Controllers
             return View();
         }
 
-        private bool GetLogin(Login login)
+        private Task GetLogin(Login login)
         {
             var identity = new ClaimsIdentity(
             new[]
@@ -58,9 +58,7 @@ namespace OBETools.Controllers
             }, CookieAuthenticationDefaults.AuthenticationScheme);
 
             var principal = new ClaimsPrincipal(identity);
-            HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
-
-            return (!String.IsNullOrEmpty(User.Identity.Name)) ? true : false; 
+            return HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
         }
 
         public IActionResult Logout()

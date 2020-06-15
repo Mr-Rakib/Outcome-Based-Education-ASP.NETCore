@@ -110,5 +110,165 @@ namespace OBETools.Controllers
             return View();
         }
 
+        // -------------- PEO ----------
+        public ActionResult DetailsPEO(int id)
+        {
+            if (id > 0)
+            {
+                PEO PEO = PEOService.FindById(id, User.Identity.Name);
+                return PartialView("Partial/PEODetails", PEO);
+            }
+            return View();
+        }
+
+        public ActionResult CreatePEO()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreatePEO(PEO PEO)
+        {
+            if (ModelState.IsValid)
+            {
+                string message = PEOService.Save(PEO, User.Identity.Name);
+                if (string.IsNullOrEmpty(message))
+                {
+                    TempData["Success"] = Messages.Created;
+                    return RedirectToAction("Index");
+                }
+                else ViewData["Warning"] = message;
+            }
+            else ViewData["Error"] = Messages.InvalidField;
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult EditPEO(int id)
+        {
+            if (id > 0)
+            {
+                PEO PEO = PEOService.FindById(id, User.Identity.Name);
+                return View(PEO);
+            }
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditPEO(PEO PEO)
+        {
+            string message;
+            if (ModelState.IsValid)
+            {
+                message = PEOService.Update(PEO, User.Identity.Name);
+                if (String.IsNullOrEmpty(message))
+                {
+                    TempData["Success"] = Messages.Updated;
+                    return RedirectToAction("Index");
+                }
+                else ViewData["Warning"] = message;
+            }
+            else ViewData["Warning"] = Messages.InvalidField;
+            return View();
+        }
+
+        public ActionResult DeletePEO(int id)
+        {
+            string message;
+            if (id > 0)
+            {
+                message = PEOService.Delete(id, User.Identity.Name);
+                if (String.IsNullOrEmpty(message))
+                {
+                    TempData["Success"] = Messages.Deleted;
+                    return RedirectToAction("Index");
+                }
+                else ViewData["Warning"] = message;
+            }
+            else ViewData["Warning"] = Messages.InvalidField;
+            return View();
+        }
+
+        // -------------- PLO ----------
+        public ActionResult DetailsPLO(int id)
+        {
+            if (id > 0)
+            {
+                PLO PLO = PLOService.FindById(id, User.Identity.Name);
+                return PartialView("Partial/PLODetails", PLO);
+            }
+            return View();
+        }
+
+        public ActionResult CreatePLO()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreatePLO(PLO PLO)
+        {
+            if (ModelState.IsValid)
+            {
+                string message = PLOService.Save(PLO, User.Identity.Name);
+                if (string.IsNullOrEmpty(message))
+                {
+                    TempData["Success"] = Messages.Created;
+                    return RedirectToAction("Index");
+                }
+                else ViewData["Warning"] = message;
+            }
+            else ViewData["Error"] = Messages.InvalidField;
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult EditPLO(int id)
+        {
+            if (id > 0)
+            {
+                PLO PLO = PLOService.FindById(id, User.Identity.Name);
+                return View(PLO);
+            }
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditPLO(PLO PLO)
+        {
+            string message;
+            if (ModelState.IsValid)
+            {
+                message = PLOService.Update(PLO, User.Identity.Name);
+                if (String.IsNullOrEmpty(message))
+                {
+                    TempData["Success"] = Messages.Updated;
+                    return RedirectToAction("Index");
+                }
+                else ViewData["Warning"] = message;
+            }
+            else ViewData["Warning"] = Messages.InvalidField;
+            return View();
+        }
+
+        public ActionResult DeletePLO(int id)
+        {
+            string message;
+            if (id > 0)
+            {
+                message = PLOService.Delete(id, User.Identity.Name);
+                if (String.IsNullOrEmpty(message))
+                {
+                    TempData["Success"] = Messages.Deleted;
+                    return RedirectToAction("Index");
+                }
+                else ViewData["Warning"] = message;
+            }
+            else ViewData["Warning"] = Messages.InvalidField;
+            return View();
+        }
+
     }
 }

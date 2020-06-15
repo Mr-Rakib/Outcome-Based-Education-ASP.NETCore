@@ -36,11 +36,11 @@ namespace OBETools.DAL.Repository
                                     Id = reader.GetInt32("id"),
                                     Department = new Departments()
                                     {
-                                        Id = reader.GetInt32("program_id")
+                                        Id = reader.GetInt32("department_id")
                                     },
                                     Name        = reader.GetString("Name"),
                                     CreditHour  = reader.GetFloat("creditHour"),
-                                    Durations   = reader.GetString("durations")
+                                    Durations   = reader.GetString("duration")
                                 };
                                 allPrograms.Add(Programs);
                             }
