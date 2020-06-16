@@ -101,7 +101,7 @@ namespace OBETools.Controllers
                 message = MissionService.Delete(id, User.Identity.Name);
                 if (String.IsNullOrEmpty(message))
                 {
-                    TempData["Success"] = Messages.Deleted;
+                    TempData["Error"] = Messages.Deleted;
                     return RedirectToAction("Index");
                 }
                 else ViewData["Warning"] = message;
@@ -181,7 +181,7 @@ namespace OBETools.Controllers
                 message = PEOService.Delete(id, User.Identity.Name);
                 if (String.IsNullOrEmpty(message))
                 {
-                    TempData["Success"] = Messages.Deleted;
+                    TempData["Error"] = Messages.Deleted;
                     return RedirectToAction("Index");
                 }
                 else ViewData["Warning"] = message;
@@ -261,7 +261,7 @@ namespace OBETools.Controllers
                 message = PLOService.Delete(id, User.Identity.Name);
                 if (String.IsNullOrEmpty(message))
                 {
-                    TempData["Success"] = Messages.Deleted;
+                    TempData["Error"] = Messages.Deleted;
                     return RedirectToAction("Index");
                 }
                 else ViewData["Warning"] = message;

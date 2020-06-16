@@ -26,34 +26,41 @@ using OBETools.Models;
 #nullable disable
 #nullable restore
 #line 3 "E:\Bitbucket\obetools\Views\_ViewImports.cshtml"
-using OBETools.BLL.Services;
+using OBETools.Models.View_Model;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 4 "E:\Bitbucket\obetools\Views\_ViewImports.cshtml"
-using System.Linq;
+using OBETools.BLL.Services;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 5 "E:\Bitbucket\obetools\Views\_ViewImports.cshtml"
-using Microsoft.AspNetCore.Http;
+using System.Linq;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 6 "E:\Bitbucket\obetools\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Http;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "E:\Bitbucket\obetools\Views\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Mvc;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3b437e44a8b3015df07e1089eee3bdc8f16e7210", @"/Views/Academy/Partial/MissionDetails.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"650a8998d894939bf3f2edc33113a08e61c5e398", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"08be7c9f67e66a1aa08d9810aee868fb20346d11", @"/Views/_ViewImports.cshtml")]
     public class Views_Academy_Partial_MissionDetails : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<OBETools.Models.Mission>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-group col-md-4"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -102,7 +109,7 @@ using Microsoft.AspNetCore.Mvc;
                                 <div class=""form-row pt-4 pb-3"">
 
                                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3b437e44a8b3015df07e1089eee3bdc8f16e72104885", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3b437e44a8b3015df07e1089eee3bdc8f16e72105048", async() => {
                 WriteLiteral(" ");
             }
             );
@@ -133,7 +140,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
 #line hidden
 #nullable disable
             WriteLiteral(" </label>\r\n\r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3b437e44a8b3015df07e1089eee3bdc8f16e72106859", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3b437e44a8b3015df07e1089eee3bdc8f16e72107022", async() => {
                 WriteLiteral(" ");
             }
             );

@@ -25,7 +25,7 @@
                                     <label class="form-group border col-md-8"> @(Model.Program.Department.Name == "" ? "Not Set" : Model.Program.Department.Name) </label>
 
                                     <label class="form-group col-md-4" asp-for="@Model.Program.Name"> </label>
-                                    <label class="form-group border col-md-8"> @(Model.Program.Name == "" ? "Not Set" : Model.Name) </label>
+                                    <label class="form-group border col-md-8"> @(Model.Program.Name == "" ? "Not Set" : Model.Program.Name) </label>
 
                                     <label class="form-group col-md-4" asp-for="@Model.Description"> </label>
                                     <textarea rows="5" style="background: #eee" readonly class="form-group border col-md-8"> @(Model.Description == "" ? "Not Set" : Model.Description) </textarea>

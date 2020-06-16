@@ -29,6 +29,9 @@ namespace OBETools.Utility.Connection
         public static string DeletePrograms     = "sp_deletePrograms";
         public static string DeleteDepartments  = "sp_deleteDepartments";
 
+        public static string UpdateMissionToPEOMapping = "sp_updateMissionToPEOMapping";
+        public static string SaveMissionToPEOMapping   = "sp_saveMissionToPEOMapping";
+        public static string DeleteMissionToPEOMapping = "sp_deleteMissionToPEOMapping";
 
         /// Large Version of SP DELETE
 

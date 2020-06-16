@@ -4,7 +4,7 @@
 }
 
 <div class="text-right col-md-12 pb-2">
-    <a class="btn btn-info btn-custom-style" asp-action="CreatePEO" asp-controller="Academy"><i class="fas fa-user-plus"></i>&nbsp;Create PEO</a>
+    <a class="btn btn-info btn-custom-style" asp-action="CreatePEO" asp-controller="Academy"><i class="fas fa-plus-circle"></i>&nbsp;Create PEO</a>
 </div>
 <div class="card mb-4">
     <div class="card-body">
@@ -27,12 +27,11 @@
                         <tr>
                             <td>@(count++)</td>
                             <td>@Html.DisplayFor(modelItem => item.Name)</td>
-                            <td>@Html.DisplayFor(modelItem => item.Program.Department.Name)</td>
                             <td>@Html.DisplayFor(modelItem => item.Program.Name)</td>
                             <td>@Html.DisplayFor(modelItem => item.Description)</td>
                             <td class="text-center" style="font-size: .75em">
                                 <a class="p-1" asp-action="EditPEO" asp-controller="Academy" asp-route-id="@item.Id"><i class="far fa-edit text-info"></i></a>
-                                <a class="p-2" title="View Details" data-toggle="modal" data-target="#view-peo-modal" data-id="@item.Id"><i class="far fa-eye text-secondery"></i></a>
+                                <a class="p-1" title="View Details" data-toggle="modal" data-target="#view-peo-modal" data-id="@item.Id"><i class="far fa-eye text-secondery"></i></a>
                                 <a class="p-1" onclick="return confirm('Are you sure you want to delete?')" asp-action="DeletePEO" asp-controller="Academy" asp-route-id="@item.Id"><i class="far fa-trash-alt text-danger"></i></a>
                             </td>
                         </tr>

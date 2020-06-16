@@ -66,7 +66,7 @@ namespace OBETools.DAL.Repository
                     {
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add(new MySqlParameter("@id", PLO.Id));
-                        command.Parameters.Add(new MySqlParameter("@program_id", PLO.Program.Id));
+                        command.Parameters.Add(new MySqlParameter("@ProgramId", PLO.Program.Id));
                         command.Parameters.Add(new MySqlParameter("@name", PLO.Name));
                         command.Parameters.Add(new MySqlParameter("@Description", PLO.Description));
 
@@ -92,7 +92,7 @@ namespace OBETools.DAL.Repository
                     using (command = new MySqlCommand(Procedures.SavePLO, connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add(new MySqlParameter("@program_id", PLO.Program.Id));
+                        command.Parameters.Add(new MySqlParameter("@ProgramId", PLO.Program.Id));
                         command.Parameters.Add(new MySqlParameter("@name", PLO.Name));
                         command.Parameters.Add(new MySqlParameter("@Description", PLO.Description));
 

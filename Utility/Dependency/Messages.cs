@@ -27,19 +27,19 @@ namespace OBETools.Utility
         public static string AccessDenied   = "You are unable to access this property !";
         public static string InstitutionNotActive = "Your institution unable to access this property!";
 
-        public static string Exist = "Items already exist !";
-        public static string IdExist = "Id already exist !";
-        public static string Conflict = "Items Conflicts !";
-        public static string emailExist = "Email already exist !";
-        public static string Unauthorize = "Unauthorize User !";
-        public static string contactExist = "contact already exist !";
-        public static string usernameExist = "Username already exist !";
-        public static string StaffNotExist = "Staff Not Exist !";
-        public static string StudentNotExist = "Student Not Exist !";
-        public static string AttendanceExist = "User Already Present Today !";
-        public static string InstitutionNotExist = "Institution not exit !";
-        public static string CurrentUserNotExist = "Current User not exit !";
-        public static string GragingSystemNotExist = "Grading System is not exist !";
+        public static string Exist                  = "Items already exist !";
+        public static string IdExist                = "Id already exist !";
+        public static string Conflict               = "Items Conflicts !";
+        public static string emailExist             = "Email already exist !";
+        public static string Unauthorize            = "Unauthorize User !";
+        public static string contactExist           = "contact already exist !";
+        public static string usernameExist          = "Username already exist !";
+        public static string StaffNotExist          = "Staff Not Exist !";
+        public static string StudentNotExist        = "Student Not Exist !";
+        public static string AttendanceExist        = "User Already Present Today !";
+        public static string InstitutionNotExist    = "Institution not exit !";
+        public static string CurrentUserNotExist    = "Current User not exit !";
+        public static string GragingSystemNotExist  = "Grading System is not exist !";
         public static string SubjectManagerNotExist = "Subject Manager Not Exist !";
         public static string ExamInformationNotExit = "Exam Information is not Exist !";
 
@@ -65,5 +65,8 @@ namespace OBETools.Utility
 
         public static string ProgramNotFound    = "Program Not Found";
         public static string DepartmentNotFound = "Department Not Found";
+
+        public static string PEONotFound { get; internal set; }
+        public static string MissionNotFound { get; internal set; }
     }
 }

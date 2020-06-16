@@ -372,7 +372,7 @@ CREATE TABLE `missions` (
   `name` varchar(100) NOT NULL,
   `descriptions` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -381,7 +381,7 @@ CREATE TABLE `missions` (
 
 LOCK TABLES `missions` WRITE;
 /*!40000 ALTER TABLE `missions` DISABLE KEYS */;
-INSERT INTO `missions` VALUES (13,'Mission 1','Achieve successful learning management in academic career  ');
+INSERT INTO `missions` VALUES (13,'Mission 1','Achieve successful learning management in academic career .'),(14,'Mission 2','Mission 2 Descriptions');
 /*!40000 ALTER TABLE `missions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -396,9 +396,9 @@ CREATE TABLE `missiontopeomapping` (
   `id` int NOT NULL AUTO_INCREMENT,
   `mission_id` int NOT NULL,
   `peo_id` int NOT NULL,
-  `points` double NOT NULL,
+  `points` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -407,6 +407,7 @@ CREATE TABLE `missiontopeomapping` (
 
 LOCK TABLES `missiontopeomapping` WRITE;
 /*!40000 ALTER TABLE `missiontopeomapping` DISABLE KEYS */;
+INSERT INTO `missiontopeomapping` VALUES (2,13,3,1);
 /*!40000 ALTER TABLE `missiontopeomapping` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -423,7 +424,7 @@ CREATE TABLE `peo` (
   `name` varchar(100) NOT NULL,
   `descriptions` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -432,7 +433,7 @@ CREATE TABLE `peo` (
 
 LOCK TABLES `peo` WRITE;
 /*!40000 ALTER TABLE `peo` DISABLE KEYS */;
-INSERT INTO `peo` VALUES (1,1,'PEO 1','PEO 1 Descriptions');
+INSERT INTO `peo` VALUES (1,1,'Engineering knowledge:','Apply knowledge of mathematics, natural science, engineering fundamentals and Computer Science and Engineering to the solution of complex engineering problems.\r\n'),(3,1,'PLO 2','PLO 2 Descriptions');
 /*!40000 ALTER TABLE `peo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -482,7 +483,7 @@ CREATE TABLE `plo` (
   `name` varchar(100) NOT NULL,
   `Descriptions` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -491,6 +492,7 @@ CREATE TABLE `plo` (
 
 LOCK TABLES `plo` WRITE;
 /*!40000 ALTER TABLE `plo` DISABLE KEYS */;
+INSERT INTO `plo` VALUES (1,1,'Engineering knowledge','Apply knowledge of mathematics, natural science, engineering fundamentals and Computer Science and Engineering to the solution of complex engineering problems.'),(3,1,'PLO 2','saddddddddd');
 /*!40000 ALTER TABLE `plo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -790,6 +792,21 @@ SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = @saved_cs_client;
 
 --
+-- Temporary view structure for view `vw_allmissiontopeomapping`
+--
+
+DROP TABLE IF EXISTS `vw_allmissiontopeomapping`;
+/*!50001 DROP VIEW IF EXISTS `vw_allmissiontopeomapping`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_allmissiontopeomapping` AS SELECT 
+ 1 AS `id`,
+ 1 AS `mission_id`,
+ 1 AS `peo_id`,
+ 1 AS `points`*/;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Temporary view structure for view `vw_allpeo`
 --
 
@@ -923,6 +940,28 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_deleteMission`(
 BEGIN
 	DELETE FROM missions
     WHERE missions.id = Id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_deleteMissionToPEOMapping` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_deleteMissionToPEOMapping`(	
+	IN Id INT
+)
+BEGIN
+	DELETE FROM MissionTOPEOMapping
+    WHERE MissionTOPEOMapping.id = Id;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -1166,6 +1205,39 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_saveMissionToPEOMapping` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_saveMissionToPEOMapping`(	
+	IN MissionId INT,
+    IN PEOId INT,
+    IN Points FLOAT
+)
+BEGIN
+	INSERT INTO MissionToPEOMapping
+    (	
+		MissionToPEOMapping.mission_id,
+        MissionToPEOMapping.peo_id,
+        MissionToPEOMapping.points
+    )VALUES
+    (	
+		MissionId,
+        PEOId,
+        Points
+    );
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `sp_savePEO` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -1214,12 +1286,12 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_savePLO`(
 	IN ProgramId INT,
     IN Name VARCHAR(100),
-    IN Descriptions VARCHAR(200)
+    IN Description VARCHAR(200)
 )
 BEGIN
 	INSERT INTO plo
     (
-		plo.progrma_id 	,
+		plo.program_id 	,
         plo.name 		,
         plo.descriptions 
     )
@@ -1227,7 +1299,7 @@ BEGIN
     (	
 		ProgramId,
         Name ,
-        Descriptions
+        Description
     );
 END ;;
 DELIMITER ;
@@ -1426,6 +1498,36 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_updateMissionToPEOMapping` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updateMissionToPEOMapping`(
+	IN Id INT,
+	IN MissionId INT,
+    IN PEOId INT,
+    IN Points FLOAT
+)
+BEGIN
+	UPDATE MissionToPEOMapping 
+    SET 
+		MissionToPEOMapping.mission_id = MissionId,
+        MissionToPEOMapping.peo_id = PEOId,
+        MissionToPEOMapping.points = Points
+	WHERE 
+    MissionToPEOMapping.Id = Id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `sp_updatePEO` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -1440,14 +1542,14 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updatePEO`(
 	IN Id INT,
 	IN ProgramId INT,
     IN Name VARCHAR(100),
-    IN Descriptions VARCHAR(200)
+    IN Description VARCHAR(200)
 )
 BEGIN
 	UPDATE peo
     SET
-		peo.progrma_id 		= ProgramId,
+		peo.program_id 		= ProgramId,
         peo.name 			= Name ,
-        peo.descriptions 	= Descriptions
+        peo.descriptions 	= Description
     WHERE 
     peo.id = Id ;
 END ;;
@@ -1470,14 +1572,14 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updatePLO`(
 	IN Id INT,
 	IN ProgramId INT,
     IN Name VARCHAR(100),
-    IN Descriptions VARCHAR(200)
+    IN Description VARCHAR(200)
 )
 BEGIN
 	UPDATE plo
     SET
-		plo.progrma_id 		= ProgramId,
+		plo.program_id 		= ProgramId,
         plo.name 			= Name ,
-        plo.descriptions 	= Descriptions
+        plo.descriptions 	= Description
     WHERE 
     plo.id = Id ;
 END ;;
@@ -1573,6 +1675,24 @@ DELIMITER ;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
+-- Final view structure for view `vw_allmissiontopeomapping`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_allmissiontopeomapping`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_allmissiontopeomapping` AS select `missiontopeomapping`.`id` AS `id`,`missiontopeomapping`.`mission_id` AS `mission_id`,`missiontopeomapping`.`peo_id` AS `peo_id`,`missiontopeomapping`.`points` AS `points` from `missiontopeomapping` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
 -- Final view structure for view `vw_allpeo`
 --
 
@@ -1635,4 +1755,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-15 18:14:37
+-- Dump completed on 2020-06-16 18:48:17

@@ -63,6 +63,7 @@ body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 400;
+    font-size:14px;
     line-height: 1.5;
     color: #03380c;
     text-align: left;
@@ -10167,7 +10168,7 @@ body {
   color: rgba(255, 255, 255, 0.25);
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link {
-    color: rgb(84, 199, 111);
+    color: rgb(154, 226, 171);
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
     color: rgb(101, 144, 104);
