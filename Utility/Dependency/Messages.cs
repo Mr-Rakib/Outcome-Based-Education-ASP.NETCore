@@ -45,6 +45,10 @@ namespace OBETools.Utility
 
         public static string Issue                  = "There are some issue happen !";
         public static string NotFound               = "Items not found !";
+        public static string PEONotFound            = "PEO not found";
+        public static string DuplicateItems         = "Duplicate Items !";
+        public static string MissionNotFound        = "Mission Not Found";
+
         public static string InvalidUser            = "Invalid username or password";
         public static string InvalidField           = "Invalid input filds !";
         public static string IssueInTracer          = "Opps, There are some issue to save tracer";
@@ -66,7 +70,5 @@ namespace OBETools.Utility
         public static string ProgramNotFound    = "Program Not Found";
         public static string DepartmentNotFound = "Department Not Found";
 
-        public static string PEONotFound { get; internal set; }
-        public static string MissionNotFound { get; internal set; }
     }
 }

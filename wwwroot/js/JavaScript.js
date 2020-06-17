@@ -45,6 +45,14 @@ $(".custom-file-input").on("change", function () {
 });
 
 
+$('#view-missiontopeo-modal').on('show.bs.modal',
+    function (e) {
+        var Id = $(e.relatedTarget).attr('data-id');
+        $('#viewmissiontopeomodal').load('/MissionToPEOMapping/Details?id=' + Id);
+    }
+);
+
+
 var loadFile = function (event) {
     var output = document.getElementById('output');
     output.src = URL.createObjectURL(event.target.files[0]);

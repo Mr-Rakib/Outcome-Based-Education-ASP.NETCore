@@ -19,5 +19,7 @@ namespace OBETools.Utility.Connection
         public static string ALLAcademicGrading = String.Concat(Select, "vw_AcademicGrading");
 
         public static string ALLMissionToPEOMapping =  String.Concat(Select, "vw_AllMissionToPEOMapping");
+
+        public static string ALLPLOToPEOMapping { get; internal set; }
     }
 }

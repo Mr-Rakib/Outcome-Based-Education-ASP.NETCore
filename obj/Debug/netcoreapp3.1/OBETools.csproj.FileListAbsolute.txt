@@ -1701,11 +1701,8 @@ E:\Bitbucket\obetools\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\Sy
 E:\Bitbucket\obetools\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 E:\Bitbucket\obetools\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
 E:\Bitbucket\obetools\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\OBETools.csprojAssemblyReference.cache
 E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\staticwebassets\OBETools.StaticWebAssets.Manifest.cache
 E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\staticwebassets\OBETools.StaticWebAssets.xml
-E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\OBETools.MvcApplicationPartsAssemblyInfo.cs
-E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\OBETools.MvcApplicationPartsAssemblyInfo.cache
 E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\OBETools.RazorAssemblyInfo.cache
 E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\OBETools.RazorAssemblyInfo.cs
 E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\OBETools.AssemblyInfoInputs.cache
@@ -1751,5 +1748,10 @@ E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\EditPLO.cshtml
 E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\MissionToPEOMapping\Index.cshtml.g.cs
 E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\MissionToPEOMapping\Create.cshtml.g.cs
 E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\MissionToPEOMapping\Edit.cshtml.g.cs
-E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\MissionToPEOMapping\Partial\MissionToPEOMappingDetails.cshtml.g.cs
 E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\MissionToPEOMapping\Partial\MissionToPEO.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\MissionToPEOMapping\Partial\Details.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\OBETools.csprojAssemblyReference.cache
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\MissionToPEOMapping\Partial\PEOMapList.cshtml.g.cs
+E:\Bitbucket\obetools\bin\Debug\netcoreapp3.1\MoreLinq.dll
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\OBETools.MvcApplicationPartsAssemblyInfo.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\OBETools.MvcApplicationPartsAssemblyInfo.cache

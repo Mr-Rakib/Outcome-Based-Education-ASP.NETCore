@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 
 namespace OBETools.Models.View_Model
 {
-    public class MapPEO
+    public class PLOToPEO
     {
-        public PEO PEO { get; set; }
-        public float Points { get; set; }
+        public int Id { get; set; }
+        public PLO PLO { get; set; }
+        public List<MapPEO> MapPEOLists { get; set; }
     }
 }

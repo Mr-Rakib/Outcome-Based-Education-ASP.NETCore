@@ -46,6 +46,7 @@
                             <label class="form-control-label col-md-8">@(count++). &nbsp;@(items.Name)</label>
 
                             <select class="border col-md-3" asp-for="MapPEOLists[index].Points">
+                                    <option value=@(0)>Select</option>
                                     <option value=@(1)>Low</option>
                                     <option value=@(2)>Medium</option>
                                     <option value=@(3)>High</option>

@@ -17,16 +17,16 @@ namespace OBETools.Controllers
 
         public ActionResult Index()
         {
-            List<MissionToPEOMapping> MissionToPEOMappings = MissionToPEOMappingService.FindAll(User.Identity.Name);
-            return View(MissionToPEOMappings);
+            List<MissionToPEO> MissionToPEOs = MissionToPEOMappingService.FindAllMissionToPEO(User.Identity.Name);
+            return View(MissionToPEOs);
         }
 
         public ActionResult Details(int id)
         {
             if (id > 0)
             {
-                MissionToPEOMapping MissionToPEOMapping = MissionToPEOMappingService.FindById(id, User.Identity.Name);
-                return PartialView("Partial/MissionToPEOMappingDetails", MissionToPEOMapping);
+                MissionToPEO MissionToPEOMapping = MissionToPEOMappingService.FindByMissionId(id, User.Identity.Name);
+                return PartialView("Partial/Details", MissionToPEOMapping);
             }
             return View();
         }
@@ -58,20 +58,20 @@ namespace OBETools.Controllers
         {
             if (id > 0)
             {
-                MissionToPEOMapping MissionToPEOMapping = MissionToPEOMappingService.FindById(id, User.Identity.Name);
-                return View(MissionToPEOMapping);
+                MissionToPEO MissionToPEO = MissionToPEOMappingService.FindByMissionId(id, User.Identity.Name);
+                return View(MissionToPEO);
             }
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(MissionToPEOMapping MissionToPEOMapping)
+        public ActionResult Edit(MissionToPEO MissionToPEO)
         {
             string message;
             if (ModelState.IsValid)
             {
-                message = MissionToPEOMappingService.Update(MissionToPEOMapping, User.Identity.Name);
+                message = MissionToPEOMappingService.UpdateMapping(MissionToPEO, User.Identity.Name);
                 if (String.IsNullOrEmpty(message))
                 {
                     TempData["Success"] = Messages.Updated;

@@ -1,7 +1,8 @@
-﻿@model IEnumerable<OBETools.Models.MissionToPEOMapping>
+﻿@model IEnumerable<OBETools.Models.View_Model.MissionToPEO>
 
 @{
     int count = 1;
+    int peoindex = 1;
 }
 
 <div class="text-right col-md-12 pb-2">
@@ -15,8 +16,7 @@
                     <tr class="custom-table-user text-center">
                         <th class="text-left">Sl No.</th>
                         <th>@Html.DisplayNameFor(model => model.Mission.Name)</th>
-                        <th>@Html.DisplayNameFor(model => model.PEO.Name)</th>
-                        <th>@Html.DisplayNameFor(model => model.Points)</th>
+                        <th>PEOs Name</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -27,12 +27,28 @@
                         <tr>
                             <td>@(count++)</td>
                             <td>@Html.DisplayFor(modelItem => item.Mission.Name)</td>
-                            <td>@Html.DisplayFor(modelItem => item.PEO.Name)</td>
-                            <td>@Html.DisplayFor(modelItem => item.Points)</td>
+                            <td>
+                                @{
+                                    peoindex = 1;
+                                }
+
+                                @foreach (var peo in item.MapPEOLists)
+                                {
+                                    if (peo.Points > 0)
+                                    {
+                                    @Html.DisplayFor(modelItem => peo.PEO.Name)
+                                        if (peoindex < item.MapPEOLists.Count)
+                                        {
+                                        <label>, &nbsp;</label>
+                                        }
+                                    }
+                                    peoindex++;
+
+                                }
+                            </td>
                             <td class="text-center" style="font-size: .75em">
-                                <a class="p-1" asp-action="Edit" asp-controller="MissionToPEOMapping" asp-route-id="@item.Id"><i class="far fa-edit text-info"></i></a>
-                                <a class="p-2" title="View Details" data-toggle="modal" data-target="#view-mission-modal" data-id="@item.Id"><i class="far fa-eye text-secondery"></i></a>
-                                <a class="p-1" onclick="return confirm('Are you sure you want to delete?')" asp-action="Delete" asp-controller="MissionToPEOMapping" asp-route-id="@item.Id"><i class="far fa-trash-alt text-danger"></i></a>
+                                <a class="p-1" asp-action="Edit" asp-controller="MissionToPEOMapping" asp-route-id="@item.Mission.Id"><i class="far fa-edit text-info"></i></a>
+                                <a class="p-1" title="View Details" data-toggle="modal" data-target="#view-missiontopeo-modal" data-id="@item.Mission.Id"><i class="far fa-eye text-secondery"></i></a>
                             </td>
                         </tr>
                     }

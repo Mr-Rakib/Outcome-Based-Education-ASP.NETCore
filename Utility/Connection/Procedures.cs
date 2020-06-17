@@ -33,6 +33,10 @@ namespace OBETools.Utility.Connection
         public static string SaveMissionToPEOMapping   = "sp_saveMissionToPEOMapping";
         public static string DeleteMissionToPEOMapping = "sp_deleteMissionToPEOMapping";
 
+        public static string UpdatePLOToPEOMapping { get; internal set; }
+        public static string SavePLOToPEOMapping { get; internal set; }
+        public static string DeletePLOToPEOMapping { get; internal set; }
+
         /// Large Version of SP DELETE
 
     }

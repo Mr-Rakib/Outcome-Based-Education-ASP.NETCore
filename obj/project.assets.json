@@ -1123,6 +1123,15 @@
           }
         }
       },
+      "morelinq/3.3.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MoreLinq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MoreLinq.dll": {}
+        }
+      },
       "MySql.Data/8.0.20": {
         "type": "package",
         "dependencies": {
@@ -4568,6 +4577,27 @@
         "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "morelinq/3.3.2": {
+      "sha512": "MQc8GppZJLmjvcpEdf3EkC6ovsp7gRWt2e5mC7dcIOrgwSc+yjFd3JQ0iRqr3XrUT6rb/phv0IkEmBtbfVA7AQ==",
+      "type": "package",
+      "path": "morelinq/3.3.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "COPYING.txt",
+        "lib/net451/MoreLinq.dll",
+        "lib/net451/MoreLinq.pdb",
+        "lib/net451/MoreLinq.xml",
+        "lib/netstandard1.0/MoreLinq.dll",
+        "lib/netstandard1.0/MoreLinq.pdb",
+        "lib/netstandard1.0/MoreLinq.xml",
+        "lib/netstandard2.0/MoreLinq.dll",
+        "lib/netstandard2.0/MoreLinq.pdb",
+        "lib/netstandard2.0/MoreLinq.xml",
+        "morelinq.3.3.2.nupkg.sha512",
+        "morelinq.nuspec"
       ]
     },
     "MySql.Data/8.0.20": {
@@ -9064,7 +9094,8 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.3",
       "MySql.Data >= 8.0.20",
       "Newtonsoft.Json >= 12.0.3",
-      "System.Data.SqlClient >= 4.8.1"
+      "System.Data.SqlClient >= 4.8.1",
+      "morelinq >= 3.3.2"
     ]
   },
   "packageFolders": {
@@ -9160,6 +9191,10 @@
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.8.1, )"
+          },
+          "morelinq": {
+            "target": "Package",
+            "version": "[3.3.2, )"
           }
         },
         "imports": [

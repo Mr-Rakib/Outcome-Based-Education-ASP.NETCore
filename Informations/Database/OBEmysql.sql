@@ -370,9 +370,9 @@ DROP TABLE IF EXISTS `missions`;
 CREATE TABLE `missions` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
-  `descriptions` varchar(200) NOT NULL,
+  `descriptions` varchar(1000) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -381,7 +381,7 @@ CREATE TABLE `missions` (
 
 LOCK TABLES `missions` WRITE;
 /*!40000 ALTER TABLE `missions` DISABLE KEYS */;
-INSERT INTO `missions` VALUES (13,'Mission 1','Achieve successful learning management in academic career .'),(14,'Mission 2','Mission 2 Descriptions');
+INSERT INTO `missions` VALUES (13,'Perfection of Intelligence ',' Life long learners who will be able to create, share and apply their knowledge in multidisciplinary areas to earn benefit for the humanity.'),(14,'Leadership Skill','Groom our students with the quality of leadership skill'),(18,'Complex Problem Solve','The mission of the department is to  groom our students with the quality complex problem solvers');
 /*!40000 ALTER TABLE `missions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -398,7 +398,7 @@ CREATE TABLE `missiontopeomapping` (
   `peo_id` int NOT NULL,
   `points` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -407,7 +407,7 @@ CREATE TABLE `missiontopeomapping` (
 
 LOCK TABLES `missiontopeomapping` WRITE;
 /*!40000 ALTER TABLE `missiontopeomapping` DISABLE KEYS */;
-INSERT INTO `missiontopeomapping` VALUES (2,13,3,1);
+INSERT INTO `missiontopeomapping` VALUES (35,13,1,3),(36,13,3,2),(37,13,5,1);
 /*!40000 ALTER TABLE `missiontopeomapping` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -422,9 +422,9 @@ CREATE TABLE `peo` (
   `id` int NOT NULL AUTO_INCREMENT,
   `program_id` int NOT NULL,
   `name` varchar(100) NOT NULL,
-  `descriptions` varchar(200) DEFAULT NULL,
+  `descriptions` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -433,7 +433,7 @@ CREATE TABLE `peo` (
 
 LOCK TABLES `peo` WRITE;
 /*!40000 ALTER TABLE `peo` DISABLE KEYS */;
-INSERT INTO `peo` VALUES (1,1,'Engineering knowledge:','Apply knowledge of mathematics, natural science, engineering fundamentals and Computer Science and Engineering to the solution of complex engineering problems.\r\n'),(3,1,'PLO 2','PLO 2 Descriptions');
+INSERT INTO `peo` VALUES (1,1,'Engineering knowledge','Apply knowledge of mathematics, natural science, engineering fundamentals and Computer Science and Engineering to the solution of complex engineering problems.\r\n'),(3,1,'PLO 2','PLO 2 Descriptions'),(5,1,'PEO 3','New PEO');
 /*!40000 ALTER TABLE `peo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -481,9 +481,9 @@ CREATE TABLE `plo` (
   `id` int NOT NULL AUTO_INCREMENT,
   `program_id` int NOT NULL,
   `name` varchar(100) NOT NULL,
-  `Descriptions` varchar(200) DEFAULT NULL,
+  `Descriptions` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -492,7 +492,7 @@ CREATE TABLE `plo` (
 
 LOCK TABLES `plo` WRITE;
 /*!40000 ALTER TABLE `plo` DISABLE KEYS */;
-INSERT INTO `plo` VALUES (1,1,'Engineering knowledge','Apply knowledge of mathematics, natural science, engineering fundamentals and Computer Science and Engineering to the solution of complex engineering problems.'),(3,1,'PLO 2','saddddddddd');
+INSERT INTO `plo` VALUES (1,1,'Engineering knowledge','Apply knowledge of mathematics, natural science, engineering fundamentals and Computer Science and Engineering to the solution of complex engineering problems.'),(3,1,'Problem analysis','Identify, formulate, research literature and analyse complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences and engineering sciences'),(4,1,'Design/development of solutions','Design solutions for complex engineering problems and design systems, components or processes that meet specified needs with appropriate consideration for public health and safety, cultural, societal, and environmental considerations.'),(5,1,'Investigation','Conduct investigations of complex problems using research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of information to provide valid conclusions.'),(6,1,'Modern tool usage','Create, select and apply appropriate techniques, resources, and modern engineering and IT tools, including prediction and modelling, to complex engineering problems, with an understanding of the limitations.');
 /*!40000 ALTER TABLE `plo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1186,7 +1186,7 @@ DELIMITER ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_saveMission`(
     IN Name VARCHAR(100),
-    IN Description VARCHAR(200)
+    IN Description VARCHAR(1000)
 )
 BEGIN
 	INSERT INTO missions 
@@ -1251,7 +1251,7 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_savePEO`(
 	IN ProgramId INT,
     IN Name VARCHAR(100),
-    IN Description VARCHAR(200)
+    IN Description VARCHAR(1000)
 	
 )
 BEGIN
@@ -1286,7 +1286,7 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_savePLO`(
 	IN ProgramId INT,
     IN Name VARCHAR(100),
-    IN Description VARCHAR(200)
+    IN Description VARCHAR(1000)
 )
 BEGIN
 	INSERT INTO plo
@@ -1483,7 +1483,7 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updateMission`(
 	IN Id INT,
     IN Name VARCHAR(100),
-    IN Description VARCHAR(200)
+    IN Description VARCHAR(1000)
 )
 BEGIN
 	UPDATE missions 
@@ -1542,7 +1542,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updatePEO`(
 	IN Id INT,
 	IN ProgramId INT,
     IN Name VARCHAR(100),
-    IN Description VARCHAR(200)
+    IN Description VARCHAR(1000)
 )
 BEGIN
 	UPDATE peo
@@ -1572,7 +1572,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updatePLO`(
 	IN Id INT,
 	IN ProgramId INT,
     IN Name VARCHAR(100),
-    IN Description VARCHAR(200)
+    IN Description VARCHAR(1000)
 )
 BEGIN
 	UPDATE plo
@@ -1755,4 +1755,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-16 18:48:17
+-- Dump completed on 2020-06-17 18:23:32
