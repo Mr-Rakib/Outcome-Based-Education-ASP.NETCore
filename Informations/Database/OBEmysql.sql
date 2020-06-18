@@ -97,7 +97,7 @@ CREATE TABLE `academicgrading` (
 
 LOCK TABLES `academicgrading` WRITE;
 /*!40000 ALTER TABLE `academicgrading` DISABLE KEYS */;
-INSERT INTO `academicgrading` VALUES (1,1,'A+',80,100,5,2),(2,1,'A',70,79,4,2),(3,1,'A-',60,69,3.5,2),(4,1,'B',50,59,3,2),(5,1,'B-',40,49,2.5,2),(6,1,'F',0,39,0,2);
+INSERT INTO `academicgrading` VALUES (1,3,'A+',80,100,4,2),(2,3,'A',75,79,3.75,2),(3,3,'A-',70,74,3.5,2),(4,3,'B',60,69,3,2),(5,3,'B-',50,59,2.5,2),(6,3,'F',0,49,0,2);
 /*!40000 ALTER TABLE `academicgrading` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -407,7 +407,7 @@ CREATE TABLE `missiontopeomapping` (
 
 LOCK TABLES `missiontopeomapping` WRITE;
 /*!40000 ALTER TABLE `missiontopeomapping` DISABLE KEYS */;
-INSERT INTO `missiontopeomapping` VALUES (35,13,1,3),(36,13,3,2),(37,13,5,1);
+INSERT INTO `missiontopeomapping` VALUES (36,13,3,2),(37,13,5,3);
 /*!40000 ALTER TABLE `missiontopeomapping` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -433,7 +433,7 @@ CREATE TABLE `peo` (
 
 LOCK TABLES `peo` WRITE;
 /*!40000 ALTER TABLE `peo` DISABLE KEYS */;
-INSERT INTO `peo` VALUES (1,1,'Engineering knowledge','Apply knowledge of mathematics, natural science, engineering fundamentals and Computer Science and Engineering to the solution of complex engineering problems.\r\n'),(3,1,'PLO 2','PLO 2 Descriptions'),(5,1,'PEO 3','New PEO');
+INSERT INTO `peo` VALUES (3,1,'PLO 2','PLO 2 Descriptions'),(5,1,'PEO 3','PEO 3 Descriptions');
 /*!40000 ALTER TABLE `peo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -509,7 +509,7 @@ CREATE TABLE `plotopeomapping` (
   `peo_id` int NOT NULL,
   `points` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -518,6 +518,7 @@ CREATE TABLE `plotopeomapping` (
 
 LOCK TABLES `plotopeomapping` WRITE;
 /*!40000 ALTER TABLE `plotopeomapping` DISABLE KEYS */;
+INSERT INTO `plotopeomapping` VALUES (3,5,3,3),(4,5,5,3),(6,1,3,2),(7,1,5,1);
 /*!40000 ALTER TABLE `plotopeomapping` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -676,7 +677,7 @@ CREATE TABLE `staffs` (
   KEY `FK_Staffs_PersonalInformation_idx` (`personalInformation_id`),
   CONSTRAINT `FK_Staffs_Login` FOREIGN KEY (`staff_id`) REFERENCES `login` (`username`),
   CONSTRAINT `FK_Staffs_PersonalInformation` FOREIGN KEY (`personalInformation_id`) REFERENCES `personalinformation` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -685,6 +686,7 @@ CREATE TABLE `staffs` (
 
 LOCK TABLES `staffs` WRITE;
 /*!40000 ALTER TABLE `staffs` DISABLE KEYS */;
+INSERT INTO `staffs` VALUES (1,'sm',1,4),(2,'kmh',1,3);
 /*!40000 ALTER TABLE `staffs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -837,6 +839,21 @@ SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = @saved_cs_client;
 
 --
+-- Temporary view structure for view `vw_allplotopeomapping`
+--
+
+DROP TABLE IF EXISTS `vw_allplotopeomapping`;
+/*!50001 DROP VIEW IF EXISTS `vw_allplotopeomapping`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_allplotopeomapping` AS SELECT 
+ 1 AS `id`,
+ 1 AS `plo_id`,
+ 1 AS `peo_id`,
+ 1 AS `points`*/;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Temporary view structure for view `vw_allprograms`
 --
 
@@ -850,6 +867,58 @@ SET @saved_cs_client     = @@character_set_client;
  1 AS `creditHour`,
  1 AS `duration`,
  1 AS `department_id`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_allstaffs`
+--
+
+DROP TABLE IF EXISTS `vw_allstaffs`;
+/*!50001 DROP VIEW IF EXISTS `vw_allstaffs`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_allstaffs` AS SELECT 
+ 1 AS `id`,
+ 1 AS `staff_id`,
+ 1 AS `department_id`,
+ 1 AS `fullName`,
+ 1 AS `fathersName`,
+ 1 AS `mothersName`,
+ 1 AS `dateOfBirth`,
+ 1 AS `gender`,
+ 1 AS `contact`,
+ 1 AS `email`,
+ 1 AS `presentAddress`,
+ 1 AS `permanentAddress`,
+ 1 AS `image`,
+ 1 AS `username`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_allstudents`
+--
+
+DROP TABLE IF EXISTS `vw_allstudents`;
+/*!50001 DROP VIEW IF EXISTS `vw_allstudents`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_allstudents` AS SELECT 
+ 1 AS `id`,
+ 1 AS `student_id`,
+ 1 AS `program_id`,
+ 1 AS `guardianName`,
+ 1 AS `guardianContact`,
+ 1 AS `fullName`,
+ 1 AS `fathersName`,
+ 1 AS `mothersName`,
+ 1 AS `dateOfBirth`,
+ 1 AS `gender`,
+ 1 AS `contact`,
+ 1 AS `email`,
+ 1 AS `presentAddress`,
+ 1 AS `permanentAddress`,
+ 1 AS `image`,
+ 1 AS `username`*/;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1006,6 +1075,28 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_deletePLO`(
 BEGIN
 	DELETE FROM plo
     WHERE plo.Id = Id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_deletePLOToPEOMapping` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_deletePLOToPEOMapping`(
+	IN Id INT
+)
+BEGIN
+	DELETE FROM plotopeomapping 
+    WHERE plotopeomapping.id = Id; 
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -1307,6 +1398,39 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_savePLOToPEOMapping` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_savePLOToPEOMapping`(
+	IN PLOId INT,
+    IN PEOId INT,
+    IN Points FLOAT
+)
+BEGIN
+	INSERT INTO PLOToPEOMapping
+    (	
+		PLOToPEOMapping.plo_id,
+        PLOToPEOMapping.peo_id,
+        PLOToPEOMapping.points
+    )VALUES
+    (	
+		PLOId,
+        PEOId,
+        Points
+    );
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `sp_savePrograms` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -1588,6 +1712,36 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_updatePLOToPEOMapping` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updatePLOToPEOMapping`(
+	IN Id INT,
+    IN PLOId INT,
+    IN PEOId INT,
+    IN Points FLOAT
+)
+BEGIN
+	UPDATE plotopeomapping
+    SET
+		PLOToPEOMapping.plo_id = PLOId,
+        PLOToPEOMapping.peo_id = PEOId,
+        PLOToPEOMapping.points = Points
+	WHERE 
+    PLOToPEOMapping.id = Id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `sp_updatePrograms` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -1729,6 +1883,24 @@ DELIMITER ;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
+-- Final view structure for view `vw_allplotopeomapping`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_allplotopeomapping`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_allplotopeomapping` AS select `plotopeomapping`.`id` AS `id`,`plotopeomapping`.`plo_id` AS `plo_id`,`plotopeomapping`.`peo_id` AS `peo_id`,`plotopeomapping`.`points` AS `points` from `plotopeomapping` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
 -- Final view structure for view `vw_allprograms`
 --
 
@@ -1745,6 +1917,42 @@ DELIMITER ;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_allstaffs`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_allstaffs`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_allstaffs` AS select `staffs`.`id` AS `id`,`staffs`.`staff_id` AS `staff_id`,`staffs`.`department_id` AS `department_id`,`personalinformation`.`fullName` AS `fullName`,`personalinformation`.`fathersName` AS `fathersName`,`personalinformation`.`mothersName` AS `mothersName`,`personalinformation`.`dateOfBirth` AS `dateOfBirth`,`personalinformation`.`gender` AS `gender`,`personalinformation`.`contact` AS `contact`,`personalinformation`.`email` AS `email`,`personalinformation`.`presentAddress` AS `presentAddress`,`personalinformation`.`permanentAddress` AS `permanentAddress`,`personalinformation`.`image` AS `image`,`login`.`username` AS `username` from ((`staffs` join `personalinformation`) join `login`) where ((`staffs`.`personalInformation_id` = `personalinformation`.`id`) and (`staffs`.`staff_id` = `login`.`username`)) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_allstudents`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_allstudents`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_allstudents` AS select `students`.`id` AS `id`,`students`.`student_id` AS `student_id`,`students`.`program_id` AS `program_id`,`students`.`guardianName` AS `guardianName`,`students`.`guardianContact` AS `guardianContact`,`personalinformation`.`fullName` AS `fullName`,`personalinformation`.`fathersName` AS `fathersName`,`personalinformation`.`mothersName` AS `mothersName`,`personalinformation`.`dateOfBirth` AS `dateOfBirth`,`personalinformation`.`gender` AS `gender`,`personalinformation`.`contact` AS `contact`,`personalinformation`.`email` AS `email`,`personalinformation`.`presentAddress` AS `presentAddress`,`personalinformation`.`permanentAddress` AS `permanentAddress`,`personalinformation`.`image` AS `image`,`login`.`username` AS `username` from ((`students` join `personalinformation`) join `login`) where ((`students`.`personalinformation_id` = `personalinformation`.`id`) and (`students`.`student_id` = `login`.`username`)) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -1755,4 +1963,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-17 18:23:32
+-- Dump completed on 2020-06-18 18:03:04

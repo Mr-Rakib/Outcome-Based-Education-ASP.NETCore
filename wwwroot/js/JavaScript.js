@@ -48,7 +48,15 @@ $(".custom-file-input").on("change", function () {
 $('#view-missiontopeo-modal').on('show.bs.modal',
     function (e) {
         var Id = $(e.relatedTarget).attr('data-id');
-        $('#viewmissiontopeomodal').load('/MissionToPEOMapping/Details?id=' + Id);
+        $('#viewmissiontopeomodal').load('/Mapping/MissionToPEODetails?id=' + Id);
+    }
+);
+
+
+$('#view-plotopeo-modal').on('show.bs.modal',
+    function (e) {
+        var Id = $(e.relatedTarget).attr('data-id');
+        $('#viewplotopeomodal').load('/Mapping/PLOToPEODetails?id=' + Id);
     }
 );
 

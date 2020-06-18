@@ -12,7 +12,7 @@ namespace OBETools.Models
         public int Id { get; set; }
         [DisplayName("Username")]
         public string StudentId { get; set; }
-        public Program Program { get; set; }
+        public Programs Programs{ get; set; }
         public PersonalInformation PersonalInformation { get; set; }
         [DisplayName("Guardian Name")]
         public string GuardianName { get; set; }

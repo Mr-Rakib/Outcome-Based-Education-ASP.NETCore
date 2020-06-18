@@ -1,13 +1,13 @@
-﻿@model MissionToPEO
+﻿@model OBETools.Models.View_Model.PLOToPEO
 
 @{
     ViewData["Title"] = "CreatePEO";
-    List<PEO> PEOList           = new PEOService().FindAll(User.Identity.Name);
-    List<Mission> MissionList = new MissionService().FindAll(User.Identity.Name);
+    List<PEO> PEOList = new PEOService().FindAll(User.Identity.Name);
+    List<PLO> PLOList = new PLOService().FindAll(User.Identity.Name);
     int count = 1;
     int index = 0;
 
-    
+
 }
 
 
@@ -15,24 +15,20 @@
     @Html.Partial("Notifications/_Notification")
 
     <div class="row pl-4">
-        <h4 class="mt-4 mb-1 font-weight-light "><i class="fas fa-plus-circle"></i>&nbsp; MISSION & PEO (MAPPING )</h4>
+        <h4 class="mt-4 mb-1 font-weight-light "><i class="fas fa-plus-circle"></i>&nbsp; PLO & PEO (MAPPING )</h4>
     </div>
     <hr class="c-hr-gray mb-4" />
 
     <div class="container-fluid">
-        <form asp-action="Create" asp-controller="MissionToPEOMapping" method="post">
+        <form asp-action="PLOToPEOEdit" asp-controller="Mapping" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <h5 class="mt-2 mb-1 font-weight-light pb-2"><i class="fas fa-tasks"></i>&nbsp; MISSION NAME</h5>
-                    <select asp-for="Mission.Id" class="border p-2 col-md-12">
-                        @foreach (var items in MissionList)
-                        {
-                            <option value=@(items.Id)>@items.Name</option>
-                        }
-                    </select>
-                    <span asp-validation-for="Mission.Id" class="text-danger"></span>
+                    <h5 class="mt-2 mb-1 font-weight-light pb-2"><i class="fas fa-tasks"></i>&nbsp; PLO NAME</h5>
+                    <input class="form-control" value="@Model.PLO.Name" readonly style="background:#fff" />
+                    <input class="form-control" asp-for="PLO.Id" hidden readonly />
+                    <span asp-validation-for="PLO.Id" class="text-danger"></span>
                 </div>
                 <div class="container border">
                     <div class="text-center form-group  col-md-12">
@@ -41,15 +37,16 @@
                     </div>
                     @foreach (var items in PEOList)
                     {
+
                         <div class="container form-group col-md-8">
                             <input asp-for="MapPEOLists[index].PEO.Id" hidden value="@(items.Id)" />
                             <label class="form-control-label col-md-8">@(count++). &nbsp;@(items.Name)</label>
 
-                            <select class="border col-md-3" asp-for="MapPEOLists[index].Points">
-                                    <option value=@(0)>Select</option>
-                                    <option value=@(1)>Low</option>
-                                    <option value=@(2)>Medium</option>
-                                    <option value=@(3)>High</option>
+                            <select asp-for="MapPEOLists[index].Points" class="border col-md-3">
+                                <option value=@(0)>None</option>
+                                <option value=@(1)>Low</option>
+                                <option value=@(2)>Medium</option>
+                                <option value=@(3)>High</option>
                             </select>
                         </div>
                         <label hidden>@(index++)</label>
@@ -60,7 +57,7 @@
 
             <div class="form-row pt-3">
                 <div class="form-group col-md-6">
-                    <button type="submit" class="btn-sm btn-info btn btn-block">Save</button>
+                    <button type="submit" class="btn-sm btn-info btn btn-block">Update</button>
                 </div>
                 <div class="form-group col-md-6">
                     <button type="reset" class="btn-sm btn-danger btn btn-block">Clear</button>

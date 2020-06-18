@@ -1,4 +1,4 @@
-﻿@model IEnumerable<OBETools.Models.View_Model.MissionToPEO>
+﻿@model OBETools.Models.View_Model.Mapping
 
 <div>
     <div class="pt-2">
@@ -17,16 +17,25 @@
             <a class="nav-link active" id="users-tab" data-toggle="tab" href="#user" role="tab" aria-controls="user" aria-selected="true">Mission to PEO</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="vets-tab" data-toggle="tab" href="#vet" role="tab" aria-controls="vet" aria-selected="false">PEO to PLO</a>
+            <a class="nav-link" id="vets-tab" data-toggle="tab" href="#vet" role="tab" aria-controls="vet" aria-selected="false">PLO to PEO</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" id="admins-tab" data-toggle="tab" href="#admin" role="tab" aria-controls="admin" aria-selected="false">PLO to CLO</a>
         </li>
     </ul>
+
     <div class="tab-content" id="myTabContent">
 
         <div class="tab-pane fade show active" id="user" role="tabpanel" aria-labelledby="user-tab">
-            @Html.Partial("Partial/MissionToPEO")
+            @Html.Partial("Partial/MissionToPEO", Model.MissionToPEOs)
         </div>
         <div class="tab-pane fade" id="vet" role="tabpanel" aria-labelledby="vet-tab">
-            @Html.Partial("Partial/MissionToPEO")
+            @Html.Partial("Partial/PLOToPEO", Model.PLOToPEOs)
+        </div>
+
+        <div class="tab-pane fade " id="admin" role="tabpanel" aria-labelledby="admin-tab">
+           
         </div>
     </div>
     <!-------------------TAB------------------>
@@ -41,15 +50,9 @@
     </div>
 </div>
 
-<div class="modal fade" id="view-peo-modal" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document" id="viewpeomodal">
-
-    </div>
-</div>
-
-
-<div class="modal fade" id="view-plo-modal" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document" id="viewplomodal">
+<!--PLO to PEO Modal-->
+<div class="modal fade" id="view-plotopeo-modal" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document" id="viewplotopeomodal">
 
     </div>
 </div>

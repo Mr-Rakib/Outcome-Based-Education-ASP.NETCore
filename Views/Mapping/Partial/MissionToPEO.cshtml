@@ -1,4 +1,4 @@
-﻿@model IEnumerable<OBETools.Models.View_Model.MissionToPEO>
+﻿@model IEnumerable<MissionToPEO>
 
 @{
     int count = 1;
@@ -6,7 +6,7 @@
 }
 
 <div class="text-right col-md-12 pb-2">
-    <a class="btn btn-info btn-custom-style" asp-action="Create" asp-controller="MissionToPEOMapping"><i class="fas fa-plus-circle"></i>&nbsp;Map</a>
+    <a class="btn btn-info btn-custom-style" asp-action="MissionToPEOCreate" asp-controller="Mapping"><i class="fas fa-plus-circle"></i>&nbsp;Map</a>
 </div>
 <div class="card mb-4">
     <div class="card-body">
@@ -47,7 +47,7 @@
                                 }
                             </td>
                             <td class="text-center" style="font-size: .75em">
-                                <a class="p-1" asp-action="Edit" asp-controller="MissionToPEOMapping" asp-route-id="@item.Mission.Id"><i class="far fa-edit text-info"></i></a>
+                                <a class="p-1" asp-action="MissionToPEOEdit" asp-controller="Mapping" asp-route-id="@item.Mission.Id"><i class="far fa-edit text-info"></i></a>
                                 <a class="p-1" title="View Details" data-toggle="modal" data-target="#view-missiontopeo-modal" data-id="@item.Mission.Id"><i class="far fa-eye text-secondery"></i></a>
                             </td>
                         </tr>

@@ -11,7 +11,7 @@ namespace OBETools.Models
         [DisplayName("Staff Id")]
         public int Id { get; set; }
         [DisplayName("Staff Username")]
-        public string staff_id { get; set; }
+        public string StaffId { get; set; }
         public Departments Department { get; set; }
         public PersonalInformation PersonalInformation { get; set; }
         public Login Login { get; set; }

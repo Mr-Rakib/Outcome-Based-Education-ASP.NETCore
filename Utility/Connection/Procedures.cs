@@ -29,13 +29,13 @@ namespace OBETools.Utility.Connection
         public static string DeletePrograms     = "sp_deletePrograms";
         public static string DeleteDepartments  = "sp_deleteDepartments";
 
-        public static string UpdateMissionToPEOMapping = "sp_updateMissionToPEOMapping";
         public static string SaveMissionToPEOMapping   = "sp_saveMissionToPEOMapping";
+        public static string UpdateMissionToPEOMapping = "sp_updateMissionToPEOMapping";
         public static string DeleteMissionToPEOMapping = "sp_deleteMissionToPEOMapping";
 
-        public static string UpdatePLOToPEOMapping { get; internal set; }
-        public static string SavePLOToPEOMapping { get; internal set; }
-        public static string DeletePLOToPEOMapping { get; internal set; }
+        public static string UpdatePLOToPEOMapping = "sp_updatePLOToPEOMapping";
+        public static string SavePLOToPEOMapping   = "sp_savePLOToPEOMapping";
+        public static string DeletePLOToPEOMapping = "sp_deletePLOToPEOMapping";
 
         /// Large Version of SP DELETE
 

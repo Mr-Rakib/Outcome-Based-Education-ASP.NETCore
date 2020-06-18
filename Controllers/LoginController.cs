@@ -18,12 +18,10 @@ namespace OBETools.Controllers
     public class LoginController : Controller
     {
         private readonly LoginService loginService = new LoginService();
-
         public ActionResult Login()
         {
             return IsAuthorize(); 
         }
-
        
         [HttpPost]
         public ActionResult Login(Login login)

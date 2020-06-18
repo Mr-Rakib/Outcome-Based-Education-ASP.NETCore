@@ -20,7 +20,7 @@
     <hr class="c-hr-gray mb-4" />
 
     <div class="container-fluid">
-        <form asp-action="Edit" asp-controller="MissionToPEOMapping" method="post">
+        <form asp-action="MissionToPEOEdit" asp-controller="Mapping" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-row">
@@ -43,7 +43,7 @@
                             <label class="form-control-label col-md-8">@(count++). &nbsp;@(items.Name)</label>
 
                             <select asp-for="MapPEOLists[index].Points" class="border col-md-3">
-                                <option value=@(0)>Select</option>
+                                <option value=@(0)>None</option>
                                 <option value=@(1)>Low</option>
                                 <option value=@(2)>Medium</option>
                                 <option value=@(3)>High</option>

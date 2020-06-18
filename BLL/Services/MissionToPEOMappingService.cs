@@ -165,7 +165,7 @@ namespace OBETools.BLL.Services
         {
             if (MissionService.FindById(MissionToPEOMapping.Mission.Id, currentUsername) != null)
             {
-                if (MissionService.FindById(MissionToPEOMapping.Mission.Id, currentUsername) != null)
+                if (PEOService.FindById(MissionToPEOMapping.PEO.Id, currentUsername) != null)
                 {
                     return null;
                 }
