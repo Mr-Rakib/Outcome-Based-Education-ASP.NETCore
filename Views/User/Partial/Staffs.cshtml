@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Staff>
+@{
+    int count = 1;
+}
+
+<div class="text-right col-md-12 pb-2">
+    <a class="btn btn-info btn-custom-style" asp-action="StaffCreate" asp-controller="User"><i class="fas fa-plus-circle"></i>&nbsp;Create Staff</a>
+</div>
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered display MultipleDataTable" id="dataTable_User" width="100%" cellspacing="0">
+                <thead>
+                    <tr class="custom-table-user text-center">
+                        <th class="text-left">Sl No.</th>
+                        <th colspan="1">@Html.DisplayNameFor(model => model.StaffId)</th>
+                        <th>@Html.DisplayNameFor(model => model.PersonalInformation.FullName)</th>
+                        <th>@Html.DisplayNameFor(model => model.Department.Name)</th>
+                        <th>@Html.DisplayNameFor(model => model.Login.Role)</th>
+                        <th>@Html.DisplayNameFor(model => model.PersonalInformation.Contact)</th>
+                        <th>@Html.DisplayNameFor(model => model.PersonalInformation.Gender)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@(count++)</td>
+                            <td>@Html.DisplayFor(modelItem => item.StaffId)</td>
+                            <td>@Html.DisplayFor(modelItem => item.PersonalInformation.FullName)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Department.Name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Login.Role)</td>
+                            <td>@Html.DisplayFor(modelItem => item.PersonalInformation.Contact)</td>
+                            <td>@Html.DisplayFor(modelItem => item.PersonalInformation.Gender)</td>
+                            <td class="text-center" style="font-size: .75em">
+                                <a class="p-1" asp-action="EditStaff" asp-controller="User" asp-route-id="@item.Id"><i class="far fa-edit text-info"></i></a>
+                                <a class="p-1" asp-action="DetailsStaff" asp-controller="User" asp-route-id="@item.Id"><i class="far fa-eye text-dark"></i></a>
+                                <!--
+                                     <a class="p-1" onclick="return confirm('Are you sure you want to delete?')" asp-action="DeleteMission" asp-controller="Academy" asp-route-id="@item.Id"><i class="far fa-trash-alt text-danger"></i></a>
+                                -->
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OBETools.BLL.Services;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -53,6 +54,13 @@ namespace OBETools.Utility
                 }
             }
             return DecryptText;
+        }
+
+        public static string GetCurrentRole(string username)
+        {
+            LoginService LoginService = new LoginService();
+            string role = LoginService.FindByUsername(username).Role;
+            return role;
         }
 
     }

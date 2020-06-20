@@ -138,9 +138,9 @@ CREATE TABLE `clo` (
   `id` int NOT NULL AUTO_INCREMENT,
   `course_id` int NOT NULL,
   `Name` varchar(100) NOT NULL,
-  `Descriptions` varchar(200) DEFAULT NULL,
+  `Descriptions` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -149,6 +149,7 @@ CREATE TABLE `clo` (
 
 LOCK TABLES `clo` WRITE;
 /*!40000 ALTER TABLE `clo` DISABLE KEYS */;
+INSERT INTO `clo` VALUES (1,1,'CLO 1','Understand management, functions, process of planning and the concept of C'),(2,1,'CLO 2','Analyze the structure'),(4,1,'CLO 3','Remember dynamics of C, the concept of accuracy and perception, values and attitude'),(5,1,'CLO 4','Apply case studies on functions and processes.'),(6,1,'CLO 5','Analyze Individual behavior and dynamics of groups and effective workflow and structure of C');
 /*!40000 ALTER TABLE `clo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -181,28 +182,29 @@ LOCK TABLES `cloresult` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `clotoplomappling`
+-- Table structure for table `clotoplomapping`
 --
 
-DROP TABLE IF EXISTS `clotoplomappling`;
+DROP TABLE IF EXISTS `clotoplomapping`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `clotoplomappling` (
+CREATE TABLE `clotoplomapping` (
   `id` int NOT NULL AUTO_INCREMENT,
   `clo_id` int NOT NULL,
   `plo_id` int NOT NULL,
   `points` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `clotoplomappling`
+-- Dumping data for table `clotoplomapping`
 --
 
-LOCK TABLES `clotoplomappling` WRITE;
-/*!40000 ALTER TABLE `clotoplomappling` DISABLE KEYS */;
-/*!40000 ALTER TABLE `clotoplomappling` ENABLE KEYS */;
+LOCK TABLES `clotoplomapping` WRITE;
+/*!40000 ALTER TABLE `clotoplomapping` DISABLE KEYS */;
+INSERT INTO `clotoplomapping` VALUES (1,1,1,1),(2,1,3,2),(3,1,4,3),(4,1,5,0),(5,1,6,0),(6,4,1,0),(7,4,3,3),(8,4,4,2),(9,4,5,0),(10,4,6,2),(11,2,1,2),(12,2,3,2),(13,2,4,3),(14,2,5,0),(15,2,6,0),(16,5,1,0),(17,5,3,1),(18,5,4,0),(19,5,5,2),(20,5,6,3);
+/*!40000 ALTER TABLE `clotoplomapping` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -264,12 +266,13 @@ DROP TABLE IF EXISTS `courses`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `courses` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `code` varchar(10) NOT NULL,
-  `descriptions` varchar(200) NOT NULL,
+  `credit` float NOT NULL,
+  `descriptions` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -278,6 +281,7 @@ CREATE TABLE `courses` (
 
 LOCK TABLES `courses` WRITE;
 /*!40000 ALTER TABLE `courses` DISABLE KEYS */;
+INSERT INTO `courses` VALUES (1,'Programming Language C','CSE1011',3,'Engineering Course of CSE'),(2,'Programming Language Java','CSE2015',3,'Engineering Course of CSE'),(3,'Database Design','CSE3011',3,'Engineering Course of CSE'),(4,'Advanced Java	','CSE4047	',3,'Engineering Course of CSE'),(5,'Web and Internet Programming','CSE4033',3,'Engineering Course of CSE'),(6,'Operating systems	','CSE3031',3,'Engineering Course of CSE'),(7,'Algorithm','CSE2021',3,'Engineering Course of CSE'),(8,'Data Structure	','CSE1033	',3,'Engineering Course of CSE'),(9,'Mathematical Analysis for Computer Science	','CSE3021',3,'Engineering Course of CSE'),(10,'Computer Architecture	','CSE3015',3,'Engineering Course of CSE');
 /*!40000 ALTER TABLE `courses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -293,7 +297,7 @@ CREATE TABLE `departments` (
   `name` varchar(60) NOT NULL,
   `descriptions` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -356,7 +360,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES ('2016000000009','123456','Student',1,'2020-06-13 03:05:10.000000'),('2016000000015','123456','Student',1,'2020-05-20 10:00:00.000000'),('kmh','123456','Faculty',1,'2020-05-20 10:05:00.000000'),('sm','11111','Admin',1,'2020-05-20 10:10:02.000000');
+INSERT INTO `login` VALUES ('2016000000007','123456','Student',1,'0001-01-01 00:00:00.000000'),('2016000000008','123456','Student',1,'0001-01-01 00:00:00.000000'),('2016000000009','123456','Student',1,'2020-06-13 03:05:10.000000'),('2016000000015','123456','Student',1,'2020-05-20 10:00:00.000000'),('kmh','123456','Admin',1,'2020-05-20 10:05:00.000000'),('rakib','123456','Superadmin',1,'2020-05-20 00:00:00.000000'),('sm','sm123456','Admin',1,'2020-05-20 10:10:02.000000');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -381,7 +385,7 @@ CREATE TABLE `missions` (
 
 LOCK TABLES `missions` WRITE;
 /*!40000 ALTER TABLE `missions` DISABLE KEYS */;
-INSERT INTO `missions` VALUES (13,'Perfection of Intelligence ',' Life long learners who will be able to create, share and apply their knowledge in multidisciplinary areas to earn benefit for the humanity.'),(14,'Leadership Skill','Groom our students with the quality of leadership skill'),(18,'Complex Problem Solve','The mission of the department is to  groom our students with the quality complex problem solvers');
+INSERT INTO `missions` VALUES (13,'Perfection of Intelligence',' Life long learners who will be able to create, share and apply their knowledge in multidisciplinary areas to earn benefit for the humanity.'),(14,'Leadership Skill','Groom our students with the quality of leadership skill'),(18,'Complex Problem Solve','The mission of the department is to  groom our students with the quality complex problem solvers');
 /*!40000 ALTER TABLE `missions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -398,7 +402,7 @@ CREATE TABLE `missiontopeomapping` (
   `peo_id` int NOT NULL,
   `points` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -407,7 +411,7 @@ CREATE TABLE `missiontopeomapping` (
 
 LOCK TABLES `missiontopeomapping` WRITE;
 /*!40000 ALTER TABLE `missiontopeomapping` DISABLE KEYS */;
-INSERT INTO `missiontopeomapping` VALUES (36,13,3,2),(37,13,5,3);
+INSERT INTO `missiontopeomapping` VALUES (36,13,3,2),(37,13,5,3),(38,14,3,1),(39,14,5,3),(40,18,3,3),(41,18,5,0);
 /*!40000 ALTER TABLE `missiontopeomapping` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -457,7 +461,7 @@ CREATE TABLE `personalinformation` (
   `permanentAddress` varchar(300) NOT NULL,
   `image` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -466,7 +470,7 @@ CREATE TABLE `personalinformation` (
 
 LOCK TABLES `personalinformation` WRITE;
 /*!40000 ALTER TABLE `personalinformation` DISABLE KEYS */;
-INSERT INTO `personalinformation` VALUES (1,'Md Rakibul Hasan','Md Anwer Hossain','Mst Ronjona Khatun','1998-05-22','male','01642090363','mrhasan.334@gmail.com','Dhaka, Bangladesh','Jamalpur, Bangladesh','rakib.jpg'),(2,'Jafry Monfol Deep','Md JFR Father','Mst JFR Mother','1997-03-05','male','01122090363','jafry.334@gmail.com','Dhaka, Bangladesh','Gazipur, Bangladesh','jfr.jpg'),(3,'Monirul Hasan Tomal','Md KMH Father','Mst KMH Mother','1990-12-23','male','01236698432','kmh.334@gmail.com','Dhaka, Bangladesh','Dhaka, Bangladesh','kmh.jpg'),(4,'Shahariar Monzoor ','Md SM Father','Mst SM Mother','1988-02-02','male','1236953214','sm.334@gmail.com','Dhaka, Bangladesh','Dhaka, Bangladesh','sm.jpg');
+INSERT INTO `personalinformation` VALUES (1,'Md Rakibul Hasan','Md Anwer Hossain','Mst Ronjona Khatun','1998-05-22','male','01642090363','mrhasan.334@gmail.com','Dhaka, Bangladesh','Jamalpur, Bangladesh','rakib.jpg'),(2,'Jafry Monfol Deep','Md JFR Father','Mst JFR Mother','1997-03-05','male','01122090363','jafry.334@gmail.com','Dhaka, Bangladesh','Gazipur, Bangladesh','jfr.jpg'),(3,'Monirul Hasan Tomal','Md KMH Father','Mst KMH Mother','1990-12-23','male','01236698432','kmh.334@gmail.com','Dhaka, Bangladesh','Dhaka, Bangladesh','kmh.jpg'),(4,'Shahariar Monzoor ','Md SM Father','Mst SM Mother','1988-02-02','male','1236953214','sm.334@gmail.com','Dhaka, Bangladesh','Dhaka, Bangladesh','sm.jpg'),(5,'Md Sohel Hossen','Md Hasan Khan','Mst Hasina Khan','2020-06-20','Male','01722589652','sohel@gmail.com','adasdf','sadasd','wwwroot\\images\\6f89b12e-8e3f-4dc5-a3e2-7680f19e787a_userlogo.png'),(6,'Md Sohel Hossen','Md Hasan Khan','Mst Hasina Khan','2020-06-20','Male','01722589652','sohel@gmail.com','adasdf','sadasd','wwwroot\\images\\1e45bc93-8547-40ec-9cea-91c59e2b6fd1_userlogo.png'),(7,'Md Sohel Hossen','Md Hasan Khan','Mst Hasina Khan','2020-06-20','Male','01722589652','sohel@gmail.com',',m ','jk','wwwroot\\images\\6220e250-dcb5-4806-9388-8c8fa869e037_userlogo.png'),(8,'Md Sohel Hossen','Md Hasan Khan','Mst Hasina Khan','2020-06-20','Male','01722589652','sohel@gmail.com',',m ','jk','wwwroot\\images\\6b269ac1-4c80-48cb-87fd-2b0e7ff3c714_userlogo.png'),(9,'Md Sohel Hossen','Md Hasan Khan','Mst Hasina Khan','2020-06-20','Male','01722589652','sohel@gmail.com','s','s','wwwroot\\images\\a4365eb2-96df-4f87-a5db-d924d9075b98_userlogo.jpg'),(10,'Md Sohel Hossen','Md Hasan Khan','Mst Hasina Khan','2020-06-20','Male','01722589652','sohel@gmail.com','s','s','wwwroot\\images\\cdb94c64-0f7c-4a1f-92b9-6fffad12bf40_userlogo.jpg'),(11,'Md Farhan Hasasn','Md Hasan Khan','Mst Hasina Khan','2020-06-20','Male','01722589652','sohel@gmail.com','sad','asdas','wwwroot\\images\\9f363640-cea8-4213-90c1-ccf2e68ae0e7_userlogo.jpg');
 /*!40000 ALTER TABLE `personalinformation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -520,32 +524,6 @@ LOCK TABLES `plotopeomapping` WRITE;
 /*!40000 ALTER TABLE `plotopeomapping` DISABLE KEYS */;
 INSERT INTO `plotopeomapping` VALUES (3,5,3,3),(4,5,5,3),(6,1,3,2),(7,1,5,1);
 /*!40000 ALTER TABLE `plotopeomapping` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `prerequisitecoursesinformations`
---
-
-DROP TABLE IF EXISTS `prerequisitecoursesinformations`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `prerequisitecoursesinformations` (
-  `course_id` int NOT NULL,
-  `prerequisiteCourseId` int NOT NULL,
-  KEY `FK_PrerequisiteCoursesInformations_Courses` (`course_id`),
-  KEY `FK_PrerequisiteCoursesInformations_Courses1` (`prerequisiteCourseId`),
-  CONSTRAINT `FK_PrerequisiteCoursesInformations_Courses` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`),
-  CONSTRAINT `FK_PrerequisiteCoursesInformations_Courses1` FOREIGN KEY (`prerequisiteCourseId`) REFERENCES `courses` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `prerequisitecoursesinformations`
---
-
-LOCK TABLES `prerequisitecoursesinformations` WRITE;
-/*!40000 ALTER TABLE `prerequisitecoursesinformations` DISABLE KEYS */;
-/*!40000 ALTER TABLE `prerequisitecoursesinformations` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -709,7 +687,7 @@ CREATE TABLE `students` (
   KEY `FK_Students_PersonalInformation_idx` (`personalinformation_id`),
   CONSTRAINT `FK_Students_Login` FOREIGN KEY (`student_id`) REFERENCES `login` (`username`),
   CONSTRAINT `FK_Students_PersonalInformation` FOREIGN KEY (`personalinformation_id`) REFERENCES `personalinformation` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -718,7 +696,7 @@ CREATE TABLE `students` (
 
 LOCK TABLES `students` WRITE;
 /*!40000 ALTER TABLE `students` DISABLE KEYS */;
-INSERT INTO `students` VALUES (1,'2016000000009',1,1,'Md Anwer Hossain ','01721383577'),(4,'2016000000015',1,2,'Md Kibria ','01723121212');
+INSERT INTO `students` VALUES (1,'2016000000009',1,1,'Md Anwer Hossain ','01721383577'),(4,'2016000000015',1,2,'Md Kibria ','01723121212'),(6,'2016000000008',1,10,'Md Hasan Khan','01722589653'),(7,'2016000000007',1,11,'Md Hasan Khan','01722589653');
 /*!40000 ALTER TABLE `students` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -748,6 +726,68 @@ LOCK TABLES `sysdiagrams` WRITE;
 /*!40000 ALTER TABLE `sysdiagrams` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sysdiagrams` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Temporary view structure for view `vw_allassesments`
+--
+
+DROP TABLE IF EXISTS `vw_allassesments`;
+/*!50001 DROP VIEW IF EXISTS `vw_allassesments`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_allassesments` AS SELECT 
+ 1 AS `Id`,
+ 1 AS `Name`,
+ 1 AS `type`,
+ 1 AS `EntryBy_id`,
+ 1 AS `EntryDate`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_allclos`
+--
+
+DROP TABLE IF EXISTS `vw_allclos`;
+/*!50001 DROP VIEW IF EXISTS `vw_allclos`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_allclos` AS SELECT 
+ 1 AS `id`,
+ 1 AS `course_id`,
+ 1 AS `Name`,
+ 1 AS `Descriptions`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_allclotoplomapping`
+--
+
+DROP TABLE IF EXISTS `vw_allclotoplomapping`;
+/*!50001 DROP VIEW IF EXISTS `vw_allclotoplomapping`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_allclotoplomapping` AS SELECT 
+ 1 AS `id`,
+ 1 AS `clo_id`,
+ 1 AS `plo_id`,
+ 1 AS `points`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_allcourses`
+--
+
+DROP TABLE IF EXISTS `vw_allcourses`;
+/*!50001 DROP VIEW IF EXISTS `vw_allcourses`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_allcourses` AS SELECT 
+ 1 AS `id`,
+ 1 AS `name`,
+ 1 AS `code`,
+ 1 AS `credit`,
+ 1 AS `descriptions`*/;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Temporary view structure for view `vw_alldepartments`
@@ -940,6 +980,50 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_deleteAcademicGrading`(
 BEGIN
 	DELETE FROM academicgrading
     WHERE academicgrading.id = id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_deleteCLO` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_deleteCLO`(
+	IN Id INT 
+)
+BEGIN
+	DELETE FROM clo
+    WHERE clo.id = Id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_deleteCLOToPLOMapping` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_deleteCLOToPLOMapping`(
+	IN Id INT
+)
+BEGIN
+	DELETE FROM clotoplomapping
+    WHERE clotoplomapping.id = Id;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -1161,6 +1245,74 @@ BEGIN
         PercentageTo		,
         Gpa					,
         EntryBy_id
+    );
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_saveCLO` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_saveCLO`(
+	IN Name VARCHAR(100),
+    IN CourseId INT,
+    IN Descriptions VARCHAR(1000)
+)
+BEGIN
+	INSERT INTO clo
+    (
+		clo.course_id,
+		clo.name,
+        clo.descriptions
+	)
+    VALUES 
+    (	
+		CourseId,
+        Name,
+        Descriptions
+    );
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_saveCLOToPLOMapping` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_saveCLOToPLOMapping`(
+	IN CLOId INT,
+    IN PLOId INT,
+    IN Points FLOAT
+)
+BEGIN
+	INSERT INTO CLOToPLOMapping
+    (
+		clotoplomapping.clo_id,
+		clotoplomapping.plo_id,
+		clotoplomapping.points
+    )
+    VALUES
+    (
+		CLOId ,
+		PLOId ,	
+		Points 	
     );
 END ;;
 DELIMITER ;
@@ -1469,6 +1621,196 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_saveStaff` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_saveStaff`(
+	IN StaffId 			VARCHAR(13),
+    IN DepartmentId 	INT,
+    IN FullName 		VARCHAR(60),
+    IN FathersName 		VARCHAR(60),
+    IN MothersName 		VARCHAR(60),
+    IN DateOfBirth 		DATE,
+    IN Gender 			VARCHAR(6),
+    IN Contact 			VARCHAR(14),
+    IN Email 			VARCHAR(200),
+    IN PresentAddress 	VARCHAR(300),
+    IN PermanentAddress VARCHAR(300),
+    IN Image 			VARCHAR(200),
+    IN Password 		VARCHAR(200),
+    IN Role 			VARCHAR(50),
+    IN LastLoginDate 	DATETIME,
+    IN IsActive 		INT
+)
+BEGIN
+
+	INSERT INTO personalinformation
+    (
+		personalinformation.fullName 		,
+		personalinformation.fathersName 	,	
+		personalinformation.mothersName 	,	
+		personalinformation.dateOfBirth 	,	
+		personalinformation.gender 			,
+		personalinformation.contact 		,	
+		personalinformation.email 			,
+		personalinformation.presentAddress 	,
+		personalinformation.permanentAddress, 
+		personalinformation.image 			
+    )
+    VALUES
+    (
+		FullName 		,
+		FathersName 	,	
+		MothersName 	,	
+		DateOfBirth 	,	
+		Gender 			,
+		Contact 		,	
+		Email 			,
+		PresentAddress 	,
+		PermanentAddress, 
+		Image 			
+    );
+    
+	INSERT INTO staffs
+    (
+		staffs.staff_id 		,	
+		staffs.department_id 	,
+        staffs.personalInformation_id
+    )
+    VALUES 
+    (
+		StaffId 		,
+        DepartmentId 	,
+        LAST_INSERT_ID()
+    );
+    
+    INSERT INTO login
+    (
+		login.username,
+        login.password,
+        login.role,
+        login.lastLoginDate,
+        login.isActive
+    )VALUES
+    (
+		StaffId			,
+        Password 		,
+        Role 			,
+        LastLoginDate 	,
+		IsActive 	
+    );
+
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_saveStudent` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_saveStudent`(
+    IN StudentId		VARCHAR(13),
+    IN ProgramId 		INT,
+    IN GuardianName     VARCHAR(60),
+    IN GuardianContact  VARCHAR(14),
+    IN FullName 		VARCHAR(60),
+    IN FathersName 		VARCHAR(60),
+    IN MothersName 		VARCHAR(60),
+    IN DateOfBirth 		DATE,
+    IN Gender 			VARCHAR(6),
+    IN Contact 			VARCHAR(14),
+    IN Email 			VARCHAR(200),
+    IN PresentAddress 	VARCHAR(300),
+    IN PermanentAddress VARCHAR(300),
+    IN Image 			VARCHAR(200),
+    IN Password 		VARCHAR(200),
+    IN Role 			VARCHAR(50),
+    IN LastLoginDate 	DATETIME,
+    IN IsActive 		INT
+)
+BEGIN
+
+	INSERT INTO personalinformation
+    (
+		personalinformation.fullName 		,
+		personalinformation.fathersName 	,	
+		personalinformation.mothersName 	,	
+		personalinformation.dateOfBirth 	,	
+		personalinformation.gender 			,
+		personalinformation.contact 		,	
+		personalinformation.email 			,
+		personalinformation.presentAddress 	,
+		personalinformation.permanentAddress, 
+		personalinformation.image 			
+    )
+    VALUES
+    (
+		FullName 		,
+		FathersName 	,	
+		MothersName 	,	
+		DateOfBirth 	,	
+		Gender 			,
+		Contact 		,	
+		Email 			,
+		PresentAddress 	,
+		PermanentAddress, 
+		Image 			
+    );
+    
+    INSERT INTO login
+    (
+		login.username,
+        login.password,
+        login.role,
+        login.lastLoginDate,
+        login.isActive
+    )VALUES
+    (
+		StudentId		,
+        Password 		,
+        Role 			,
+        LastLoginDate 	,
+		IsActive 	
+    );
+    
+    INSERT INTO students
+    (
+		students.student_id ,	
+		students.program_id ,
+        students.personalInformation_id,
+        students.guardianName,
+        students.guardianContact
+    )
+    VALUES 
+    (
+		StudentId 		,
+        ProgramId 	,
+        LAST_INSERT_ID(),
+        GuardianName,
+        GuardianContact
+    );
+
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `sp_updateAcademicGrading` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -1498,6 +1840,66 @@ BEGIN
     academicgrading.gpa					= Gpa,
     academicgrading.EntryBy_id			= EntryBy_id
     WHERE academicgrading.id = id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_updateCLO` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updateCLO`(
+	IN Id INT,
+	IN Name VARCHAR(100),
+    IN CourseId INT,
+    IN Descriptions VARCHAR(1000)
+)
+BEGIN
+	UPDATE clo
+    SET
+		clo.course_id = CourseId,
+        clo.name = Name,
+        clo.descriptions = Descriptions
+    WHERE 
+    clo.id = Id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_updateCLOToPLOMapping` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updateCLOToPLOMapping`(
+	IN Id INT,
+	IN CLOId INT,
+    IN PLOId INT,
+    IN Points FLOAT
+)
+BEGIN
+	UPDATE clotoplomapping
+    SET
+    clotoplomapping.clo_id = CLOId,
+    clotoplomapping.plo_id = PLOId,
+    clotoplomapping.points = Points
+    WHERE 
+    clotoplomapping.id = Id;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -1775,6 +2177,78 @@ DELIMITER ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
+-- Final view structure for view `vw_allassesments`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_allassesments`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_allassesments` AS select `assesments`.`Id` AS `Id`,`assesments`.`Name` AS `Name`,`assesments`.`type` AS `type`,`assesments`.`EntryBy_id` AS `EntryBy_id`,`assesments`.`EntryDate` AS `EntryDate` from `assesments` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_allclos`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_allclos`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_allclos` AS select `clo`.`id` AS `id`,`clo`.`course_id` AS `course_id`,`clo`.`Name` AS `Name`,`clo`.`Descriptions` AS `Descriptions` from `clo` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_allclotoplomapping`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_allclotoplomapping`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_allclotoplomapping` AS select `clotoplomapping`.`id` AS `id`,`clotoplomapping`.`clo_id` AS `clo_id`,`clotoplomapping`.`plo_id` AS `plo_id`,`clotoplomapping`.`points` AS `points` from `clotoplomapping` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_allcourses`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_allcourses`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_allcourses` AS select `courses`.`id` AS `id`,`courses`.`name` AS `name`,`courses`.`code` AS `code`,`courses`.`credit` AS `credit`,`courses`.`descriptions` AS `descriptions` from `courses` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
 -- Final view structure for view `vw_alldepartments`
 --
 
@@ -1963,4 +2437,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-18 18:03:04
+-- Dump completed on 2020-06-20  7:07:13

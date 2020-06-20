@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using OBETools.BLL.Services;
 using OBETools.Models;
 using OBETools.Models.View_Model;
+using OBETools.Utility;
 
 namespace OBETools.Controllers
 {
@@ -27,12 +28,57 @@ namespace OBETools.Controllers
             return View(Users);
         }
 
+        public ActionResult StudentCreate()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult StudentCreate(Student Student)
+        {
+            if (ModelState.IsValid)
+            {
+                string message = StudentService.Save(Student, User.Identity.Name);
+                if (string.IsNullOrEmpty(message))
+                {
+                    TempData["Success"] = Messages.Created;
+                    return RedirectToAction("Index");
+                }
+                else ViewData["Warning"] = message;
+            }
+            else ViewData["Error"] = Messages.InvalidField;
+            return View();
+        }
+
+        public ActionResult StaffCreate()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult StaffCreate(Staff Staff)
+        {
+            if (ModelState.IsValid)
+            {
+                string message = StaffService.Save(Staff, User.Identity.Name);
+                if (string.IsNullOrEmpty(message))
+                {
+                    TempData["Success"] = Messages.Created;
+                    return RedirectToAction("Index");
+                }
+                else ViewData["Warning"] = message;
+            }
+            else ViewData["Error"] = Messages.InvalidField;
+            return View();
+        }
+
+
         public ActionResult StudentDetails(int id)
         {
             if (id > 0)
             {
                 Student Student = StudentService.FindById(id, User.Identity.Name);
-                return PartialView("Partial/StudentDetails", Student);
+                return View("Partial/StudentDetails", Student);
             }
             return View();
         }
@@ -42,7 +88,7 @@ namespace OBETools.Controllers
             if (id > 0)
             {
                 Staff Staff = StaffService.FindById(id, User.Identity.Name);
-                return PartialView("Partial/StaffDetails", Staff);
+                return View("Partial/StaffDetails", Staff);
             }
             return View();
         }

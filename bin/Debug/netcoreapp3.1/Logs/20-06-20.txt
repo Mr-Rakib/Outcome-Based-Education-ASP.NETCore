@@ -1,0 +1,238 @@
+-----------Exception Details on  6/20/2020 6:23:15 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/20/2020 6:23:15 AM
+
+File Name       :  R:\University Period\Research\Bitbucket\obetools\DAL\Repository\LoginRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  35
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/20/2020 6:33:36 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/20/2020 6:33:36 AM
+
+File Name       :  R:\University Period\Research\Bitbucket\obetools\DAL\Repository\StudentRepository.cs
+Methods Name    :  Save
+Error Line No   :  95
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  Column 'presentAddress' cannot be null
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/20/2020 6:35:14 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/20/2020 6:35:14 AM
+
+File Name       :  R:\University Period\Research\Bitbucket\obetools\DAL\Repository\StudentRepository.cs
+Methods Name    :  Save
+Error Line No   :  95
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  Column 'presentAddress' cannot be null
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/20/2020 6:35:24 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/20/2020 6:35:24 AM
+
+File Name       :  R:\University Period\Research\Bitbucket\obetools\DAL\Repository\LoginRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  35
+Coulumn Number  :  25
+Error Message   :  InvalidOperationException
+Exception Type  :  System.InvalidOperationException
+Error Location  :  Connection must be valid and open.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/20/2020 6:44:52 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/20/2020 6:44:52 AM
+
+File Name       :  R:\University Period\Research\Bitbucket\obetools\DAL\Repository\StudentRepository.cs
+Methods Name    :  Save
+Error Line No   :  95
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  Cannot add or update a child row: a foreign key constraint fails (`obe`.`students`, CONSTRAINT `FK_Students_Login` FOREIGN KEY (`student_id`) REFERENCES `login` (`username`))
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/20/2020 6:46:02 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/20/2020 6:46:02 AM
+
+File Name       :  R:\University Period\Research\Bitbucket\obetools\DAL\Repository\StudentRepository.cs
+Methods Name    :  Save
+Error Line No   :  95
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  Column 'role' cannot be null
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/20/2020 6:48:26 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/20/2020 6:48:26 AM
+
+File Name       :  R:\University Period\Research\Bitbucket\obetools\DAL\Repository\StudentRepository.cs
+Methods Name    :  Save
+Error Line No   :  95
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  Column 'role' cannot be null
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/20/2020 6:49:44 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/20/2020 6:49:44 AM
+
+File Name       :  R:\University Period\Research\Bitbucket\obetools\DAL\Repository\StudentRepository.cs
+Methods Name    :  Save
+Error Line No   :  95
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  Column 'role' cannot be null
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/20/2020 6:57:35 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/20/2020 6:57:35 AM
+
+File Name       :  R:\University Period\Research\Bitbucket\obetools\DAL\Repository\LoginRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  35
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/20/2020 6:59:02 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/20/2020 6:59:02 AM
+
+File Name       :  R:\University Period\Research\Bitbucket\obetools\DAL\Repository\StudentRepository.cs
+Methods Name    :  Save
+Error Line No   :  95
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  Column 'role' cannot be null
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/20/2020 7:04:12 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/20/2020 7:04:12 AM
+
+File Name       :  R:\University Period\Research\Bitbucket\obetools\DAL\Repository\MissionRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/20/2020 7:04:12 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/20/2020 7:04:12 AM
+
+File Name       :  R:\University Period\Research\Bitbucket\obetools\DAL\Repository\ProgramRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  30
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/20/2020 7:04:12 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/20/2020 7:04:12 AM
+
+File Name       :  R:\University Period\Research\Bitbucket\obetools\DAL\Repository\PLORepository.cs
+Methods Name    :  FindAll
+Error Line No   :  33
+Coulumn Number  :  29
+Error Message   :  NotSupportedException
+Exception Type  :  System.NotSupportedException
+Error Location  :   The ReadAsync method cannot be called when another read operation is pending.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/20/2020 7:04:12 AM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/20/2020 7:04:12 AM
+
+File Name       :  R:\University Period\Research\Bitbucket\obetools\DAL\Repository\LoginRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  35
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+

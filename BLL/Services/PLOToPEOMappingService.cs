@@ -163,7 +163,7 @@ namespace OBETools.BLL.Services
         {
             if (PLOService.FindById(PLOToPEOMapping.PLO.Id, currentUsername) != null)
             {
-                if (PEOService.FindById(PLOToPEOMapping.PLO.Id, currentUsername) != null)
+                if (PEOService.FindById(PLOToPEOMapping.PEO.Id, currentUsername) != null)
                 {
                     return null;
                 }

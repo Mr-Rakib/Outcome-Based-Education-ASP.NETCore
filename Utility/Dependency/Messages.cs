@@ -71,5 +71,10 @@ namespace OBETools.Utility
         public static string DepartmentNotFound = "Department Not Found";
 
         public static string PLONotFound = "PLO Not Found";
+
+        public static string CourseNotFound = "Course Not Found";
+        public static string CLONotFound = "CLO Not Found";
+
+        public static string InvalidImage = "Image Size not more than 200KB and Extention should be jpg, jpeg or png";
     }
 }

@@ -1,0 +1,56 @@
+﻿@model OBETools.Models.CLO
+
+@{
+    List<Course> CourseList = new CourseService().FindAll(User.Identity.Name);
+}
+
+
+<div class="pt-3 container ">
+    @Html.Partial("Notifications/_Notification")
+
+    <div class="row pl-4">
+        <h4 class="mt-4 mb-1 font-weight-light "><i class="fas fa-plus-circle"></i>&nbsp; ADD NEW CLO</h4>
+    </div>
+    <hr class="c-hr-gray mb-4" />
+
+    <div class="container-fluid">
+        <form asp-action="CreateCLO" asp-controller="Academy" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control " required />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label asp-for="Course.Name" class="control-label"></label>
+                    <select asp-for="Course.Id" class="form-control">
+                        @foreach (var items in CourseList)
+                        {
+                            <option value=@(items.Id)>@items.Name</option>
+                        }
+                    </select>
+                    <span asp-validation-for="Course" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label asp-for="@Model.Descriptions" class="control-label"></label>&nbsp;*
+                    <textarea asp-for="@Model.Descriptions" class="form-control " rows="4" id="text-area" required></textarea>
+                    <span asp-validation-for="@Model.Descriptions" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <button type="submit" class="btn-sm btn-info btn btn-block">Save</button>
+                </div>
+                <div class="form-group col-md-6">
+                    <button type="reset" class="btn-sm btn-danger btn btn-block">Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -29,13 +29,14 @@ namespace OBETools.Controllers
             string message = null;
             if (ModelState.IsValid)
             {
-                message = loginService.IsValidLogin(login, User.Identity.Name);
+                message = loginService.IsValidLogin(login);
 
                 if (String.IsNullOrEmpty(message))
                 {
-                    login = loginService.FindByUsername(login.Username, User.Identity.Name);
+                    login = loginService.FindByUsername(login.Username);
                     if (GetLogin(login).IsCompleted)
                     {
+                        loginService.UpdateLastLoginDate(login);
                         return RedirectToAction("Index", "Home");
                     }
                     else message = Messages.Issue;
@@ -55,6 +56,8 @@ namespace OBETools.Controllers
                 new Claim(ClaimTypes.Role, login.Role),
             }, CookieAuthenticationDefaults.AuthenticationScheme);
 
+            HttpContext.Session.SetString("Role", login.Role);
+
             var principal = new ClaimsPrincipal(identity);
             return HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
         }
@@ -67,8 +70,8 @@ namespace OBETools.Controllers
 
         private ActionResult IsAuthorize()
         {
-            return (string.IsNullOrEmpty(HttpContext.Session.GetString("UserName"))) ?
-                    View() : (ActionResult)RedirectToAction("Index", "Dashboard");
+            return (string.IsNullOrEmpty(User.Identity.Name)) ?
+                    View() : (ActionResult)RedirectToAction("Index", "Home");
         }
 
     }

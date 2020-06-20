@@ -35,7 +35,7 @@
         </div>
 
         <div class="tab-pane fade " id="admin" role="tabpanel" aria-labelledby="admin-tab">
-           
+            @Html.Partial("Partial/CLOToPLO", Model.CLOToPLOs)
         </div>
     </div>
     <!-------------------TAB------------------>
@@ -57,3 +57,10 @@
     </div>
 </div>
 
+
+<!--CLO To PLO Modal-->
+<div class="modal fade" id="view-clotoplo-modal" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document" id="viewclotoplomodal">
+
+    </div>
+</div>

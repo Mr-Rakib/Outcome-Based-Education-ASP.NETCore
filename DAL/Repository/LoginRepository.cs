@@ -63,7 +63,7 @@ namespace OBETools.DAL.Repository
 
         public bool Update(Login Items)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

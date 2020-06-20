@@ -1,0 +1,40 @@
+﻿@model OBETools.Models.View_Model.CLOToPLO
+
+@{
+    int count = 1;
+}
+
+<div class="modal-content custom-profile-modal">
+    <div class="modal-header">
+        <div class="p-1">
+            <h6 class="mt-4 mb-1 font-weight-light "><i class="fas fa-tasks"></i>&nbsp; @Model.CLO.Name With PLO (MAPPING )</h6>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="fas fa-times text-dark"></i></span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="CLO.Course.Name"></label>
+                  <input class="form-control" readonly value="@Model.CLO.Course.Name"/>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="CLO.Course.Code"></label>
+                <input class="form-control" readonly value="@Model.CLO.Course.Code" />
+            </div>
+
+            <div class="container border">
+                <div class="text-center form-group  col-md-12">
+                    <h6 class="mt-4 mb-1 font-weight-light"><i class="fab fa-stack-overflow"></i>&nbsp; PLO WITH POINTS</h6>
+                    <hr />
+                </div>
+                <div class="pb-3">
+                    @Html.Partial("partial/PLOMaplIst", Model.MapPLOLists)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

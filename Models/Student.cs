@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -19,5 +20,6 @@ namespace OBETools.Models
         [DisplayName("Guardian Contact")]
         public string GuardianContact { get; set; }
         public Login Login { get; set; }
+        
     }
 }

@@ -9,7 +9,7 @@ namespace OBETools.Utility
     {
         Superadmin,
         Admin,
-        Atudent,
+        Student,
         Faculty,
         Authorty
     }

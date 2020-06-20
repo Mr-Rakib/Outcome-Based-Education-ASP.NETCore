@@ -14,6 +14,7 @@ namespace OBETools.Controllers
     {
         private readonly MissionToPEOMappingService MissionToPEOMappingService = new MissionToPEOMappingService();
         private readonly PLOToPEOMappingService PLOToPEOMappingService = new PLOToPEOMappingService();
+        private readonly CLOToPLOMappingService CLOToPLOMappingService = new CLOToPLOMappingService();
 
         ///------------------------ ALL MAPPING -------------------------------///
         public ActionResult Index()
@@ -21,9 +22,11 @@ namespace OBETools.Controllers
             Mapping Mapping = new Mapping();
             Mapping.MissionToPEOs = new List<MissionToPEO>();
             Mapping.PLOToPEOs = new List<PLOToPEO>();
+            Mapping.CLOToPLOs = new List<CLOToPLO>();
 
             Mapping.MissionToPEOs = MissionToPEOMappingService.FindAllMissionToPEO(User.Identity.Name);
             Mapping.PLOToPEOs = PLOToPEOMappingService.FindAllPLOToPEO(User.Identity.Name);
+            Mapping.CLOToPLOs = CLOToPLOMappingService.FindAllCLOToPLO(User.Identity.Name);
             return View(Mapping);
         }
 
@@ -187,5 +190,87 @@ namespace OBETools.Controllers
             else ViewData["Warning"] = Messages.InvalidField;
             return View();
         }
+
+        /// -------------------------------- CLO TO PLO ------------------------------------ ///
+
+        public ActionResult CLOToPLODetails(int id)
+        {
+            if (id > 0)
+            {
+                CLOToPLO CLOToPLOMapping = CLOToPLOMappingService.FindByCLOId(id, User.Identity.Name);
+                return PartialView("Partial/CLOToPLODetails", CLOToPLOMapping);
+            }
+            return View();
+        }
+
+        public ActionResult CLOToPLOCreate()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CLOToPLOCreate(CLOToPLO CLOToPLO)
+        {
+            if (ModelState.IsValid)
+            {
+                string message = CLOToPLOMappingService.SaveMapping(CLOToPLO, User.Identity.Name);
+                if (string.IsNullOrEmpty(message))
+                {
+                    TempData["Success"] = Messages.Created;
+                    return RedirectToAction("Index");
+                }
+                else ViewData["Warning"] = message;
+            }
+            else ViewData["Error"] = Messages.InvalidField;
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult CLOToPLOEdit(int id)
+        {
+            if (id > 0)
+            {
+                CLOToPLO CLOToPLO = CLOToPLOMappingService.FindByCLOId(id, User.Identity.Name);
+                return View(CLOToPLO);
+            }
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CLOToPLOEdit(CLOToPLO CLOToPLO)
+        {
+            string message;
+            if (ModelState.IsValid)
+            {
+                message = CLOToPLOMappingService.UpdateMapping(CLOToPLO, User.Identity.Name);
+                if (String.IsNullOrEmpty(message))
+                {
+                    TempData["Success"] = Messages.Updated;
+                    return RedirectToAction("Index");
+                }
+                else ViewData["Warning"] = message;
+            }
+            else ViewData["Warning"] = Messages.InvalidField;
+            return View();
+        }
+
+        public ActionResult CLOToPLODelete(int id)
+        {
+            string message;
+            if (id > 0)
+            {
+                message = CLOToPLOMappingService.Delete(id, User.Identity.Name);
+                if (String.IsNullOrEmpty(message))
+                {
+                    TempData["Error"] = Messages.Deleted;
+                    return RedirectToAction("Index");
+                }
+                else ViewData["Warning"] = message;
+            }
+            else ViewData["Warning"] = Messages.InvalidField;
+            return View();
+        }
+
     }
 }

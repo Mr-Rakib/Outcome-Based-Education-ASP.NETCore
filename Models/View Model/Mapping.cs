@@ -8,6 +8,7 @@ namespace OBETools.Models.View_Model
     public class Mapping
     {
         public List<MissionToPEO> MissionToPEOs { get; set; }
+        public List<CLOToPLO> CLOToPLOs { get; set; }
         public List<PLOToPEO> PLOToPEOs { get; set; }
     }
 }

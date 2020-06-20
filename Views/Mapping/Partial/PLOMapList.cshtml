@@ -1,0 +1,30 @@
+﻿@model IEnumerable<OBETools.Models.View_Model.MapPLO>
+
+@{
+    int slno = 1;
+}
+
+<div class="table-responsive">
+    <table class="table table-bordered display MultipleDataTable" id="dataTable_User" width="100%" cellspacing="0">
+        <thead>
+            <tr class="custom-table-mapping text-center">
+                <th class="text-left">Sl No.</th>
+                <th>@Html.DisplayNameFor(model => model.PLO.Name)</th>
+                <th>@Html.DisplayNameFor(model => model.Points)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                if (item.Points > 0)
+                {
+                    <tr>
+                        <td>@(slno++)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PLO.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Points)</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

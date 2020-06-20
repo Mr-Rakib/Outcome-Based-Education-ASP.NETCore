@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;
+using OBETools.DAL.Interface;
 using OBETools.Models;
 using OBETools.Utility;
 using OBETools.Utility.Connection;
@@ -11,12 +12,17 @@ using System.Threading.Tasks;
 
 namespace OBETools.DAL.Repository
 {
-    public class StaffRepository
+    public class StaffRepository : ICRUDRepository<Staff>
     {
 
         private MySqlConnection connection;
         private MySqlCommand command;
         private MySqlDataReader reader;
+
+        public bool Delete(int Id)
+        {
+            throw new NotImplementedException();
+        }
 
         public List<Staff> FindAll()
         {
@@ -71,6 +77,74 @@ namespace OBETools.DAL.Repository
                 Logger.Log(ex);
             }
             return allStaff;
+        }
+
+        public bool Save(Staff Staff)
+        {
+            int status = 0;
+            using (connection = Database.GetConnection())
+            {
+                try
+                {
+                    using (command = new MySqlCommand(Procedures.SaveStaff, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        SetAllParameters(Staff);
+                        connection.Open();
+                        status = command.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Log(ex);
+                }
+            }
+            return (status > 0) ? true : false;
+        }
+
+
+        public bool Update(Staff Staff)
+        {
+            int status = 0;
+            using (connection = Database.GetConnection())
+            {
+                try
+                {
+                    using (command = new MySqlCommand(Procedures.UpdateStaff, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add(new MySqlParameter("@StudentId", Staff.StaffId));
+                        SetAllParameters(Staff);
+                        connection.Open();
+                        status = command.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Log(ex);
+                }
+            }
+            return (status > 0) ? true : false;
+        }
+        
+        public void SetAllParameters(Staff Staff)
+        {
+            command.Parameters.Add(new MySqlParameter("@StaffId", Staff.StaffId));
+            command.Parameters.Add(new MySqlParameter("@DepartmentId", Staff.Department.Id));
+            command.Parameters.Add(new MySqlParameter("@FullName", Staff.PersonalInformation.FullName));
+            command.Parameters.Add(new MySqlParameter("@FathersName", Staff.PersonalInformation.FathersName));
+            command.Parameters.Add(new MySqlParameter("@MothersName", Staff.PersonalInformation.MothersName));
+            command.Parameters.Add(new MySqlParameter("@DateOfBirth", Staff.PersonalInformation.DateOfBirth));
+            command.Parameters.Add(new MySqlParameter("@Gender", Staff.PersonalInformation.Gender));
+            command.Parameters.Add(new MySqlParameter("@Contact", Staff.PersonalInformation.Contact));
+            command.Parameters.Add(new MySqlParameter("@Email", Staff.PersonalInformation.Email));
+            command.Parameters.Add(new MySqlParameter("@PresentAddress", Staff.PersonalInformation.PresentAddress));
+            command.Parameters.Add(new MySqlParameter("@PermanentAddress", Staff.PersonalInformation.PermanentAddress));
+            command.Parameters.Add(new MySqlParameter("@Image", Staff.PersonalInformation.Image));
+            command.Parameters.Add(new MySqlParameter("@Password", Staff.Login.Password));
+            command.Parameters.Add(new MySqlParameter("@Role", Staff.Login.Role));
+            command.Parameters.Add(new MySqlParameter("@LastLoginDate", Staff.Login.LastLoginDate));
+            command.Parameters.Add(new MySqlParameter("@IsActive", Staff.Login.IsActive));
         }
     }
 }

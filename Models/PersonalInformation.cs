@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -30,5 +31,6 @@ namespace OBETools.Models
         public string PermanentAddress { get; set; }
         [DisplayName("Image")]
         public string Image { get; set; }
+        public IFormFile ImageFile { get; set; }
     }
 }

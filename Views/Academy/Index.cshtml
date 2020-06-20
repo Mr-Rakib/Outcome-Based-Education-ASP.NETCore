@@ -9,11 +9,11 @@
 
     </div>
     <hr class="c-hr-gray" />
-    
+
     <div class="pt-2">
         @Html.Partial("Partial/_Cards")
     </div>
-    
+
     <ul class="nav nav-tabs mb-1" id="myTab" role="tablist">
 
 
@@ -26,18 +26,23 @@
         <li class="nav-item">
             <a class="nav-link " id="admin-tab" data-toggle="tab" href="#admin" role="tab" aria-controls="admin" aria-selected="false">PLO</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link " id="clo-tab" data-toggle="tab" href="#clo" role="tab" aria-controls="clo" aria-selected="false">CLO</a>
+        </li>
+
     </ul>
     <div class="tab-content" id="myTabContent">
-
         <div class="tab-pane fade show active" id="user" role="tabpanel" aria-labelledby="user-tab">
             @Html.Partial("Partial/Missions", Model.Missions)
         </div>
         <div class="tab-pane fade" id="vet" role="tabpanel" aria-labelledby="vet-tab">
             @Html.Partial("Partial/PEOs", Model.PEOs)
         </div>
-
         <div class="tab-pane fade " id="admin" role="tabpanel" aria-labelledby="admin-tab">
             @Html.Partial("Partial/PLOs", Model.PLOs)
+        </div>
+        <div class="tab-pane fade" id="clo" role="tabpanel" aria-labelledby="clo-tab">
+            @Html.Partial("Partial/CLOs", Model.CLOs)
         </div>
     </div>
 </div>
@@ -56,9 +61,14 @@
     </div>
 </div>
 
-
 <div class="modal fade" id="view-plo-modal" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document" id="viewplomodal">
+
+    </div>
+</div>
+
+<div class="modal fade" id="view-clo-modal" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document" id="viewclomodal">
 
     </div>
 </div>

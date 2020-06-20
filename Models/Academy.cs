@@ -10,5 +10,6 @@ namespace OBETools.Models
         public List<Mission> Missions { get; set; }
         public List<PEO> PEOs { get; set; }
         public List<PLO> PLOs { get; set; }
+        public List<CLO> CLOs { get; set; }
     }
 }

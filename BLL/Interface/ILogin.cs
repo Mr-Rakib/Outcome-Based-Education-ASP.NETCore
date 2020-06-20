@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OBETools.BLL.Interface
 {
-    interface ILogin : ICRUD<Login>
+    interface ILogin
     {
         Login FindByUsername(string username, string currentUsername);
         Login FindByUsernameAndPassword(string username, string password, string currentUsername);
