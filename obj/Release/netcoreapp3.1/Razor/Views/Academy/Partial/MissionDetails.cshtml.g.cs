@@ -47,20 +47,27 @@ using System.Linq;
 #nullable disable
 #nullable restore
 #line 6 "R:\University Period\Research\Bitbucket\obetools\Views\_ViewImports.cshtml"
-using Microsoft.AspNetCore.Http;
+using OBETools.Utility;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 7 "R:\University Period\Research\Bitbucket\obetools\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Http;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 8 "R:\University Period\Research\Bitbucket\obetools\Views\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Mvc;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3b437e44a8b3015df07e1089eee3bdc8f16e7210", @"/Views/Academy/Partial/MissionDetails.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"08be7c9f67e66a1aa08d9810aee868fb20346d11", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"747c42f5f4e2f03f70a6f9f4d06a0ff9c6531df8", @"/Views/_ViewImports.cshtml")]
     public class Views_Academy_Partial_MissionDetails : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<OBETools.Models.Mission>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-group col-md-4"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -109,7 +116,7 @@ using Microsoft.AspNetCore.Mvc;
                                 <div class=""form-row pt-4 pb-3"">
 
                                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3b437e44a8b3015df07e1089eee3bdc8f16e72105264", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3b437e44a8b3015df07e1089eee3bdc8f16e72105444", async() => {
                 WriteLiteral(" ");
             }
             );
@@ -140,7 +147,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
 #line hidden
 #nullable disable
             WriteLiteral(" </label>\r\n\r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3b437e44a8b3015df07e1089eee3bdc8f16e72107292", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3b437e44a8b3015df07e1089eee3bdc8f16e72107472", async() => {
                 WriteLiteral(" ");
             }
             );

@@ -2228,7 +2228,6 @@ R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\V
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Mapping\Partial\CLOToPLO.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Mapping\Partial\CLOToPLODetails.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Mapping\Partial\PLOMapList.cshtml.g.cs
-R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\OBETools.csprojAssemblyReference.cache
 R:\University Period\Research\Bitbucket\obetools\bin\Debug\netcoreapp3.1\EasyConveyor.dll
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\OBETools.csproj.CoreCompileInputs.cache
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\OBETools.MvcApplicationPartsAssemblyInfo.cs
@@ -2240,3 +2239,10 @@ R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\V
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\User\StudentCreate.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\User\StudentDetails.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\User\StaffCreate.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\OBETools.csprojAssemblyReference.cache
+R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Assessment\Assesments.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Assessment\CreateAssessment.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Assessment\EditAssessment.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Assessment\Index.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Assessment\Partial\_Cards.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Assessment\Partial\AssessmentDetails.cshtml.g.cs

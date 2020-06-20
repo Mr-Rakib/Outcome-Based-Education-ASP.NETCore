@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Assessment>
+@{
+    int count = 1;
+}
+
+<div class="text-right col-md-12 pb-2">
+    <a class="btn btn-info btn-custom-style" asp-action="CreateAssessment" asp-controller="Assessment"><i class="fas fa-plus-circle"></i>&nbsp;Create Assessment</a>
+</div>
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered display MultipleDataTable" id="dataTable_User" width="100%" cellspacing="0">
+                <thead>
+                    <tr class="custom-table-course text-center">
+                        <th class="text-left">Sl No.</th>
+                        <th colspan="1">@Html.DisplayNameFor(model => model.Name)</th>
+                        <th colspan="1">@Html.DisplayNameFor(model => model.Type)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@(count++)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Type)</td>
+                            <td class="text-center" style="font-size: .75em">
+                                <a class="p-1" asp-action="EditAssessment" asp-controller="Assessment" asp-route-id="@item.Id"><i class="far fa-edit text-info"></i></a>
+                                <a class="p-1" title="View Details" data-toggle="modal" data-target="#view-assessment-modal" data-id="@item.Id"><i class="far fa-eye text-secondery"></i></a>
+                                <!--
+                                     <a class="p-1" onclick="return confirm('Are you sure you want to delete?')" asp-action="DeleteMission" asp-controller="Academy" asp-route-id="@item.Id"><i class="far fa-trash-alt text-danger"></i></a>
+                                -->
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,6 @@
 ﻿using OBETools.BLL.Services;
+using OBETools.DAL.Repository;
+using OBETools.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,6 +15,9 @@ namespace OBETools.Utility
 {
     public static class Security
     {
+        private static readonly LoginService LoginService = new LoginService();
+        private static readonly StaffService StaffService = new StaffService();
+
         private static string EncryptionKey = "abc123";
         public static string Encrypt(string EncryptText)
         {
@@ -34,6 +39,8 @@ namespace OBETools.Utility
             }
             return EncryptText;
         }
+
+
         public static string Decrypt(string DecryptText)
         {
             DecryptText = DecryptText.Replace(" ", "+");
@@ -58,9 +65,16 @@ namespace OBETools.Utility
 
         public static string GetCurrentRole(string username)
         {
-            LoginService LoginService = new LoginService();
             string role = LoginService.FindByUsername(username).Role;
             return role;
+        }
+
+
+        internal static Staff GetCurrentUser(string currentUsername)
+        {
+            Staff staff = new Staff();
+            staff = StaffService.FindAll(currentUsername).Find(st => st.StaffId == currentUsername);
+            return staff;
         }
 
     }

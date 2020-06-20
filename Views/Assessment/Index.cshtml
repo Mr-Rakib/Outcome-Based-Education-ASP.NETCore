@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Assessment>
+<div>
+    <div class="pt-2">
+        @Html.Partial("Notifications/_Notification")
+    </div>
+    <div class="row">
+        <h2 class="mt-4 mb-1 font-weight-light"><i class="fas fa-stream p-1"></i>&nbsp; Assesmet Management</h2>
+        <hr />
+
+    </div>
+    <hr class="c-hr-gray" />
+
+    <div class="pt-2">
+        @Html.Partial("Partial/_Cards")
+    </div>
+    <div>
+        @Html.Partial("Assesments")
+    </div>
+        
+</div>
+
+
+<!--Profile Modal-->
+<div class="modal fade" id="view-assessment-modal" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document" id="viewassessmentmodal">
+
+    </div>
+</div>

@@ -97,9 +97,10 @@ namespace OBETools.DAL.Repository
                 catch (Exception ex)
                 {
                     Logger.Log(ex);
+                    return false;
                 }
             }
-            return (status > 0) ? true : false;
+            return true ;
         }
 
 

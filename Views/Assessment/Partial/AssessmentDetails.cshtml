@@ -1,0 +1,42 @@
+﻿@model OBETools.Models.Assessment
+
+<div class="modal-content custom-profile-modal">
+    <div class="modal-header">
+        <div class="p-1">
+            <h4 class=" font-weight-light"><i class="fas fa-stream"></i> &nbsp;ASSESSMENT</h4>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="fas fa-times text-dark"></i></span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+        <div class="container bootstrap snippet">
+            <div class="col-md-12 ">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12 pb-3">
+                                <div class="form-row pt-4 pb-3">
+
+                                    <label class="form-group col-md-4" asp-for="@Model.Name"> </label>
+                                    <label class="form-group border col-md-8"> @(Model.Name == "" ? "Not Set" : Model.Name) </label>
+
+                                    <label class="form-group col-md-4" asp-for="@Model.Type"> </label>
+                                    <label class="form-group border col-md-8" asp-for="@Model.Type"> </label>
+
+                                    <label class="form-group  col-md-4" asp-for="@Model.EntryInformation.EntryById"></label>
+                                    <label class="form-group  col-md-8"> @Model.EntryInformation.EntryById </label>
+
+                                    <label class="form-group  col-md-4" asp-for="@Model.EntryInformation.EntryDate"></label>
+                                    <label class="form-group border col-md-8"> @Model.EntryInformation.EntryDate</label>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

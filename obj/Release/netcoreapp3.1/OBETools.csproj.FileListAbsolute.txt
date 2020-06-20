@@ -471,3 +471,10 @@ R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\stati
 R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\OBETools.dll
 R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\OBETools.pdb
 R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\OBETools.genruntimeconfig.cache
+R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\User\Partial\Staffs.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\User\Partial\Students.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\User\Partial\_Cards.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\User\StaffCreate.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\User\StaffDetails.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\User\StudentCreate.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\User\StudentDetails.cshtml.g.cs

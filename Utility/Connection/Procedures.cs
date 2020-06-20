@@ -53,5 +53,9 @@ namespace OBETools.Utility.Connection
 
         public static string UpdateStudent      = "sp_updateStudent";
         public static string UpdateStaff        = "sp_updateStaff";
+
+        public static string UpdateAssessment = "sp_updateAssessment";
+        public static string SaveAssessment   = "sp_saveAssessment";
+        public static string DeleteAssessment = "sp_deleteAssessment";
     }
 }

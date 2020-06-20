@@ -106,7 +106,7 @@
                     <label asp-for="@Model.PersonalInformation.Image" class="control-label"></label><br />
 
                     <div class="custom-file">
-                        <input asp-for="@Model.PersonalInformation.ImageFile" type="file" class="custom-file-input" id="customFile">
+                        <input asp-for="@Model.PersonalInformation.ImageFile" type="file" class="custom-file-input" id="customFile " required>
                         <label class="custom-file-label" for="customFile">Choose file</label>
                     </div>
                     <span asp-validation-for="@Model.PersonalInformation.ImageFile" class="text-danger"></span>
@@ -120,9 +120,9 @@
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label asp-for="@Model.PersonalInformation.PermanentAddress" class="control-label"></label>&nbsp;*
-                    <textarea asp-for="@Model.PersonalInformation.PermanentAddress" class="form-control" rows="3" id="text-area" required></textarea>
-                    <span asp-validation-for="@Model.PersonalInformation.PermanentAddress" class="text-danger"></span>
+                    <label asp-for="@Model.PersonalInformation.PresentAddress" class="control-label"></label>&nbsp;*
+                    <textarea asp-for="@Model.PersonalInformation.PresentAddress" class="form-control" rows="3" id="text-area" required></textarea>
+                    <span asp-validation-for="@Model.PersonalInformation.PresentAddress" class="text-danger"></span>
                 </div>
 
                 <div class="form-group col-md-6">

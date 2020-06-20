@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Assessment>
+
+    <div class="row container">
+        <div class="col-xl-4 col-md-6">
+            <div class="card custom-card-mission text-white mb-4">
+                <div class="card-body d-flex align-items-center justify-content-between">
+                    <H3 class="font-weight-light"> <i class="fas fa-book-reader"></i>&nbsp; COURSE</H3>
+                    <H1 class="font-weight-normal">
+                        @Model.ToList().Count
+                    </H1>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-md-6">
+            <div class="card custom-card-plo text-white mb-4">
+                <div class="card-body d-flex align-items-center justify-content-between">
+                    <H3 class="font-weight-light"> <i class="fas fa-tasks"></i>&nbsp; ASSESMENT</H3>
+                    <H1 class="font-weight-normal">
+                        @Model.ToList().Count
+                    </H1>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-md-6">
+            <div class="card custom-card-student text-white mb-4">
+                <div class="card-body d-flex align-items-center justify-content-between">
+                    <H3 class="font-weight-light"><i class="fab fa-bity"></i>&nbsp; TYPE</H3>
+                    <H1 class="font-weight-normal">
+                        6
+                    </H1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+

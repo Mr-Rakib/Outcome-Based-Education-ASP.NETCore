@@ -70,10 +70,8 @@
     background: #2b9a7b;
 }
 
-
-
 .custom-card-mission {
-    background-color: #8e1e59
+    background-color: #bd2130
 }
 
 .custom-card-peo {
@@ -87,7 +85,6 @@
 .custom-card-clo {
     background-color: #146f8c
 }
-
 
 .custom-table-admin {
     background-color: #daf1a3
@@ -103,6 +100,10 @@
 
 .custom-table-mapping{
     background-color: #8cb1bd
+}
+
+.custom-table-course {
+    background-color: #dad0b0
 }
 
 .btn-custom-style {
