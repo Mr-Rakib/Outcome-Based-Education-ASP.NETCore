@@ -9128,11 +9128,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "R:\\University Period\\Research\\Bitbucket\\obetools\\OBETools.csproj",
+      "projectUniqueName": "E:\\Bitbucket\\obetools\\OBETools.csproj",
       "projectName": "OBETools",
-      "projectPath": "R:\\University Period\\Research\\Bitbucket\\obetools\\OBETools.csproj",
+      "projectPath": "E:\\Bitbucket\\obetools\\OBETools.csproj",
       "packagesPath": "C:\\Users\\mrhas\\.nuget\\packages\\",
-      "outputPath": "R:\\University Period\\Research\\Bitbucket\\obetools\\obj\\",
+      "outputPath": "E:\\Bitbucket\\obetools\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -9242,7 +9242,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   },

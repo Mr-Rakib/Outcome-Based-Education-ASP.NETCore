@@ -1,6 +1,7 @@
 ﻿using OBETools.DAL.Repository;
 using OBETools.Models;
 using OBETools.Utility;
+using OBETools.Utility.Dependency;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,7 +41,7 @@ namespace OBETools.BLL.Services
             {
                 Assessment.EntryInformation = new EntryInformation()
                 {
-                    EntryById = Security.GetCurrentUser(CurrentUsername).Id,
+                    EntryById = Authorization.GetCurrentUser(CurrentUsername).Id,
                     EntryDate = DateTime.Now
                 };
                 return AssessmentRepository.Save(Assessment) ? null : Messages.IssueInDatabase;

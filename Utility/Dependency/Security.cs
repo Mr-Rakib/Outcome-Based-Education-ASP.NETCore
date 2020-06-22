@@ -15,9 +15,6 @@ namespace OBETools.Utility
 {
     public static class Security
     {
-        private static readonly LoginService LoginService = new LoginService();
-        private static readonly StaffService StaffService = new StaffService();
-
         private static string EncryptionKey = "abc123";
         public static string Encrypt(string EncryptText)
         {
@@ -63,12 +60,6 @@ namespace OBETools.Utility
             return DecryptText;
         }
 
-        internal static Staff GetCurrentUser(string currentUsername)
-        {
-            Staff staff = new Staff();
-            staff = StaffService.FindAll(currentUsername).Find(st => st.StaffId == currentUsername);
-            return staff;
-        }
 
     }
 }

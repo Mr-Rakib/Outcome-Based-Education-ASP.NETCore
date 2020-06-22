@@ -32,7 +32,7 @@ namespace OBETools.DAL.Repository
                         {
                             while (reader.Read())
                             {
-                                CourseRegistration CourseRegistration = new CourseRegistration
+                                CourseRegistration CourseRegistration = new CourseRegistration()
                                 {
                                     Id = reader.GetInt32("id"),
                                     StudentId = reader.GetInt32("student_id"),
@@ -55,8 +55,6 @@ namespace OBETools.DAL.Repository
                                 };
                                 AllCourseRegistration.Add(CourseRegistration);
                             }
-                            
-                            
                         }
                     }
                 }

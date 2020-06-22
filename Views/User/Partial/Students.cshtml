@@ -42,7 +42,7 @@
                             <td>@Html.DisplayFor(modelItem => item.PersonalInformation.Gender)</td>
                             <td class="text-center" style="font-size: .75em">
                                 <a class="p-1" asp-action="EditStudent" asp-controller="User" asp-route-id="@item.Id"><i class="far fa-edit text-info"></i></a>
-                                <a class="p-1" asp-action="DetailsStudent" asp-controller="User" asp-route-id="@item.Id"><i class="far fa-eye text-dark"></i></a>
+                                <a class="p-1" asp-action="StudentDetails" asp-controller="User" asp-route-id="@item.Id"><i class="far fa-eye text-dark"></i></a>
                                 <!--
                                      <a class="p-1" onclick="return confirm('Are you sure you want to delete?')" asp-action="DeleteMission" asp-controller="Academy" asp-route-id="@item.Id"><i class="far fa-trash-alt text-danger"></i></a>
                                 -->

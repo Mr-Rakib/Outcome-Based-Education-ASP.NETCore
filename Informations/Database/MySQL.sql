@@ -102,6 +102,32 @@ INSERT INTO `academicgrading` VALUES (1,3,'A+',80,100,4,2),(2,3,'A',75,79,3.75,2
 UNLOCK TABLES;
 
 --
+-- Table structure for table `assesments`
+--
+
+DROP TABLE IF EXISTS `assesments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `assesments` (
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(100) NOT NULL,
+  `type` varchar(100) NOT NULL,
+  `EntryBy_id` int NOT NULL,
+  `EntryDate` datetime NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `assesments`
+--
+
+LOCK TABLES `assesments` WRITE;
+/*!40000 ALTER TABLE `assesments` DISABLE KEYS */;
+/*!40000 ALTER TABLE `assesments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `assessments`
 --
 
@@ -195,7 +221,7 @@ CREATE TABLE `clotoplomapping` (
   `plo_id` int NOT NULL,
   `points` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -204,8 +230,33 @@ CREATE TABLE `clotoplomapping` (
 
 LOCK TABLES `clotoplomapping` WRITE;
 /*!40000 ALTER TABLE `clotoplomapping` DISABLE KEYS */;
-INSERT INTO `clotoplomapping` VALUES (1,1,1,1),(2,1,3,2),(3,1,4,3),(4,1,5,0),(5,1,6,0),(6,4,1,0),(7,4,3,3),(8,4,4,2),(9,4,5,0),(10,4,6,2),(11,2,1,2),(12,2,3,2),(13,2,4,3),(14,2,5,0),(15,2,6,0),(16,5,1,0),(17,5,3,1),(18,5,4,0),(19,5,5,2),(20,5,6,3);
+INSERT INTO `clotoplomapping` VALUES (1,1,1,1),(2,1,3,2),(3,1,4,3),(4,1,5,3),(5,1,6,0),(6,4,1,0),(7,4,3,3),(8,4,4,2),(9,4,5,0),(10,4,6,2),(11,2,1,2),(12,2,3,2),(13,2,4,3),(14,2,5,0),(15,2,6,0),(16,5,1,0),(17,5,3,1),(18,5,4,0),(19,5,5,2),(20,5,6,3),(21,6,1,1),(22,6,3,0),(23,6,4,2),(24,6,5,0),(25,6,6,2);
 /*!40000 ALTER TABLE `clotoplomapping` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `clotoplomappling`
+--
+
+DROP TABLE IF EXISTS `clotoplomappling`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `clotoplomappling` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `clo_id` int NOT NULL,
+  `plo_id` int NOT NULL,
+  `points` float NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `clotoplomappling`
+--
+
+LOCK TABLES `clotoplomappling` WRITE;
+/*!40000 ALTER TABLE `clotoplomappling` DISABLE KEYS */;
+/*!40000 ALTER TABLE `clotoplomappling` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -245,7 +296,7 @@ CREATE TABLE `courseregistration` (
   `id` int NOT NULL AUTO_INCREMENT,
   `registrationinformation_id` int NOT NULL,
   `student_id` int NOT NULL,
-  `registertime` time NOT NULL,
+  `registertime` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -256,7 +307,7 @@ CREATE TABLE `courseregistration` (
 
 LOCK TABLES `courseregistration` WRITE;
 /*!40000 ALTER TABLE `courseregistration` DISABLE KEYS */;
-INSERT INTO `courseregistration` VALUES (1,1,1,'202:05:20'),(2,1,4,'202:05:20'),(3,1,6,'202:05:20'),(4,2,7,'202:05:20'),(5,2,1,'202:05:20'),(6,3,4,'202:05:20'),(7,4,6,'202:05:20'),(8,4,7,'202:05:20'),(9,6,1,'202:05:20'),(10,6,4,'202:05:20'),(11,7,6,'202:05:20'),(12,7,7,'202:05:20'),(13,10,1,'202:05:20'),(14,10,4,'202:05:20'),(15,10,6,'202:05:20'),(16,10,7,'202:05:20');
+INSERT INTO `courseregistration` VALUES (1,1,1,'2020-06-30 10:05:20'),(2,1,4,'2020-06-30 10:05:20'),(3,1,6,'2020-06-30 10:05:20'),(4,2,7,'2020-06-30 10:05:20'),(5,2,1,'2020-06-30 10:05:20'),(6,3,4,'2020-06-30 10:05:20'),(7,4,6,'2020-06-30 10:05:20'),(8,4,7,'2020-06-30 10:05:20'),(9,6,1,'2020-06-30 10:05:20'),(10,6,4,'2020-06-30 10:05:20'),(11,7,6,'2020-06-30 10:05:20'),(12,7,7,'2020-06-30 10:05:20'),(13,10,1,'2020-06-30 10:05:20'),(14,10,4,'2020-06-30 10:05:20'),(15,10,6,'2020-06-30 10:05:20'),(16,10,7,'2020-06-30 10:05:20');
 /*!40000 ALTER TABLE `courseregistration` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -472,7 +523,7 @@ CREATE TABLE `personalinformation` (
 
 LOCK TABLES `personalinformation` WRITE;
 /*!40000 ALTER TABLE `personalinformation` DISABLE KEYS */;
-INSERT INTO `personalinformation` VALUES (1,'Md Rakibul Hasan','Md Anwer Hossain','Mst Ronjona Khatun','1998-05-22','male','01642090363','mrhasan.334@gmail.com','Dhaka, Bangladesh','Jamalpur, Bangladesh','rakib.jpg'),(2,'Jafry Monfol Deep','Md JFR Father','Mst JFR Mother','1997-03-05','male','01122090363','jafry.334@gmail.com','Dhaka, Bangladesh','Gazipur, Bangladesh','jfr.jpg'),(3,'Monirul Hasan Tomal','Md KMH Father','Mst KMH Mother','1990-12-23','male','01236698432','kmh.334@gmail.com','Dhaka, Bangladesh','Dhaka, Bangladesh','kmh.jpg'),(4,'Shahariar Monzoor ','Md SM Father','Mst SM Mother','1988-02-02','male','1236953214','sm.334@gmail.com','Dhaka, Bangladesh','Dhaka, Bangladesh','sm.jpg'),(10,'Md Sohel Hossen','Md Hasan Khan','Mst Hasina Khan','2020-06-20','Male','01722589652','sohel@gmail.com','s','s','wwwroot\\images\\cdb94c64-0f7c-4a1f-92b9-6fffad12bf40_userlogo.jpg'),(11,'Md Farhan Hasasn','Md Hasan Khan','Mst Hasina Khan','2020-06-20','Male','01722589652','sohel@gmail.com','sad','asdas','wwwroot\\images\\9f363640-cea8-4213-90c1-ccf2e68ae0e7_userlogo.jpg'),(12,'Sojib Hasan','Md Habib Khan','Msy Habiba ','2020-06-20','Male','013827374793','Sojib@gmail.com','Tongi','Tongi','wwwroot\\images\\f19b985f-a5d5-4fc7-8da7-b847c9e20b89_images (7).jpeg'),(16,'Roksana Akter Joly ','Md Hasan Khan','Mst Hasina Khan','1991-06-20','Female','01722589652','joly@gmail.com','Dhaka','Dhaka,Dhaka','wwwroot\\images\\01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg');
+INSERT INTO `personalinformation` VALUES (1,'Md Rakibul Hasan','Md Anwer Hossain','Mst Ronjona Khatun','1998-05-22','male','01642090363','mrhasan.334@gmail.com','Dhaka, Bangladesh','Jamalpur, Bangladesh','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(2,'Jafry Monfol Deep','Md JFR Father','Mst JFR Mother','1997-03-05','male','01122090363','jafry.334@gmail.com','Dhaka, Bangladesh','Gazipur, Bangladesh','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(3,'Monirul Hasan Tomal','Md KMH\'s Father','Mst KMH\'s Mother','1990-12-23','male','01236698432','kmh.334@gmail.com','Dhaka, Bangladesh','Dhaka, Bangladesh','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(4,'Shahariar Monzoor ','Md SM\'s Father','Mst SM\'s Mother','1988-02-02','male','1236953214','sm.334@gmail.com','Dhaka, Bangladesh','Dhaka, Bangladesh','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(10,'Md Sohel Hossen','Md Hasan Khan','Mst Hasina Khan','2020-06-20','Male','01722589652','sohel@gmail.com','s','s','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(11,'Md Farhan Hasasn','Md Hasan Khan','Mst Hasina Khan','2020-06-20','Male','01722589652','sohel@gmail.com','sad','asdas','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(12,'Sojib Hasan','Md Habib Khan','Msy Habiba ','2020-06-20','Male','013827374793','Sojib@gmail.com','Tongi','Tongi','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(16,'Roksana Akter Joly ','Mam\'s Father','Mam\'s Mother','1991-06-20','Female','01722589652','joly@gmail.com','Dhaka','Dhaka,Dhaka','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg');
 /*!40000 ALTER TABLE `personalinformation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -529,6 +580,32 @@ INSERT INTO `plotopeomapping` VALUES (3,5,3,3),(4,5,5,3),(6,1,3,2),(7,1,5,1);
 UNLOCK TABLES;
 
 --
+-- Table structure for table `prerequisitecoursesinformations`
+--
+
+DROP TABLE IF EXISTS `prerequisitecoursesinformations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `prerequisitecoursesinformations` (
+  `course_id` int NOT NULL,
+  `prerequisiteCourseId` int NOT NULL,
+  KEY `FK_PrerequisiteCoursesInformations_Courses` (`course_id`),
+  KEY `FK_PrerequisiteCoursesInformations_Courses1` (`prerequisiteCourseId`),
+  CONSTRAINT `FK_PrerequisiteCoursesInformations_Courses` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`),
+  CONSTRAINT `FK_PrerequisiteCoursesInformations_Courses1` FOREIGN KEY (`prerequisiteCourseId`) REFERENCES `courses` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `prerequisitecoursesinformations`
+--
+
+LOCK TABLES `prerequisitecoursesinformations` WRITE;
+/*!40000 ALTER TABLE `prerequisitecoursesinformations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `prerequisitecoursesinformations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `programs`
 --
 
@@ -564,7 +641,7 @@ DROP TABLE IF EXISTS `registrationinformation`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `registrationinformation` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `semster_id` int NOT NULL,
+  `semester_id` int NOT NULL,
   `course_id` int NOT NULL,
   `faculty_id` int NOT NULL,
   `Classday` varchar(50) NOT NULL,
@@ -942,7 +1019,7 @@ SET @saved_cs_client     = @@character_set_client;
  1 AS `student_id`,
  1 AS `registertime`,
  1 AS `registrationinformationId`,
- 1 AS `semster_id`,
+ 1 AS `semester_id`,
  1 AS `course_id`,
  1 AS `faculty_id`,
  1 AS `ClassDay`,
@@ -2556,7 +2633,7 @@ DELIMITER ;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `vw_allregistrationinformation` AS select `courseregistration`.`id` AS `id`,`courseregistration`.`registrationinformation_id` AS `registrationinformation_id`,`courseregistration`.`student_id` AS `student_id`,`courseregistration`.`registertime` AS `registertime`,`registrationinformation`.`id` AS `registrationinformationId`,`registrationinformation`.`semster_id` AS `semster_id`,`registrationinformation`.`course_id` AS `course_id`,`registrationinformation`.`faculty_id` AS `faculty_id`,`registrationinformation`.`Classday` AS `ClassDay`,`registrationinformation`.`classTimeStart` AS `classTimeStart`,`registrationinformation`.`classTimeEnd` AS `classTimeEnd`,`registrationinformation`.`roomnumber` AS `roomnumber`,`registrationinformation`.`seatLimit` AS `seatLimit` from (`courseregistration` join `registrationinformation`) where (`courseregistration`.`registrationinformation_id` = `registrationinformation`.`id`) */;
+/*!50001 VIEW `vw_allregistrationinformation` AS select `courseregistration`.`id` AS `id`,`courseregistration`.`registrationinformation_id` AS `registrationinformation_id`,`courseregistration`.`student_id` AS `student_id`,`courseregistration`.`registertime` AS `registertime`,`registrationinformation`.`id` AS `registrationinformationId`,`registrationinformation`.`semester_id` AS `semester_id`,`registrationinformation`.`course_id` AS `course_id`,`registrationinformation`.`faculty_id` AS `faculty_id`,`registrationinformation`.`Classday` AS `ClassDay`,`registrationinformation`.`classTimeStart` AS `classTimeStart`,`registrationinformation`.`classTimeEnd` AS `classTimeEnd`,`registrationinformation`.`roomnumber` AS `roomnumber`,`registrationinformation`.`seatLimit` AS `seatLimit` from (`courseregistration` join `registrationinformation`) where (`courseregistration`.`registrationinformation_id` = `registrationinformation`.`id`) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -2606,4 +2683,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-20 16:44:27
+-- Dump completed on 2020-06-22 18:21:56

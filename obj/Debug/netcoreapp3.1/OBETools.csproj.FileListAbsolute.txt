@@ -2250,3 +2250,33 @@ R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\V
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\CourseManager\Partial\CourseRegistrations.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\CourseManager\Partial\Courses.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\CourseManager\Partial\_Cards.cshtml.g.cs
+E:\Bitbucket\obetools\bin\Debug\netcoreapp3.1\EasyConveyor.dll
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\CreateCLO.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\EditCLO.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\Partial\CLODetails.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\Partial\CLOs.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Assessment\Assesments.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Assessment\CreateAssessment.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Assessment\EditAssessment.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Assessment\Index.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Assessment\Partial\AssessmentDetails.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Assessment\Partial\_Cards.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\CourseManager\Index.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\CourseManager\Partial\CourseRegistrations.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\CourseManager\Partial\Courses.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\CourseManager\Partial\_Cards.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Mapping\CLOToPLOCreate.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Mapping\CLOToPLOEdit.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Mapping\Partial\CLOToPLO.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Mapping\Partial\CLOToPLODetails.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Mapping\Partial\PLOMapList.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\User\Partial\Staffs.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\User\Partial\Students.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\User\Partial\_Cards.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\User\StaffCreate.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\User\StudentCreate.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\User\Partial\StaffDetails.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\User\Partial\StudentDetails.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Home\Partial\UserCards.cshtml.g.cs
+E:\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Home\Partial\OBECards.cshtml.g.cs

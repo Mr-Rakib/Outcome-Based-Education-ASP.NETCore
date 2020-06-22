@@ -29,7 +29,7 @@ namespace OBETools.Utility.Dependency
                     ImageFile.CopyTo(createFile);
                 }
             }
-            return Path.Combine(FileDir, "images", uniqueFileName);
+            return uniqueFileName;
 
         }
 

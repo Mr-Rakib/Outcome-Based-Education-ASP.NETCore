@@ -1,0 +1,57 @@
+﻿
+@{
+    StaffService StaffService = new StaffService();
+    StudentService StudentService = new StudentService();
+    CourseRegistrationService courseRegistrationService = new CourseRegistrationService();
+
+    var Users = StaffService.FindAll(User.Identity.Name);
+    int Staffs = Users.Count;
+    int Students = StudentService.FindAll(User.Identity.Name).Count;
+    int Admins = Users.FindAll(st => st.Login.Role.ToLower() == Roles.Admin.ToString().ToLower()).Count;
+    int RegisterStudent = courseRegistrationService.FindAll(User.Identity.Name).DistinctBy(reg => reg.StudentId).ToList().Count;
+}
+
+<div class="row">
+    <div class="col-xl-3  col-md-6">
+        <div class="card custom-card-d mb-4 ">
+            <div class="card-body d-flex align-items-center justify-content-between">
+                <H3 class="font-weight-light"> <i class="fas fa-user-shield"></i>&nbsp; ADMIN</H3>
+                <H1 class="font-weight-normal">
+                    @Admins
+                </H1>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card custom-card-d mb-4">
+            <div class="card-body d-flex align-items-center justify-content-between">
+                <H3 class="font-weight-light"><i class="fas fa-chalkboard-teacher"></i>&nbsp; STAFF</H3>
+                <H1 class="font-weight-normal">
+                    @Staffs
+                </H1>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card custom-card-d mb-4">
+            <div class="card-body d-flex align-items-center justify-content-between">
+                <H3 class="font-weight-light"><i class="fas fa-user-graduate"></i>&nbsp; STUDENT</H3>
+                <H1 class="font-weight-normal">
+                    @Students
+                </H1>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6">
+        <div class="card custom-card-d mb-4">
+            <div class="card-body d-flex align-items-center justify-content-between">
+                <H3 class="font-weight-light"><i class="fas fa-user-friends"></i>&nbsp; REGISTERED</H3>
+                <H1 class="font-weight-normal">
+                    @RegisterStudent
+                </H1>
+            </div>
+        </div>
+    </div>
+
+</div>
