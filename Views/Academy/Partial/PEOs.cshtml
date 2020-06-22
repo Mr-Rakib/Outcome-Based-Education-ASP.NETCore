@@ -1,11 +1,18 @@
 ﻿@model IEnumerable<OBETools.Models.PEO>
-@{ 
+@{
     int count = 1;
 }
 
-<div class="text-right col-md-12 pb-2">
-    <a class="btn btn-info btn-custom-style" asp-action="CreatePEO" asp-controller="Academy"><i class="fas fa-plus-circle"></i>&nbsp;Create PEO</a>
+<hr class="c-hr-gray" />
+<div class=" row pb-2 pt-1">
+    <div class="text-left col-md-6">
+        <h5 class="font-weight-light"><i class="fas fa-list p-1"></i>Program Educational Objective</h5>
+    </div>
+    <div class=" text-right col-md-6">
+        <a class="btn btn-info btn-custom-style" asp-action="CreatePEO" asp-controller="Academy"><i class="fas fa-plus-circle"></i>&nbsp;Create PEO</a>
+    </div>
 </div>
+
 <div class="card mb-4">
     <div class="card-body">
         <div class="table-responsive">
@@ -31,11 +38,12 @@
                             <td class="text-center" style="font-size: .75em">
                                 <a class="p-1" asp-action="EditPEO" asp-controller="Academy" asp-route-id="@item.Id"><i class="far fa-edit text-info"></i></a>
                                 <a class="p-1" title="View Details" data-toggle="modal" data-target="#view-peo-modal" data-id="@item.Id"><i class="far fa-eye text-secondery"></i></a>
-                            <!--    
-                                <a class="p-1" onclick="return confirm('Are you sure you want to delete?')" asp-action="DeletePEO" asp-controller="Academy" asp-route-id="@item.Id"><i class="far fa-trash-alt text-danger"></i></a>
-                            -->
+                                <!--
+                                    <a class="p-1" onclick="return confirm('Are you sure you want to delete?')" asp-action="DeletePEO" asp-controller="Academy" asp-route-id="@item.Id"><i class="far fa-trash-alt text-danger"></i></a>
+                                -->
                             </td>
                         </tr>
+
                     }
                 </tbody>
             </table>

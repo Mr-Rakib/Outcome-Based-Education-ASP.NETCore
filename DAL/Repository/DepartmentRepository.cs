@@ -40,6 +40,7 @@ namespace OBETools.DAL.Repository
                                 allDepartments.Add(Departments);
                             }
                         }
+                        
                     }
                 }
             }

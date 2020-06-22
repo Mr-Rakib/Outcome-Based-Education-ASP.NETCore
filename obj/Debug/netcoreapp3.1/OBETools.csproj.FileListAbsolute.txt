@@ -2246,3 +2246,7 @@ R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\V
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Assessment\Index.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Assessment\Partial\_Cards.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Assessment\Partial\AssessmentDetails.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\CourseManager\Index.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\CourseManager\Partial\CourseRegistrations.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\CourseManager\Partial\Courses.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\CourseManager\Partial\_Cards.cshtml.g.cs

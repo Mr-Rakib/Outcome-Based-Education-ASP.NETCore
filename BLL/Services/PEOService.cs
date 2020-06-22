@@ -26,9 +26,16 @@ namespace OBETools.BLL.Services
 
         public List<PEO> FindAll(string CurrentUsername)
         {
-            List<PEO> PEOLists = PEORepository.FindAll();
-            PEOLists.ForEach(peo => peo.Program = ProgramsService.FindById(peo.Program.Id, CurrentUsername));
-            return PEOLists;
+            try
+            {
+                List<PEO> PEOLists = PEORepository.FindAll();
+                PEOLists.ForEach(peo => peo.Program = ProgramsService.FindById(peo.Program.Id, CurrentUsername));
+                return PEOLists;
+            }catch(Exception ex)
+            {
+                Logger.Log(ex);
+                return null;
+            }
         }
 
         public PEO FindById(int id, string CurrentUsername)

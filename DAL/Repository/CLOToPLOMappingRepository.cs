@@ -46,6 +46,8 @@ namespace OBETools.DAL.Repository
                                 };
                                 allCLOToPLOMapping.Add(CLOToPLOMapping);
                             }
+                            
+                            
                         }
                     }
                 }
@@ -70,8 +72,7 @@ namespace OBETools.DAL.Repository
                         command.Parameters.Add(new MySqlParameter("@Id", CLOToPLOMapping.Id));
                         SetAllParameters(CLOToPLOMapping);
 
-                        connection.Open();
-                        status = command.ExecuteNonQuery();
+                        connection.Open(); status = command.ExecuteNonQuery();
                     }
                 }
                 catch (Exception ex)

@@ -28,6 +28,8 @@ namespace OBETools.Utility.Connection
 
         public static string ALLAssessment = String.Concat(Select, "vw_AllAssessment");
 
-        public static string ALLCourseRegistration { get; internal set; }
+        public static string ALLCourseRegistration = String.Concat(Select, "vw_allregistrationinformation");
+
+        public static string ALLAcademicEvaluation { get; internal set; }
     }
 }

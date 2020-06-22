@@ -36,7 +36,7 @@ namespace OBETools.DAL.Repository
                                 {
                                     Id = reader.GetInt32("id"),
                                     StudentId = reader.GetInt32("student_id"),
-                                    RegisterTime = reader.GetDateTime("regesterTime"),
+                                    RegisterTime = reader.GetDateTime("registertime"),
                                     RegistrationInformation = new RegistrationInformation()
                                     {
                                         Id = reader.GetInt32("registrationInformation_id"),
@@ -46,15 +46,17 @@ namespace OBETools.DAL.Repository
                                           Id = reader.GetInt32("course_id"),
                                         },
                                         FacultyId = reader.GetInt32("faculty_id"),
-                                        ClassDay = reader.GetString("faculty_id"),
+                                        ClassDay = reader.GetString("ClassDay"),
                                         ClassTimeStart = reader.GetTimeSpan("ClassTimeStart"),
                                         ClassTimeEnd = reader.GetTimeSpan("ClassTimeEnd"),
                                         RoomNumber = reader.GetString("roomNumber"),
-                                        Limit = reader.GetInt32("Limit"),
+                                        Limit = reader.GetInt32("seatLimit"),
                                     },
                                 };
                                 AllCourseRegistration.Add(CourseRegistration);
                             }
+                            
+                            
                         }
                     }
                 }

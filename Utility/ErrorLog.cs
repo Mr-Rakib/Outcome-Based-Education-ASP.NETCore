@@ -121,7 +121,7 @@ namespace OBETools.Utility
                     using (cmd = new SqlCommand(sp_SaveErrorLogs, connection))
                     {
                         cmd.CommandType = CommandType.Text;
-                        connection.Open();
+                        ;
                         cmd.ExecuteNonQuery();
                     }
                 }

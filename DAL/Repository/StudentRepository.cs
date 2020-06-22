@@ -69,6 +69,8 @@ namespace OBETools.DAL.Repository
                                 };
                                 allStudent.Add(Student);
                             }
+                            
+                            
                         }
                     }
                 }

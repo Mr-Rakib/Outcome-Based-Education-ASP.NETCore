@@ -1,13 +1,10 @@
-﻿using MoreLinq;
-using OBETools.BLL.Interface;
+﻿using OBETools.BLL.Interface;
 using OBETools.DAL.Repository;
 using OBETools.Models;
 using OBETools.Models.View_Model;
 using OBETools.Utility;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace OBETools.BLL.Services
 {
@@ -30,105 +27,167 @@ namespace OBETools.BLL.Services
         public List<MissionToPEOMapping> FindAll(string CurrentUsername)
         {
             List<MissionToPEOMapping> MissionToPEOMappingLists = MissionToPEOMappingRepository.FindAll();
-            MissionToPEOMappingLists.ForEach(MissionToPEOMapping => MissionToPEOMapping.Mission = MissionService.FindById(MissionToPEOMapping.Mission.Id, CurrentUsername));
-            MissionToPEOMappingLists.ForEach(MissionToPEOMapping => MissionToPEOMapping.PEO = PEOService.FindById(MissionToPEOMapping.PEO.Id, CurrentUsername));
+            try
+            {
+                MissionToPEOMappingLists.ForEach(MissionToPEOMapping => MissionToPEOMapping.Mission = MissionService.FindById(MissionToPEOMapping.Mission.Id, CurrentUsername));
+                MissionToPEOMappingLists.ForEach(MissionToPEOMapping => MissionToPEOMapping.PEO = PEOService.FindById(MissionToPEOMapping.PEO.Id, CurrentUsername));
+            }
+            catch (Exception ex)
+            {
+                Logger.Log(ex);
+            }
             return MissionToPEOMappingLists;
         }
 
         public List<MissionToPEO> FindAllMissionToPEO(string CurrentUsername)
         {
-            List<MissionToPEOMapping> MissionToPEOMappings = FindAll(CurrentUsername);
             List<MissionToPEO> MissionToPEOs = new List<MissionToPEO>();
-
-            foreach (var items in MissionToPEOMappings)
+            List<MissionToPEOMapping> MissionToPEOMappings =  FindAll(CurrentUsername);
+            try
             {
-                var value = FindByMissionId(items.Mission.Id, CurrentUsername);
-                if (MissionToPEOs.Find(v => v.Mission.Id == value.Mission.Id) == null)
+                foreach (var items in MissionToPEOMappings)
                 {
-                    MissionToPEOs.Add(value);
+                    var value = FindByMissionId(items.Mission.Id, CurrentUsername);
+                    if (MissionToPEOs != null)
+                    {
+
+                        if (MissionToPEOs.Find(v => v.Mission.Id == value.Mission.Id) == null)
+                        {
+                            MissionToPEOs.Add(value);
+                        }
+                    }
+                    else
+                    {
+                        MissionToPEOs.Add(value);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                Logger.Log(ex);
             }
             return MissionToPEOs;
         }
 
         internal string SaveMapping(MissionToPEO missionToPEO, string name)
         {
-            if (missionToPEO.MapPEOLists.Count > 0)
+            try
             {
-                foreach(var item in missionToPEO.MapPEOLists)
+                missionToPEO.Mission = MissionService.FindById(missionToPEO.Mission.Id, name);
+
+                if (missionToPEO.MapPEOLists.Count > 0)
                 {
-                    MissionToPEOMapping missionToPEOMapping = new MissionToPEOMapping()
+                    foreach (var item in missionToPEO.MapPEOLists)
                     {
-                        Mission = MissionService.FindById(missionToPEO.Mission.Id, name),
-                        PEO = PEOService.FindById(item.PEO.Id, name),
-                        Points = item.Points
-                    };
-                    if (!IsExistMapping(missionToPEOMapping, name))
-                    {
-                        Save(missionToPEOMapping, name);
+                        MissionToPEOMapping missionToPEOMapping = new MissionToPEOMapping()
+                        {
+                            Mission = missionToPEO.Mission,
+                            PEO = PEOService.FindById(item.PEO.Id, name),
+                            Points = item.Points
+                        };
+                        if (!IsExistMapping(missionToPEOMapping, name))
+                        {
+                            Save(missionToPEOMapping, name);
+                        }
                     }
+                    return null;
                 }
-                return null;
+                else return Messages.InvalidField;
             }
-            else return Messages.InvalidField;
-            
+            catch (Exception ex)
+            {
+                Logger.Log(ex);
+                return ex.Message;
+            }
         }
 
         internal string UpdateMapping(MissionToPEO missionToPEO, string name)
         {
-            if (missionToPEO.MapPEOLists.Count > 0)
+            try
             {
-                foreach (var item in missionToPEO.MapPEOLists)
+                if (missionToPEO.MapPEOLists.Count > 0)
                 {
-                    MissionToPEOMapping missionToPEOMapping = new MissionToPEOMapping()
+                    missionToPEO.Mission = MissionService.FindById(missionToPEO.Mission.Id, name);
+                    if (missionToPEO != null)
                     {
-                        Mission = MissionService.FindById(missionToPEO.Mission.Id, name),
-                        PEO = PEOService.FindById(item.PEO.Id, name),
-                        Points = item.Points
-                    };
-                    if (! IsExistMapping(missionToPEOMapping, name))
-                    {
-                        Save(missionToPEOMapping, name);
+                        foreach (var item in missionToPEO.MapPEOLists)
+                        {
+                            MissionToPEOMapping missionToPEOMapping = new MissionToPEOMapping()
+                            {
+                                Mission = missionToPEO.Mission,
+                                PEO = PEOService.FindById(item.PEO.Id, name),
+                                Points = item.Points
+                            };
+                            if (!IsExistMapping(missionToPEOMapping, name))
+                            {
+                                Save(missionToPEOMapping, name);
+                            }
+                            else
+                            {
+                                var deleteorUpdate = FindAll(name).Find(mp => mp.Mission.Id == missionToPEOMapping.Mission.Id && mp.PEO.Id == missionToPEOMapping.PEO.Id);
+                                missionToPEOMapping.Id = deleteorUpdate.Id;
+                                Update(missionToPEOMapping, name);
+                            }
+                        }
+                        return null;
                     }
-                    else
-                    {
-                        var deleteorUpdate = FindAll(name).Find(mp => mp.Mission.Id == missionToPEOMapping.Mission.Id && mp.PEO.Id == missionToPEOMapping.PEO.Id);
-                        missionToPEOMapping.Id = deleteorUpdate.Id;
-                        Update(missionToPEOMapping, name);
-                    }
+                    else return Messages.MissionNotFound;
                 }
-                return null;
+                else return Messages.InvalidField;
             }
-            else return Messages.InvalidField;
+            catch (Exception ex)
+            {
+                Logger.Log(ex);
+                return ex.Message;
+            }
         }
 
         private bool IsExistMapping(MissionToPEOMapping missionToPEOMapping, string name)
         {
-            var ExistmapPEOs = FindByMissionId(missionToPEOMapping.Mission.Id, name).MapPEOLists.FindAll(st => st.PEO.Id == missionToPEOMapping.PEO.Id);
-            return (ExistmapPEOs.Count > 0) ? true : false;
+            try
+            {
+                var ExistmapPEOs = FindByMissionId(missionToPEOMapping.Mission.Id, name).MapPEOLists.FindAll(st => st.PEO.Id == missionToPEOMapping.PEO.Id);
+                return (ExistmapPEOs.Count > 0) ? true : false;
+            }
+            catch (Exception ex)
+            {
+                Logger.Log(ex);
+                return false;
+            }
         }
 
         public MissionToPEO FindByMissionId(int id, string CurrentUsername)
         {
-            MissionToPEO FoundedMissionToPEO = FindMissionToPEOByMissionId(id, CurrentUsername); 
-            return FoundedMissionToPEO ;
+            MissionToPEO FoundedMissionToPEO = FindMissionToPEOByMissionId(id, CurrentUsername);
+            return FoundedMissionToPEO;
         }
 
         private MissionToPEO FindMissionToPEOByMissionId(int missionId, string currentUsername)
         {
-            List<MissionToPEOMapping> missionToPEOMappings = FindAll(currentUsername).FindAll(MissionToPEOMapping => MissionToPEOMapping.Mission.Id == missionId);
+            List<MissionToPEOMapping> missionToPEOMappings = FindAll(currentUsername);
             MissionToPEO missionToPEO = new MissionToPEO();
-            missionToPEO.Mission = (missionToPEOMappings.Count > 0) ? missionToPEOMappings[0].Mission : null ;
-            missionToPEO.MapPEOLists = new List<MapPEO>();
-            
-            foreach (var items in missionToPEOMappings)
+            if (missionToPEOMappings != null)
             {
-                MapPEO mapPEO = new MapPEO()
+                try
                 {
-                    PEO = items.PEO,
-                    Points = items.Points
-                };
-                missionToPEO.MapPEOLists.Add(mapPEO);
+                    missionToPEOMappings = missionToPEOMappings.FindAll(MissionToPEOMapping => MissionToPEOMapping.Mission.Id == missionId);
+                    missionToPEO.Mission = (missionToPEOMappings.Count > 0) ? missionToPEOMappings[0].Mission : null;
+                    missionToPEO.MapPEOLists = new List<MapPEO>();
+
+                    foreach (var items in missionToPEOMappings)
+                    {
+                        MapPEO mapPEO = new MapPEO()
+                        {
+                            PEO = items.PEO,
+                            Points = items.Points
+                        };
+                        missionToPEO.MapPEOLists.Add(mapPEO);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Log(ex);
+                }
             }
             return missionToPEO;
         }
@@ -163,15 +222,23 @@ namespace OBETools.BLL.Services
 
         private string IsValidMissionToPEOMapping(MissionToPEOMapping MissionToPEOMapping, string currentUsername)
         {
-            if (MissionService.FindById(MissionToPEOMapping.Mission.Id, currentUsername) != null)
+            try
             {
-                if (PEOService.FindById(MissionToPEOMapping.PEO.Id, currentUsername) != null)
+                if (MissionService.FindById(MissionToPEOMapping.Mission.Id, currentUsername) != null)
                 {
-                    return null;
+                    if (PEOService.FindById(MissionToPEOMapping.PEO.Id, currentUsername) != null)
+                    {
+                        return null;
+                    }
+                    else return Messages.PEONotFound;
                 }
-                else return Messages.PEONotFound;
+                else return Messages.MissionNotFound;
             }
-            else return Messages.MissionNotFound;
+            catch(Exception ex)
+            {
+                Logger.Log(ex);
+                return Messages.Issue;
+            }
         }
 
         public MissionToPEOMapping FindById(int id, string CurrentUsername)

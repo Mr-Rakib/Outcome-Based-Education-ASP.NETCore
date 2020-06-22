@@ -32,6 +32,7 @@ namespace OBETools.DAL.Repository
                     {
                         command.CommandType = CommandType.Text;
                         connection.Open();
+
                         using (reader = command.ExecuteReader())
                         {
                             while (reader.Read())
@@ -46,6 +47,8 @@ namespace OBETools.DAL.Repository
                                 };
                                 allLogin.Add(login);
                             }
+                            
+                            
                         }
                     }
                 }

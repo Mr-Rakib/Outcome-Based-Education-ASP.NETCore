@@ -44,6 +44,8 @@ namespace OBETools.DAL.Repository
                                 };
                                 allCLO.Add(CLO);
                             }
+                            
+                            
                         }
                     }
                 }

@@ -2,6 +2,7 @@
 using OBETools.Utility.Dependency;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,7 +12,6 @@ namespace OBETools.Utility.Connection
     public static class Database
     {
         private static MySqlConnection MySQLConnection;
-        private static SqlConnection MsSQLConnection;
         private static readonly string connectionString = ConfigureAppSettings.Configure.GetSection("Database")["ConnectionString"];
 
         public static MySqlConnection GetConnection()
@@ -28,18 +28,5 @@ namespace OBETools.Utility.Connection
             return MySQLConnection;
         }
 
-        public static SqlConnection GetSQLConnection()
-        {
-            MsSQLConnection = null;
-            try
-            {
-                MsSQLConnection = new SqlConnection(connectionString);
-            }
-            catch (Exception ex)
-            {
-                Logger.Log(ex);
-            }
-            return MsSQLConnection;
-        }
     }
 }

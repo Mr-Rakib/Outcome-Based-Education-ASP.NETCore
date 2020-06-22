@@ -1,5 +1,6 @@
 ﻿@{ 
     string username = User.Identity.Name;
+    var Role = Context.User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value;
 
 }
 
@@ -21,7 +22,7 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#"><i class="fas fa-user-circle"></i>&nbsp; @username</a>
-                <a class="dropdown-item" href="#"><i class="fas fa-check-circle"></i>&nbsp; @Security.GetCurrentRole(username)</a>
+                <a class="dropdown-item" href="#"><i class="fas fa-check-circle"></i>&nbsp; @Role</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item text-danger" asp-action="Logout" asp-controller="Login">Logout</a>
             </div>

@@ -1,6 +1,8 @@
 ﻿
 @{
     ViewData["Title"] = "StudentDetails";
+    var userId = Context.User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value;
+
 }
 
 <h1>StudentDetails</h1>

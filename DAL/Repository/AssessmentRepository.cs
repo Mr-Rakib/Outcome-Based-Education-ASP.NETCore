@@ -46,6 +46,8 @@ namespace OBETools.DAL.Repository
                                 };
                                 AllAssessment.Add(Assessment);
                             }
+                            
+                            
                         }
                     }
                 }
@@ -69,7 +71,6 @@ namespace OBETools.DAL.Repository
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add(new MySqlParameter("@Id", Assessment.Id));
                         SetAllParameters(Assessment);
-
                         connection.Open();
                         status = command.ExecuteNonQuery();
                     }

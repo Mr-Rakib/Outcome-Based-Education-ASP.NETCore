@@ -1,11 +1,18 @@
 ﻿@model IEnumerable<CLO>
 @{
-     int count=1;
- }
+    int count = 1;
+}
 
-<div class="text-right col-md-12 pb-2">
-    <a class="btn btn-info btn-custom-style" asp-action="CreateCLO" asp-controller="Academy"><i class="fas fa-plus-circle"></i>&nbsp;Create CLO</a>
+<hr class="c-hr-gray" />
+<div class=" row pb-2 pt-1">
+    <div class="text-left col-md-6">
+        <h5 class="font-weight-light"><i class="fas fa-list p-1"></i>Course Learning Outcome</h5>
+    </div>
+    <div class=" text-right col-md-6">
+        <a class="btn btn-info btn-custom-style" asp-action="CreateCLO" asp-controller="Academy"><i class="fas fa-plus-circle"></i>&nbsp;Create CLO</a>
+    </div>
 </div>
+
 <div class="card mb-4">
     <div class="card-body">
         <div class="table-responsive">

@@ -46,6 +46,13 @@ $('#view-clo-modal').on('show.bs.modal',
     }
 );
 
+$('#view-assessment-modal').on('show.bs.modal',
+    function (e) {
+        var Id = $(e.relatedTarget).attr('data-id');
+        $('#viewassessmentmodal').load('/Assessment/DetailsAssessment?id=' + Id);
+    }
+);
+
 
 $(".custom-file-input").on("change", function () {
     var fileName = $(this).val().split("\\").pop();

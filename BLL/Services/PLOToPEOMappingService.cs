@@ -12,8 +12,8 @@ namespace OBETools.BLL.Services
     public class PLOToPEOMappingService
     {
         private static PLOToPEOMappingRepository PLOToPEOMappingRepository = new PLOToPEOMappingRepository();
-        private static PEOService PEOService = new PEOService();
         private static PLOService PLOService = new PLOService();
+        private static PEOService PEOService = new PEOService();
 
         public string Delete(int Id, string CurrentUsername)
         {
@@ -28,88 +28,139 @@ namespace OBETools.BLL.Services
         public List<PLOToPEOMapping> FindAll(string CurrentUsername)
         {
             List<PLOToPEOMapping> PLOToPEOMappingLists = PLOToPEOMappingRepository.FindAll();
-            PLOToPEOMappingLists.ForEach(PLOToPEOMapping => PLOToPEOMapping.PEO = PEOService.FindById(PLOToPEOMapping.PEO.Id, CurrentUsername)); 
-            PLOToPEOMappingLists.ForEach(PLOToPEOMapping => PLOToPEOMapping.PLO = PLOService.FindById(PLOToPEOMapping.PLO.Id, CurrentUsername));
+            try
+            {
+                PLOToPEOMappingLists.ForEach(PLOToPEOMapping => PLOToPEOMapping.PLO = PLOService.FindById(PLOToPEOMapping.PLO.Id, CurrentUsername));
+                PLOToPEOMappingLists.ForEach(PLOToPEOMapping => PLOToPEOMapping.PEO = PEOService.FindById(PLOToPEOMapping.PEO.Id, CurrentUsername));
+            }
+            catch (Exception ex)
+            {
+                Logger.Log(ex);
+            }
             return PLOToPEOMappingLists;
         }
 
         public List<PLOToPEO> FindAllPLOToPEO(string CurrentUsername)
         {
-            List<PLOToPEOMapping> PLOToPEOMappings = FindAll(CurrentUsername);
             List<PLOToPEO> PLOToPEOs = new List<PLOToPEO>();
-
-            foreach (var items in PLOToPEOMappings)
+            List<PLOToPEOMapping> PLOToPEOMappings = FindAll(CurrentUsername);
+            try
             {
-                var value = FindByPLOId(items.PLO.Id, CurrentUsername);
-                if (PLOToPEOs.Find(v => v.PLO.Id == value.PLO.Id) == null)
+                foreach (var items in PLOToPEOMappings)
                 {
-                    PLOToPEOs.Add(value);
+                    var value = FindByPLOId(items.PLO.Id, CurrentUsername);
+                    if (PLOToPEOs != null)
+                    {
+
+                        if (PLOToPEOs.Find(v => v.PLO.Id == value.PLO.Id) == null)
+                        {
+                            PLOToPEOs.Add(value);
+                        }
+                    }
+                    else
+                    {
+                        PLOToPEOs.Add(value);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                Logger.Log(ex);
             }
             return PLOToPEOs;
         }
 
         internal string SaveMapping(PLOToPEO PLOToPEO, string name)
         {
-            if (PLOToPEO.MapPEOLists.Count > 0)
+            try
             {
-                foreach (var item in PLOToPEO.MapPEOLists)
-                {
-                    PLOToPEOMapping PLOToPEOMapping = new PLOToPEOMapping()
-                    {
-                        PLO = PLOService.FindById(PLOToPEO.PLO.Id, name),
-                        PEO = PEOService.FindById(item.PEO.Id, name),
-                        Points = item.Points
-                    };
-                    if (!IsExistMapping(PLOToPEOMapping, name))
-                    {
-                        Save(PLOToPEOMapping, name);
-                    }
-                }
-                return null;
-            }
-            else return Messages.InvalidField;
+                PLOToPEO.PLO = PLOService.FindById(PLOToPEO.PLO.Id, name);
 
+                if (PLOToPEO.MapPEOLists.Count > 0)
+                {
+                    foreach (var item in PLOToPEO.MapPEOLists)
+                    {
+                        PLOToPEOMapping PLOToPEOMapping = new PLOToPEOMapping()
+                        {
+                            PLO = PLOToPEO.PLO,
+                            PEO = PEOService.FindById(item.PEO.Id, name),
+                            Points = item.Points
+                        };
+                        if (!IsExistMapping(PLOToPEOMapping, name))
+                        {
+                            Save(PLOToPEOMapping, name);
+                        }
+                    }
+                    return null;
+                }
+                else return Messages.InvalidField;
+            }
+            catch (Exception ex)
+            {
+                Logger.Log(ex);
+                return ex.Message;
+            }
         }
 
         internal string UpdateMapping(PLOToPEO PLOToPEO, string name)
         {
-            if (PLOToPEO.MapPEOLists.Count > 0)
+            try
             {
-                foreach (var item in PLOToPEO.MapPEOLists)
+                if (PLOToPEO.MapPEOLists.Count > 0)
                 {
-                    PLOToPEOMapping PLOToPEOMapping = new PLOToPEOMapping()
+                    PLOToPEO.PLO = PLOService.FindById(PLOToPEO.PLO.Id, name);
+                    if (PLOToPEO != null)
                     {
-                        PLO = PLOService.FindById(PLOToPEO.PLO.Id, name),
-                        PEO = PEOService.FindById(item.PEO.Id, name),
-                        Points = item.Points
-                    };
-                    if (!IsExistMapping(PLOToPEOMapping, name))
-                    {
-                        Save(PLOToPEOMapping, name);
+                        foreach (var item in PLOToPEO.MapPEOLists)
+                        {
+                            PLOToPEOMapping PLOToPEOMapping = new PLOToPEOMapping()
+                            {
+                                PLO = PLOToPEO.PLO,
+                                PEO = PEOService.FindById(item.PEO.Id, name),
+                                Points = item.Points
+                            };
+                            if (!IsExistMapping(PLOToPEOMapping, name))
+                            {
+                                Save(PLOToPEOMapping, name);
+                            }
+                            else
+                            {
+                                var deleteorUpdate = FindAll(name).Find(mp => mp.PLO.Id == PLOToPEOMapping.PLO.Id && mp.PEO.Id == PLOToPEOMapping.PEO.Id);
+                                PLOToPEOMapping.Id = deleteorUpdate.Id;
+                                Update(PLOToPEOMapping, name);
+                            }
+                        }
+                        return null;
                     }
-                    else
-                    {
-                        var deleteorUpdate = FindAll(name).Find(mp => mp.PLO.Id == PLOToPEOMapping.PLO.Id && mp.PEO.Id == PLOToPEOMapping.PEO.Id);
-                        PLOToPEOMapping.Id = deleteorUpdate.Id;
-                        Update(PLOToPEOMapping, name);
-                    }
+                    else return Messages.PLONotFound;
                 }
-                return null;
+                else return Messages.InvalidField;
             }
-            else return Messages.InvalidField;
+            catch (Exception ex)
+            {
+                Logger.Log(ex);
+                return ex.Message;
+            }
         }
 
         private bool IsExistMapping(PLOToPEOMapping PLOToPEOMapping, string name)
         {
-            var ExistmapPEOs = FindByPLOId(PLOToPEOMapping.PLO.Id, name).MapPEOLists.FindAll(st => st.PEO.Id == PLOToPEOMapping.PEO.Id);
-            return (ExistmapPEOs.Count > 0) ? true : false;
+            try
+            {
+                var ExistmapPEOs = FindByPLOId(PLOToPEOMapping.PLO.Id, name).MapPEOLists.FindAll(st => st.PEO.Id == PLOToPEOMapping.PEO.Id);
+                return (ExistmapPEOs.Count > 0) ? true : false;
+            }
+            catch (Exception ex)
+            {
+                Logger.Log(ex);
+                return false;
+            }
         }
 
         public PLOToPEO FindByPLOId(int id, string CurrentUsername)
         {
-            PLOToPEO PLOToPEO = FindPLOToPEOByPLOId(id, CurrentUsername);
-            return PLOToPEO;
+            PLOToPEO FoundedPLOToPEO = FindPLOToPEOByPLOId(id, CurrentUsername);
+            return FoundedPLOToPEO;
         }
 
         private PLOToPEO FindPLOToPEOByPLOId(int PLOId, string currentUsername)
@@ -140,7 +191,7 @@ namespace OBETools.BLL.Services
                 {
                     return PLOToPEOMappingRepository.Save(PLOToPEOMapping) ? null : Messages.IssueInDatabase;
                 }
-                else return Messages.MissionNotFound;
+                else return Messages.PLONotFound;
             }
             else return Messages.NotFound;
         }
@@ -154,7 +205,7 @@ namespace OBETools.BLL.Services
                 {
                     return PLOToPEOMappingRepository.Update(PLOToPEOMapping) ? null : Messages.IssueInDatabase;
                 }
-                else return Messages.MissionNotFound;
+                else return Messages.PLONotFound;
             }
             else return Messages.NotFound;
         }

@@ -63,13 +63,6 @@ namespace OBETools.Utility
             return DecryptText;
         }
 
-        public static string GetCurrentRole(string username)
-        {
-            string role = LoginService.FindByUsername(username).Role;
-            return role;
-        }
-
-
         internal static Staff GetCurrentUser(string currentUsername)
         {
             Staff staff = new Staff();
