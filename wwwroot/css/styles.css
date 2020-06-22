@@ -67,7 +67,7 @@ body {
     line-height: 1.5;
     color: #031230;
     text-align: left;
-    background-color: #e9ecefb3;
+    background-color: #dedede;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -3908,6 +3908,7 @@ input[type=button].btn-block {
 
 .nav-tabs {
   border-bottom: 1px solid #dee2e6;
+  background: #eee;
 }
 .nav-tabs .nav-item {
   margin-bottom: -1px;

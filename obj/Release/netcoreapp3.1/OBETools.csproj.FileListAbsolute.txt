@@ -475,9 +475,7 @@ R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor
 R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\User\Partial\Students.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\User\Partial\_Cards.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\User\StaffCreate.cshtml.g.cs
-R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\User\StaffDetails.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\User\StudentCreate.cshtml.g.cs
-R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\User\StudentDetails.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\Assessment\Assesments.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\Assessment\CreateAssessment.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\Assessment\EditAssessment.cshtml.g.cs
@@ -488,3 +486,8 @@ R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor
 R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\CourseManager\Partial\CourseRegistrations.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\CourseManager\Partial\Courses.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\CourseManager\Partial\_Cards.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\bin\Release\netcoreapp3.1\EasyConveyor.dll
+R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\Home\Partial\OBECards.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\Home\Partial\UserCards.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\User\Partial\StaffDetails.cshtml.g.cs
+R:\University Period\Research\Bitbucket\obetools\obj\Release\netcoreapp3.1\Razor\Views\User\Partial\StudentDetails.cshtml.g.cs

@@ -1,4 +1,8 @@
-﻿#headernav {
+﻿.custom-header {
+    background: #ffffff;
+}
+
+#headernav {
     transform: translateX(225px);
     transition: transform 0.15s ease-in-out;
     right: 225px;
@@ -19,17 +23,6 @@
     background:#fff;
     padding:8px;
     margin-bottom:10px;
-}
-
-@media (max-width: 991px) {
- body{
-     font-size:12px;
- }
-    
-    #headernav {
-        transform: translateX(0);
-        width: 100%;
-    }
 }
 
 #headernav {
@@ -59,6 +52,39 @@
     margin-bottom: 10px;
 }
 
+.custom-card-d {
+    background: #000a1ded;
+    color: #ffd37a;
+}
+
+.custom-card-d-1 {
+    background:#ffffff;
+    color: #000a1ded;
+}
+
+.custom-card-d-2 {
+    background: #ffd37a;
+    color: #000a1ded;
+}
+.custom-card-d-3 {
+    background: #d6a28a;
+    color: #000a1ded;
+}
+.custom-card-d-4 {
+    background: #95d08d;
+    color: #000a1ded;
+}
+
+.custom-card-d-5 {
+    background: #b7ab98;
+    color: #000a1ded;
+}
+
+.custom-card-d-6 {
+    background: #89c7ca;
+    color: #000a1ded;
+}
+
 .custom-card-admin {
     background: #9a2b2b;
 }
@@ -71,7 +97,7 @@
 }
 
 .custom-card-mission {
-    background-color: #bd2130
+    background-color: #b24444
 }
 
 .custom-card-peo {
@@ -91,7 +117,8 @@
 }
 
 .custom-table-user {
-    background-color: #cde7d3
+    color: #b7ab98;
+    background-color: #070e1b;
 }
 
 .custom-table-vet {
@@ -123,10 +150,24 @@
         background-color: limegreen;
     }
 
+.custom-btn-login {
+    padding: 5px 8px 5px 8px;
+    border-radius: 8px;
+    color: #28a745;
+    border: 1px solid #031a31
+}
+
+    .custom-btn-create:hover {
+        color: #fff;
+        background-color: limegreen;
+    }
+
 .custom-icon {
     overflow: visible;
     font-size: 12px;
 }
+
+
 
 .c-hr-green {
     margin-bottom: .25rem;
@@ -147,8 +188,8 @@
 }
 
 .profile-image {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
 }
 
 .edit-image {
@@ -158,9 +199,24 @@
     padding: 10px 25%;
 }
 
+.custom-border-right {
+    border-right: 1px solid #000033 !important;
+}
+
+.custom-border-left {
+    border-left: 1px solid #000033 !important;
+}
+
+.custom-profile-front {
+    font-size: 18px;
+}
+
 @media (max-width: 1440px) {
     body {
         font-size: 12px;
+    }
+    .custom-profile-front {
+        font-size: 14px;
     }
 }
 

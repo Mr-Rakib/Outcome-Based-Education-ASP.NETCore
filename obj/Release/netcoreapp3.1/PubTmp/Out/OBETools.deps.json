@@ -333,7 +333,17 @@
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
         }
       },
-      "EasyConveyor/1.0.0": {},
+      "EasyConveyor/1.0.0": {
+        "runtime": {
+          "lib/net45/EasyConveyor.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net45/EasyConveyor.dll": {}
+        }
+      },
       "Google.Protobuf/3.6.1": {
         "dependencies": {
           "NETStandard.Library": "1.6.1"

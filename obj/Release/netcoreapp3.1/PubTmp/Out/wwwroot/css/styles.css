@@ -63,11 +63,11 @@ body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 400;
-    font-size:14px;
+    font-size: 14px;
     line-height: 1.5;
-    color: #03380c;
+    color: #031230;
     text-align: left;
-    background-color: #f7f7f7;
+    background-color: #dedede;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -160,14 +160,14 @@ sup {
 }
 
 a {
-    color: #28a745;
+    color: #3e3507;
     text-decoration: none;
     background-color: transparent;
 }
-a:hover {
-  color: #0056b3;
-  text-decoration: underline;
-}
+    a:hover {
+        color: #b13d2b;
+        text-decoration: underline;
+    }
 
 a:not([href]) {
   color: inherit;
@@ -3908,6 +3908,7 @@ input[type=button].btn-block {
 
 .nav-tabs {
   border-bottom: 1px solid #dee2e6;
+  background: #eee;
 }
 .nav-tabs .nav-item {
   margin-bottom: -1px;
@@ -4292,20 +4293,20 @@ input[type=button].btn-block {
 }
 
 .navbar-dark .navbar-brand {
-  color: #fff;
+    color: #111a2c;
 }
-.navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
-  color: #fff;
-}
+    .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
+        color: #9e2742;
+    }
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+    color: rgb(7, 15, 29);
 }
-.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-  color: rgba(255, 255, 255, 0.75);
-}
-.navbar-dark .navbar-nav .nav-link.disabled {
-  color: rgba(255, 255, 255, 0.25);
-}
+    .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+        color: #232f44;
+    }
+    .navbar-dark .navbar-nav .nav-link.disabled {
+        color: #232f44;
+    }
 .navbar-dark .navbar-nav .show > .nav-link,
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .nav-link.show,
@@ -10107,9 +10108,9 @@ body {
   padding-right: 1rem;
   margin: 0;
 }
-.sb-topnav.navbar-dark #sidebarToggle {
-  color: rgba(255, 255, 255, 0.5);
-}
+    .sb-topnav.navbar-dark #sidebarToggle {
+        color: rgb(6, 17, 39);
+    }
 .sb-topnav.navbar-light #sidebarToggle {
   color: #212529;
 }
@@ -10161,17 +10162,17 @@ body {
 }
 
 .sb-sidenav-dark {
-    background-color: #000a03;
+    background-color: #070e1b;
     color: rgba(255, 255, 255, 0.5);
 }
 .sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
   color: rgba(255, 255, 255, 0.25);
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link {
-    color: rgb(154, 226, 171);
+    color: rgb(226, 210, 154);
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
-    color: rgb(101, 144, 104);
+    color: rgb(144, 137, 101);
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-sidenav-collapse-arrow {
   color: rgba(255, 255, 255, 0.25);
@@ -10186,7 +10187,7 @@ body {
   color: #fff;
 }
     .sb-sidenav-dark .sb-sidenav-footer {
-        background-color: #040e07;
+        background-color: #000713;
     }
 
 .sb-sidenav-light {
