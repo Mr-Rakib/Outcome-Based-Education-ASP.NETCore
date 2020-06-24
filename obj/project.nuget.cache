@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JoeslnSArtOCLF6uYRLQHtD15T19eMKEgdEj2Rq/McJmVNPkliD1pgVWI/+zhspmlOtk52ejFB/2ZL3Mf+rC6A==",
+  "dgSpecHash": "XLtjfWWhoMJLTpYlvuTDP+J1BvXkUh7VOyCBGleGbI4s/jzdkKZoRHVbWtKZHpMr1oMCdVS6yERFrcV7V2nJVw==",
   "success": true,
-  "projectFilePath": "R:\\University Period\\Research\\Bitbucket\\obetools\\OBETools.csproj",
+  "projectFilePath": "E:\\Bitbucket\\Research\\obetools\\OBETools.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrhas\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\mrhas\\.nuget\\packages\\easyconveyor\\1.0.0\\easyconveyor.1.0.0.nupkg.sha512",

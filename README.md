@@ -17,11 +17,13 @@
 ![Alt Text](https://bitbucket.org/OBETools/obetools/raw/24f76d3a3dea2a06c4db29abab6c2dab3a369520/ScreenCast/CourseManager.png?raw=true)
 ![Alt Text](https://bitbucket.org/OBETools/obetools/raw/24f76d3a3dea2a06c4db29abab6c2dab3a369520/ScreenCast/Courses.png?raw=true)
 ![Alt Text](https://bitbucket.org/OBETools/obetools/raw/24f76d3a3dea2a06c4db29abab6c2dab3a369520/ScreenCast/Students.png?raw=true)
-![Alt Text](https://bitbucket.org/OBETools/obetools/raw/24f76d3a3dea2a06c4db29abab6c2dab3a369520/ScreenCast/StudentProfile.png?raw=true)
+![Alt Text](https://bitbucket.org/OBETools/obetools/raw/24f76d3a3dea2a06c4db29abab6c2dab3a369520/ScreenCast/RAKIB.png?raw=true)
+![Alt Text](https://bitbucket.org/OBETools/obetools/raw/24f76d3a3dea2a06c4db29abab6c2dab3a369520/ScreenCast/Jafry.png?raw=true)
 ![Alt Text](https://bitbucket.org/OBETools/obetools/raw/24f76d3a3dea2a06c4db29abab6c2dab3a369520/ScreenCast/CreateStudent.png?raw=true)
 ![Alt Text](https://bitbucket.org/OBETools/obetools/raw/24f76d3a3dea2a06c4db29abab6c2dab3a369520/ScreenCast/Staffs.png?raw=true)
 
-![Alt Text](https://bitbucket.org/OBETools/obetools/raw/24f76d3a3dea2a06c4db29abab6c2dab3a369520/ScreenCast/StaffProfile.png?raw=true)
+![Alt Text](https://bitbucket.org/OBETools/obetools/raw/24f76d3a3dea2a06c4db29abab6c2dab3a369520/ScreenCast/SM.png?raw=true)
+![Alt Text](https://bitbucket.org/OBETools/obetools/raw/24f76d3a3dea2a06c4db29abab6c2dab3a369520/ScreenCast/KMH.png?raw=true)
 ![Alt Text](https://bitbucket.org/OBETools/obetools/raw/24f76d3a3dea2a06c4db29abab6c2dab3a369520/ScreenCast/CreateStaff.png?raw=true)
 
 ![Alt Text](https://bitbucket.org/OBETools/obetools/raw/8d7d8ed077468ca79a34241f353382edaf7a8de0/ScreenCast/Mobile/Dashboard.PNG?raw=true)

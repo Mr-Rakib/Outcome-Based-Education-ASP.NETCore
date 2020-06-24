@@ -2610,7 +2610,6 @@ E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.We
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
-E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\MoreLinq.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\MySql.Data.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
@@ -2626,9 +2625,7 @@ E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\System.Composition.Runtim
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
-E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
@@ -2684,15 +2681,11 @@ E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.csprojAssemblyReference.cache
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\staticwebassets\OBETools.StaticWebAssets.Manifest.cache
@@ -2780,3 +2773,5 @@ E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.Views.pdb
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.csproj.CopyComplete
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.dll
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.pdb
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.csproj.CoreCompileInputs.cache
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.genruntimeconfig.cache
