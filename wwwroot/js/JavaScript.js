@@ -83,7 +83,6 @@ $('#view-clotoplo-modal').on('show.bs.modal',
     }
 );
 
-
 var loadFile = function (event) {
     var output = document.getElementById('output');
     output.src = URL.createObjectURL(event.target.files[0]);

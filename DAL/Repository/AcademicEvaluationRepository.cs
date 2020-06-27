@@ -95,7 +95,7 @@ namespace OBETools.DAL.Repository
             command.Parameters.Add(new MySqlParameter("@AssessmentId", AcademicEvaluation.Assessment.Id));
             command.Parameters.Add(new MySqlParameter("@Marks", AcademicEvaluation.Marks));
             command.Parameters.Add(new MySqlParameter("@EntryById", AcademicEvaluation.EntryInformation.EntryById));
-            command.Parameters.Add(new MySqlParameter("@EntryByDate", AcademicEvaluation.EntryInformation.EntryDate));
+            command.Parameters.Add(new MySqlParameter("@EntryDate", AcademicEvaluation.EntryInformation.EntryDate));
         }
 
         public bool Save(AcademicEvaluation AcademicEvaluation)

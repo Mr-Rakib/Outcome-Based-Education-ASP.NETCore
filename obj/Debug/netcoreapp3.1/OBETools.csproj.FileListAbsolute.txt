@@ -2282,6 +2282,13 @@ R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\V
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Home\Partial\UserCards.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\User\Partial\StaffDetails.cshtml.g.cs
 R:\University Period\Research\Bitbucket\obetools\obj\Debug\netcoreapp3.1\Razor\Views\User\Partial\StudentDetails.cshtml.g.cs
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.AssemblyInfoInputs.cache
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.AssemblyInfo.cs
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.csproj.CoreCompileInputs.cache
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.MvcApplicationPartsAssemblyInfo.cs
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.MvcApplicationPartsAssemblyInfo.cache
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.RazorAssemblyInfo.cache
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.RazorAssemblyInfo.cs
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\appsettings.json
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -2687,18 +2694,15 @@ E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\s
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\Bitbucket\Research\obetools\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.csprojAssemblyReference.cache
-E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\staticwebassets\OBETools.StaticWebAssets.Manifest.cache
-E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\staticwebassets\OBETools.StaticWebAssets.xml
-E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.MvcApplicationPartsAssemblyInfo.cs
-E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.MvcApplicationPartsAssemblyInfo.cache
-E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.RazorAssemblyInfo.cache
-E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.RazorAssemblyInfo.cs
-E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.AssemblyInfoInputs.cache
-E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.AssemblyInfo.cs
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.TagHelpers.input.cache
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.TagHelpers.output.cache
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.RazorCoreGenerate.cache
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\Create.cshtml.g.cs
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\Details.cshtml.g.cs
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\Edit.cshtml.g.cs
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\Index.cshtml.g.cs
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\Partial\AcademicEvaluations.cshtml.g.cs
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\Partial\Details.cshtml.g.cs
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\CreateCLO.cshtml.g.cs
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\CreateMission.cshtml.g.cs
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\CreatePEO.cshtml.g.cs
@@ -2771,7 +2775,8 @@ E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.RazorTargetAssem
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.RazorTargetAssemblyInfo.cs
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.Views.pdb
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.csproj.CopyComplete
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\staticwebassets\OBETools.StaticWebAssets.Manifest.cache
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\staticwebassets\OBETools.StaticWebAssets.xml
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.dll
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.pdb
-E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.csproj.CoreCompileInputs.cache
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.genruntimeconfig.cache

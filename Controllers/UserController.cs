@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OBETools.BLL.Services;
@@ -11,6 +12,7 @@ using OBETools.Utility;
 
 namespace OBETools.Controllers
 {
+    [Authorize]
     public class UserController : Controller
     {
         private readonly StudentService StudentService = new StudentService();

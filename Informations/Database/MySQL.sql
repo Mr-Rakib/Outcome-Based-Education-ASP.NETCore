@@ -28,10 +28,10 @@ CREATE TABLE `academicevaluation` (
   `semester_id` int NOT NULL,
   `assessment_id` int NOT NULL,
   `marks` float NOT NULL,
-  `EntrBy_Id` int NOT NULL,
+  `EntryBy_Id` int NOT NULL,
   `EntryDate` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +40,7 @@ CREATE TABLE `academicevaluation` (
 
 LOCK TABLES `academicevaluation` WRITE;
 /*!40000 ALTER TABLE `academicevaluation` DISABLE KEYS */;
+INSERT INTO `academicevaluation` VALUES (21,1,1,1,8,1,'2020-06-27 12:35:32'),(22,1,1,2,7,1,'2020-06-27 12:35:32'),(23,1,1,3,0,1,'2020-06-27 12:35:32'),(24,1,1,4,5,1,'2020-06-27 12:35:32'),(25,1,1,5,5,1,'2020-06-27 12:35:32'),(26,1,1,6,0,1,'2020-06-27 12:35:32'),(27,1,1,8,0,1,'2020-06-27 12:35:32'),(28,1,1,9,5,1,'2020-06-27 12:35:32'),(29,6,1,1,10,1,'2020-06-27 12:37:32'),(30,6,1,2,10,1,'2020-06-27 12:37:32'),(31,6,1,3,0,1,'2020-06-27 12:37:32'),(32,6,1,4,5,1,'2020-06-27 12:37:32'),(33,6,1,5,0,1,'2020-06-27 12:37:32'),(34,6,1,6,0,1,'2020-06-27 12:37:32'),(35,6,1,8,0,1,'2020-06-27 12:37:32'),(36,6,1,9,5,1,'2020-06-27 12:37:32'),(37,2,1,1,10,1,'2020-06-27 12:48:06'),(38,2,1,2,10,1,'2020-06-27 12:48:06'),(39,2,1,3,0,1,'2020-06-27 12:48:06'),(40,2,1,4,0,1,'2020-06-27 12:48:06'),(41,2,1,5,0,1,'2020-06-27 12:48:06'),(42,2,1,6,0,1,'2020-06-27 12:48:06'),(43,2,1,8,0,1,'2020-06-27 12:48:06'),(44,2,1,9,10,1,'2020-06-27 12:48:07');
 /*!40000 ALTER TABLE `academicevaluation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -102,32 +103,6 @@ INSERT INTO `academicgrading` VALUES (1,3,'A+',80,100,4,2),(2,3,'A',75,79,3.75,2
 UNLOCK TABLES;
 
 --
--- Table structure for table `assesments`
---
-
-DROP TABLE IF EXISTS `assesments`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `assesments` (
-  `Id` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(100) NOT NULL,
-  `type` varchar(100) NOT NULL,
-  `EntryBy_id` int NOT NULL,
-  `EntryDate` datetime NOT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `assesments`
---
-
-LOCK TABLES `assesments` WRITE;
-/*!40000 ALTER TABLE `assesments` DISABLE KEYS */;
-/*!40000 ALTER TABLE `assesments` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `assessments`
 --
 
@@ -141,7 +116,7 @@ CREATE TABLE `assessments` (
   `EntryBy_id` int NOT NULL,
   `EntryDate` datetime NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -150,7 +125,7 @@ CREATE TABLE `assessments` (
 
 LOCK TABLES `assessments` WRITE;
 /*!40000 ALTER TABLE `assessments` DISABLE KEYS */;
-INSERT INTO `assessments` VALUES (1,'Class Test 1','Analyze',3,'2020-06-20 17:31:40'),(2,'Class Test 2','Apply',3,'2020-06-20 17:52:58'),(3,'Class Test 3','Evaluate',3,'2020-06-20 17:52:59'),(4,'Assignment 1','Understand',3,'2020-06-20 17:53:11'),(5,'Assignment 2','Create',3,'2020-06-20 17:54:49'),(6,'Co-Curricular Activities','Apply',3,'2020-06-20 17:56:13'),(7,'Co-Curricular Activities','Apply',3,'2020-06-20 17:56:13'),(8,'Quizze','Remember',3,'2020-06-20 17:56:33');
+INSERT INTO `assessments` VALUES (1,'Class Test 1','Analyze',3,'2020-06-20 17:31:40'),(2,'Class Test 2','Apply',3,'2020-06-20 17:52:58'),(3,'Class Test 3','Evaluate',3,'2020-06-20 17:52:59'),(4,'Assignment 1','Understand',3,'2020-06-20 17:53:11'),(5,'Assignment 2','Create',3,'2020-06-20 17:54:49'),(6,'Co-Curricular Activities','Apply',3,'2020-06-20 17:56:13'),(8,'Quizze','Remember',3,'2020-06-20 17:56:33'),(9,'Attendance','Understand',1,'2020-06-24 14:57:39');
 /*!40000 ALTER TABLE `assessments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -167,7 +142,7 @@ CREATE TABLE `clo` (
   `Name` varchar(100) NOT NULL,
   `Descriptions` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -176,7 +151,7 @@ CREATE TABLE `clo` (
 
 LOCK TABLES `clo` WRITE;
 /*!40000 ALTER TABLE `clo` DISABLE KEYS */;
-INSERT INTO `clo` VALUES (1,1,'CLO 1','Understand management, functions, process of planning and the concept of C'),(2,1,'CLO 2','Analyze the structure'),(4,1,'CLO 3','Remember dynamics of C, the concept of accuracy and perception, values and attitude'),(5,1,'CLO 4','Apply case studies on functions and processes.'),(6,1,'CLO 5','Analyze Individual behavior and dynamics of groups and effective workflow and structure of C');
+INSERT INTO `clo` VALUES (1,1,'CLO 1','Understand management, functions, process of planning and the concept of C'),(2,1,'CLO 2','Analyze the structure'),(4,1,'CLO 3','Remember dynamics of C, the concept of accuracy and perception, values and attitude'),(5,1,'CLO 4','Apply case studies on functions and processes.'),(6,1,'CLO 5','Analyze Individual behavior and dynamics of groups and effective workflow and structure of C'),(7,2,'CLO 1','Understand management, functions, process of planning and the concept of Java');
 /*!40000 ALTER TABLE `clo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -221,7 +196,7 @@ CREATE TABLE `clotoplomapping` (
   `plo_id` int NOT NULL,
   `points` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -230,7 +205,7 @@ CREATE TABLE `clotoplomapping` (
 
 LOCK TABLES `clotoplomapping` WRITE;
 /*!40000 ALTER TABLE `clotoplomapping` DISABLE KEYS */;
-INSERT INTO `clotoplomapping` VALUES (1,1,1,1),(2,1,3,2),(3,1,4,3),(4,1,5,3),(5,1,6,0),(6,4,1,0),(7,4,3,3),(8,4,4,2),(9,4,5,0),(10,4,6,2),(11,2,1,2),(12,2,3,2),(13,2,4,3),(14,2,5,0),(15,2,6,0),(16,5,1,0),(17,5,3,1),(18,5,4,0),(19,5,5,2),(20,5,6,3),(21,6,1,1),(22,6,3,0),(23,6,4,2),(24,6,5,0),(25,6,6,2);
+INSERT INTO `clotoplomapping` VALUES (1,1,1,1),(2,1,3,2),(3,1,4,3),(4,1,5,3),(5,1,6,0),(6,4,1,0),(7,4,3,3),(8,4,4,2),(9,4,5,0),(10,4,6,2),(11,2,1,2),(12,2,3,2),(13,2,4,3),(14,2,5,0),(15,2,6,0),(16,5,1,0),(17,5,3,1),(18,5,4,0),(19,5,5,2),(20,5,6,3),(21,6,1,1),(22,6,3,0),(23,6,4,2),(24,6,5,0),(25,6,6,2),(26,7,1,0),(27,7,3,2),(28,7,4,1),(29,7,5,0),(30,7,6,3);
 /*!40000 ALTER TABLE `clotoplomapping` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -490,7 +465,7 @@ CREATE TABLE `peo` (
 
 LOCK TABLES `peo` WRITE;
 /*!40000 ALTER TABLE `peo` DISABLE KEYS */;
-INSERT INTO `peo` VALUES (3,1,'PLO 2','PLO 2 Descriptions'),(5,1,'PEO 3','PEO 3 Descriptions');
+INSERT INTO `peo` VALUES (3,1,'PEO 2','PEO 2 Descriptions'),(5,1,'PEO 3','PEO 3 Descriptions');
 /*!40000 ALTER TABLE `peo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -523,7 +498,7 @@ CREATE TABLE `personalinformation` (
 
 LOCK TABLES `personalinformation` WRITE;
 /*!40000 ALTER TABLE `personalinformation` DISABLE KEYS */;
-INSERT INTO `personalinformation` VALUES (1,'Md Rakibul Hasan','Md Anwer Hossain','Mst Ronjona Khatun','1998-05-22','male','01642090363','mrhasan.334@gmail.com','Dhaka, Bangladesh','Jamalpur, Bangladesh','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(2,'Jafry Monfol Deep','Md JFR Father','Mst JFR Mother','1997-03-05','male','01122090363','jafry.334@gmail.com','Dhaka, Bangladesh','Gazipur, Bangladesh','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(3,'Monirul Hasan Tomal','Md KMH\'s Father','Mst KMH\'s Mother','1990-12-23','male','01236698432','kmh.334@gmail.com','Dhaka, Bangladesh','Dhaka, Bangladesh','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(4,'Shahariar Monzoor ','Md SM\'s Father','Mst SM\'s Mother','1988-02-02','male','1236953214','sm.334@gmail.com','Dhaka, Bangladesh','Dhaka, Bangladesh','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(10,'Md Sohel Hossen','Md Hasan Khan','Mst Hasina Khan','2020-06-20','Male','01722589652','sohel@gmail.com','s','s','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(11,'Md Farhan Hasasn','Md Hasan Khan','Mst Hasina Khan','2020-06-20','Male','01722589652','sohel@gmail.com','sad','asdas','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(12,'Sojib Hasan','Md Habib Khan','Msy Habiba ','2020-06-20','Male','013827374793','Sojib@gmail.com','Tongi','Tongi','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(16,'Roksana Akter Joly ','Mam\'s Father','Mam\'s Mother','1991-06-20','Female','01722589652','joly@gmail.com','Dhaka','Dhaka,Dhaka','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg');
+INSERT INTO `personalinformation` VALUES (1,'Md Rakibul Hasan','Md Anwer Hossain','Mst Ronjona Khatun','1998-05-22','male','01642090363','mrhasan.334@gmail.com','Dhaka, Bangladesh','Jamalpur, Bangladesh','Rakib.png'),(2,'Jafry Monfol Deep','Md JFR Father','Mst JFR Mother','1997-03-05','male','01122090363','jafry.334@gmail.com','Dhaka, Bangladesh','Gazipur, Bangladesh','jafry.jpg'),(3,'Monirul Hasan Tomal','Md KMH\'s Father','Mst KMH\'s Mother','1990-12-23','male','01236698432','kmh.334@gmail.com','Dhaka, Bangladesh','Dhaka, Bangladesh','kmh.jpg'),(4,'Shahriar Manzoor','Md SM\'s Father','Mst SM\'s Mother','1988-02-02','male','1236953214','sm.334@gmail.com','Dhaka, Bangladesh','Dhaka, Bangladesh','smsir.jpg'),(10,'Md Sohel Hossen','Md Hasan Khan','Mst Hasina Khan','2020-06-20','Male','01722589652','sohel@gmail.com','s','s','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(11,'Md Farhan Hasasn','Md Hasan Khan','Mst Hasina Khan','2020-06-20','Male','01722589652','sohel@gmail.com','sad','asdas','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(12,'Sojib Hasan','Md Habib Khan','Msy Habiba ','2020-06-20','Male','013827374793','Sojib@gmail.com','Tongi','Tongi','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg'),(16,'Roksana Akter Joly ','Mam\'s Father','Mam\'s Mother','1991-06-20','Female','01722589652','joly@gmail.com','Dhaka','Dhaka,Dhaka','01393030-9365-4a89-9fa7-6604ae5041b8_userlogo.jpg');
 /*!40000 ALTER TABLE `personalinformation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -808,6 +783,24 @@ LOCK TABLES `sysdiagrams` WRITE;
 UNLOCK TABLES;
 
 --
+-- Temporary view structure for view `vw_allacademicevaluation`
+--
+
+DROP TABLE IF EXISTS `vw_allacademicevaluation`;
+/*!50001 DROP VIEW IF EXISTS `vw_allacademicevaluation`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_allacademicevaluation` AS SELECT 
+ 1 AS `id`,
+ 1 AS `course_id`,
+ 1 AS `semester_id`,
+ 1 AS `assessment_id`,
+ 1 AS `marks`,
+ 1 AS `EntryBy_Id`,
+ 1 AS `EntryDate`*/;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Temporary view structure for view `vw_allassessment`
 --
 
@@ -1084,6 +1077,28 @@ SET character_set_client = @saved_cs_client;
 --
 -- Dumping routines for database 'obe'
 --
+/*!50003 DROP PROCEDURE IF EXISTS `sp_deleteAcademicEvaluation` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_deleteAcademicEvaluation`(	
+	IN Id INT
+)
+BEGIN
+	DELETE FROM academicevaluation
+    WHERE academicevaluation.id = Id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `sp_deleteAcademicGrading` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -1345,6 +1360,48 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_deletePrograms`(
 BEGIN
 	DELETE FROM programs 
     WHERE programs.id = Id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_saveAcademicEvaluation` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_saveAcademicEvaluation`(
+    IN CourseId 	INT,
+    IN AssessmentId INT,
+    IN SemesterId 	INT,
+    IN Marks 		FLOAT,
+    IN EntryById 	INT,
+    IN EntryDate 	DATETIME
+)
+BEGIN
+	INSERT INTO academicevaluation
+    (
+        academicevaluation.course_id,
+        academicevaluation.assessment_id,
+        academicevaluation.semester_id,
+        academicevaluation.marks,
+        academicevaluation.EntryBy_id,
+        academicevaluation.EntryDate
+    )VALUES
+    (	
+         CourseId 	,
+         AssessmentId, 
+         SemesterId ,	
+         Marks 		,
+         EntryById 	,
+         EntryDate 	
+    );
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -1989,6 +2046,42 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_updateAcademicEvaluation` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updateAcademicEvaluation`(
+	IN Id 	INT,
+	IN CourseId 	INT,
+    IN AssessmentId INT,
+    IN SemesterId 	INT,
+    IN Marks 		FLOAT,
+    IN EntryById 	INT,
+    IN EntryDate 	DATETIME
+)
+BEGIN
+	UPDATE academicevaluation
+    SET
+        academicevaluation.course_id     = CourseId,
+        academicevaluation.assessment_id = AssessmentId,
+        academicevaluation.semester_id	 = SemesterId,
+        academicevaluation.marks		 = Marks,
+        academicevaluation.EntryBy_id	 = EntryById,
+        academicevaluation.EntryDate	 = EntryDate	 
+	WHERE 
+    academicevaluation.id = Id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `sp_updateAcademicGrading` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -2387,6 +2480,24 @@ DELIMITER ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
+-- Final view structure for view `vw_allacademicevaluation`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_allacademicevaluation`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_allacademicevaluation` AS select `academicevaluation`.`id` AS `id`,`academicevaluation`.`course_id` AS `course_id`,`academicevaluation`.`semester_id` AS `semester_id`,`academicevaluation`.`assessment_id` AS `assessment_id`,`academicevaluation`.`marks` AS `marks`,`academicevaluation`.`EntryBy_Id` AS `EntryBy_Id`,`academicevaluation`.`EntryDate` AS `EntryDate` from `academicevaluation` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
 -- Final view structure for view `vw_allassessment`
 --
 
@@ -2683,4 +2794,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-22 18:21:56
+-- Dump completed on 2020-06-27 18:14:39

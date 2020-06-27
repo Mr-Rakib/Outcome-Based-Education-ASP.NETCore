@@ -115,8 +115,12 @@
 .custom-table-admin {
     background-color: #daf1a3
 }
-
 .custom-table-user {
+    color: #02171d;
+    background-color: #72ccdbb0
+}
+
+.custom-table-user-1 {
     color: #b7ab98;
     background-color: #070e1b;
 }
@@ -130,7 +134,7 @@
 }
 
 .custom-table-course {
-    background-color: #dad0b0
+    background-color: #dedede
 }
 
 .btn-custom-style {
@@ -207,8 +211,21 @@
     border-left: 1px solid #000033 !important;
 }
 
+.custom-profile {
+    background: #f3f2f2;
+    margin-top: 0.5rem !important;
+}
 .custom-profile-front {
     font-size: 18px;
+}
+custom-edit:hover{
+    title : "Edit"
+}
+
+.custom-a {
+    color: #056372;
+    text-decoration: none;
+    background-color: transparent;
 }
 
 @media (max-width: 1440px) {

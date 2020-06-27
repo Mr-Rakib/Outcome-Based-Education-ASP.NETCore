@@ -7,8 +7,12 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>OBE</title>
+
     <link href="~/css/styles.css" rel="stylesheet" />
+    <link href="~/css/cards.css" rel="stylesheet" />
+    <link href="~/css/color.css" rel="stylesheet" />
     <link href="~/css/StyleSheet.css" rel="stylesheet" />
+
     <link href="~/DataTables-1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 </head>
@@ -20,8 +24,8 @@
         @Html.Partial("_Sidebar")
         <div id="layoutSidenav_content">
             @Html.Partial("_Header")
-            <div class="container-fluid">
-                <main role="main" class="pb-2">
+            <div class=" m-2 c-b-white-1">
+                <main role="main" class="pb-2 container-fluid">
                         @RenderBody()
                 </main>
             </div>
@@ -29,11 +33,11 @@
             <footer class="p-2 bg-light mt-auto">
                 <div class="container-fluid">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2019</div>
+                        <div class="text-muted">Copyright &copy; 2020  </div>
                         <div>
-                            <a href="#">Privacy Policy</a>
+                            <a href="https://www.facebook.com/prince.hridoy.1213/">By </a>
                             &middot;
-                            <a href="#">Terms &amp; Conditions</a>
+                            <a href="https://www.facebook.com/prince.hridoy.1213/">Md Rakibul Hasan &amp; Jafry Mondol Deep</a>
                         </div>
                     </div>
                 </div>
@@ -47,9 +51,6 @@
     <script src="~/js/JavaScript.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="~/assets/demo/chart-area-demo.js"></script>
-    <script src="~/assets/demo/chart-bar-demo.js"></script>
-    <script src="~/assets/demo/chart-pie-demo.js"></script>
 
     <script src="~/DataTables-1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="~/DataTables-1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>

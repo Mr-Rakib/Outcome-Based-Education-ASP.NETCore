@@ -1,0 +1,49 @@
+﻿
+.c-hr-green {
+    margin-bottom: .25rem;
+    border-top: 1px solid #daf1a3;
+}
+
+.c-hr-gray {
+    margin-bottom: .25rem;
+    border-top: 1px solid #ccc;
+}
+
+.c-b-white {
+    background: #fff;
+}
+
+.c-b-white-1 {
+    background: #efefef;
+}
+ 
+.custom-table-admin {
+    background-color: #daf1a3
+}
+
+.custom-table-user {
+    color: #02171d;
+    background-color: #72ccdbb0
+}
+
+.custom-table-user-1 {
+    color: #b7ab98;
+    background-color: #070e1b;
+}
+
+.custom-table-vet {
+    background-color: #fbe39a
+}
+
+.custom-table-mapping {
+    background-color: #8cb1bd
+}
+
+.custom-table-course {
+    background-color: #dedede
+}
+
+.btn-custom-style {
+    font-size: 12px;
+    font-weight: 300;
+}

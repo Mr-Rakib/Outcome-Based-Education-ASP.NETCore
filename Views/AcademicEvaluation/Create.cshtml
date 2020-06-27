@@ -1,0 +1,75 @@
+﻿@model AcademicEvaluationLists
+@{
+    int count = 1;
+    int index = 0;
+    List<Assessment> AssessmentList = new AssessmentService().FindAll(User.Identity.Name);
+    List<CourseRegistration> CourseList = new CourseRegistrationService().FindAll(User.Identity.Name).DistinctBy(cr => cr.RegistrationInformation.Course.Id).ToList();
+}
+
+<div >
+    @Html.Partial("Notifications/_Notification")
+
+    <div class="row pl-4">
+        <h4 class="mt-4 mb-1 font-weight-light "><i class="fas fa-plus-circle"></i>&nbsp; ADD NEW ACADEMIC EVALUATION</h4>
+    </div>
+    <hr class="c-hr-gray mb-4" />
+
+    <div class="container-fluid " >
+        <form asp-action="Create" asp-controller="AcademicEvaluation" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <label asp-for="Course.Name" class="control-label"></label>
+                    <select asp-for="Course.Id" class="form-control">
+                        @foreach (var items in CourseList)
+                        {
+                        
+                        <option value=@(items.RegistrationInformation.Course.Id)>@items.RegistrationInformation.Course.Name - @(items.RegistrationInformation.Course.Id)</option>
+                        }
+                    </select>
+                    <span asp-validation-for="Course" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label asp-for="SemesterId" class="control-label"></label>
+                    <input asp-for="SemesterId" class="form-control " required  value="1"/>
+                    <span asp-validation-for="SemesterId" class="text-danger"></span>
+                </div>
+
+
+                <div class="container border ">
+                    <div class="text-center form-group  col-md-12">
+                        <h6 class="mt-4 mb-1 font-weight-light"><i class="fab fa-stack-overflow"></i>&nbsp; ASSESSMENTS WITH POINTS</h6>
+                        <hr />
+                    </div>
+
+                    <div class="container">
+                        @foreach (var items in AssessmentList)
+                        {
+                            <div class="container form-group col-md-10">
+                                <input asp-for="Assessments[index].Assessment.Id" hidden value="@(items.Id)" />
+                                <label class="form-control-label col-md-8"><strong>@(count++). &nbsp;@(items.Name)</strong> </label>
+
+                                <input class="text-center form-control-label col-md-3" asp-for="Assessments[index].Marks" value="0" />
+                            </div>
+                            <label hidden>@(index++)</label>
+                        }
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="form-row pt-2">
+                <div class="form-group col-md-6">
+                    <button type="submit" class="btn-sm btn-info btn btn-block">Save</button>
+                </div>
+                <div class="form-group col-md-6">
+                    <button type="reset" class="btn-sm btn-danger btn btn-block">Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

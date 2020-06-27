@@ -22,6 +22,7 @@
                         <th class="text-left">Sl No.</th>
                         <th>@Html.DisplayNameFor(model => model.Name)</th>
                         <th>@Html.DisplayNameFor(model => model.Course.Name)</th>
+                        <th>@Html.DisplayNameFor(model => model.Course.Code)</th>
                         <th>@Html.DisplayNameFor(model => model.Descriptions)</th>
                         <th>Action</th>
                     </tr>
@@ -34,6 +35,7 @@
                             <td>@(count++)</td>
                             <td>@Html.DisplayFor(modelItem => item.Name)</td>
                             <td>@Html.DisplayFor(modelItem => item.Course.Name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Course.Code)</td>
                             <td>@Html.DisplayFor(modelItem => item.Descriptions)</td>
                             <td class="text-center" style="font-size: .75em">
                                 <a class="p-1" asp-action="EditCLO" asp-controller="Academy" asp-route-id="@item.Id"><i class="far fa-edit text-info"></i></a>

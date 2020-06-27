@@ -6,12 +6,10 @@
     List<CLO> CLOList = new CLOService().FindAll(User.Identity.Name);
     int count = 1;
     int index = 0;
-
-
 }
 
 
-<div class="pt-3 container custom-profile">
+<div >
     @Html.Partial("Notifications/_Notification")
 
     <div class="row pl-4">

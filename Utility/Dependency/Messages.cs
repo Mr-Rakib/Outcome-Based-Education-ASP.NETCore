@@ -49,32 +49,34 @@ namespace OBETools.Utility
         public static string DuplicateItems = "Duplicate Items !";
         public static string MissionNotFound = "Mission Not Found";
 
-        public static string InvalidUser = "Invalid username or password";
-        public static string InvalidField = "Invalid input filds !";
-        public static string IssueInTracer = "Opps, There are some issue to save tracer";
-        public static string IssueInDatabase = "Opps, There are some issue in database";
-        public static string InvalidImageSize = "Image Size not more than 200KB";
-        public static string InvalidInformation = "Invalid Information! Please provide the valid information.";
-        public static string InvalidPasswordField = "Invalid password field";
-        public static string InvalidSubjectManager = "Invalid ! Subject or Class or Batch are not from same institution";
-        public static string InvaldFileExtrension = "Invalid Extension! Only (.docs, .pdf, .txt) extentions are allowed ";
-        public static string InvaldImageExtrension = "Invalid Extension! Only (.jpg, .jpeg, .png) extentions are allowed ";
-        public static string InvalidStudentAdmission = "Invalid ! Student and Subject Manager are not from same institution";
+        public static string InvalidUser                = "Invalid username or password";
+        public static string InvalidField               = "Invalid input filds !";
+        public static string InvalidImage               = "Image Size not more than 200KB and Extention should be jpg, jpeg or png";
+        public static string IssueInTracer              = "Opps, There are some issue to save tracer";
+        public static string IssueInDatabase            = "Opps, There are some issue in database";
+        public static string InvalidImageSize           = "Image Size not more than 200KB";
+        public static string InvalidInformation         = "Invalid Information! Please provide the valid information.";
+        public static string InvalidPasswordField       = "Invalid password field";
+        public static string InvalidSubjectManager      = "Invalid ! Subject or Class or Batch are not from same institution";
+        public static string InvaldFileExtrension       = "Invalid Extension! Only (.docs, .pdf, .txt) extentions are allowed ";
+        public static string InvaldImageExtrension      = "Invalid Extension! Only (.jpg, .jpeg, .png) extentions are allowed ";
+        public static string InvalidStudentAdmission    = "Invalid ! Student and Subject Manager are not from same institution";
         //Large-Parts
         public static string InvalidExamManagerInformation = "Invalid Exam Manager. Please provide the valid information.";
 
-        public static string DuplicateGrade = "This grade already exist !";
-        public static string DuplicateExamManager = "Duplicate Exam! Exam manager already exist.";
-        public static string DuplicateFeesCollection = "Student already paid for this month !";
+        public static string DuplicateGrade             = "This grade already exist !";
+        public static string DuplicateExamManager       = "Duplicate Exam! Exam manager already exist.";
+        public static string DuplicateFeesCollection    = "Student already paid for this month !";
 
-        public static string ProgramNotFound = "Program Not Found";
-        public static string DepartmentNotFound = "Department Not Found";
+        public static string ProgramNotFound            = "Program Not Found";
+        public static string DepartmentNotFound         = "Department Not Found";
 
-        public static string PLONotFound = "PLO Not Found";
 
-        public static string CourseNotFound = "Course Not Found";
-        public static string CLONotFound = "CLO Not Found";
+        public static string CLONotFound                = "CLO Not Found";
+        public static string PLONotFound                = "PLO Not Found";
+        public static string CourseNotFound             = "Course Not Found";
+        public static string AssessmentNotFound         = "Assessment not found.";
 
-        public static string InvalidImage = "Image Size not more than 200KB and Extention should be jpg, jpeg or png";
+
     }
 }

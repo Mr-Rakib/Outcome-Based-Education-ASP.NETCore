@@ -30,36 +30,43 @@ namespace OBETools.Utility.Connection
         public static string DeleteDepartments = "sp_deleteDepartments";
 
 
-        public static string UpdatePLOToPEOMapping = "sp_updatePLOToPEOMapping";
-        public static string SavePLOToPEOMapping = "sp_savePLOToPEOMapping";
-        public static string DeletePLOToPEOMapping = "sp_deletePLOToPEOMapping";
+        public static string SavePLOToPEOMapping        = "sp_savePLOToPEOMapping";
+        public static string UpdatePLOToPEOMapping      = "sp_updatePLOToPEOMapping";
+        public static string DeletePLOToPEOMapping      = "sp_deletePLOToPEOMapping";
 
-        public static string UpdateCLO = "sp_updateCLO";
-        public static string SaveCLO = "sp_saveCLO";
-        public static string DeleteCLO = "sp_deleteCLO";
+        public static string SaveCLO                    = "sp_saveCLO";
+        public static string UpdateCLO                  = "sp_updateCLO";
+        public static string DeleteCLO                  = "sp_deleteCLO";
 
-        public static string UpdateCLOToPLOMapping = "sp_updateCLOToPLOMapping";
-        public static string SaveCLOToPLOMapping = "sp_saveCLOToPLOMapping";
-        public static string DeleteCLOToPLOMapping = "sp_deleteCLOToPLOMapping";
+        public static string SaveCLOToPLOMapping        = "sp_saveCLOToPLOMapping";
+        public static string UpdateCLOToPLOMapping      = "sp_updateCLOToPLOMapping";
+        public static string DeleteCLOToPLOMapping      = "sp_deleteCLOToPLOMapping";
 
         /// Large Version of SP DELETE
 
-        public static string SaveMissionToPEOMapping = "sp_saveMissionToPEOMapping";
-        public static string UpdateMissionToPEOMapping = "sp_updateMissionToPEOMapping";
-        public static string DeleteMissionToPEOMapping = "sp_deleteMissionToPEOMapping";
+        public static string SaveMissionToPEOMapping    = "sp_saveMissionToPEOMapping";
+        public static string UpdateMissionToPEOMapping  = "sp_updateMissionToPEOMapping";
+        public static string DeleteMissionToPEOMapping  = "sp_deleteMissionToPEOMapping";
 
-        public static string SaveStudent        = "sp_saveStudent";
-        public static string SaveStaff          = "sp_saveStaff";
+        public static string SaveStaff                  = "sp_saveStaff";
+        public static string SaveStudent                = "sp_saveStudent";
 
-        public static string UpdateStudent      = "sp_updateStudent";
-        public static string UpdateStaff        = "sp_updateStaff";
+        public static string UpdateStaff                = "sp_updateStaff";
+        public static string UpdateStudent              = "sp_updateStudent";
 
-        public static string UpdateAssessment = "sp_updateAssessment";
-        public static string SaveAssessment   = "sp_saveAssessment";
-        public static string DeleteAssessment = "sp_deleteAssessment";
+        public static string SaveAssessment             = "sp_saveAssessment";
+        public static string UpdateAssessment           = "sp_updateAssessment";
+        public static string DeleteAssessment           = "sp_deleteAssessment";
 
-        public static string UpdateAcademicEvaluation { get; internal set; }
-        public static string SaveAcademicEvaluation { get; internal set; }
-        public static string DeleteAcademicEvaluation { get; internal set; }
+        public static string SaveAcademicEvaluation     = "sp_saveAcademicEvaluation";
+        public static string UpdateAcademicEvaluation   = "sp_updateAcademicEvaluation";
+        public static string DeleteAcademicEvaluation   = "sp_deleteAcademicEvaluation";
+
+        public static string UpdateAcademicEvaluationMapping { get; internal set; }
+        public static string SaveAcademicEvaluationMapping { get; internal set; }
+        public static string DeleteAcademicEvaluationMapping { get; internal set; }
+        public static string UpdateEvaluationtToCLOMapping { get; internal set; }
+        public static string SaveEvaluationtToCLOMapping { get; internal set; }
+        public static string DeleteEvaluationtToCLOMapping { get; internal set; }
     }
 }

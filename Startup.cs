@@ -88,7 +88,6 @@ namespace OBETools
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
             app.UseCookiePolicy();
             app.UseAuthentication();
@@ -98,7 +97,7 @@ namespace OBETools
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Login}/{action=Login}/{id?}");
+                    pattern: "{controller=Login}/{action=Login}/{id?}/{value?}");
             });
         }
     }

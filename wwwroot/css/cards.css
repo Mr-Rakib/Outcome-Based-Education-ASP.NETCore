@@ -1,0 +1,63 @@
+﻿
+.custom-card-d {
+    background: #000a1ded;
+    color: #ffd37a;
+}
+
+.custom-card-d-1 {
+    background: #ffffff;
+    color: #000a1ded;
+}
+
+.custom-card-d-2 {
+    background: #ffd37a;
+    color: #000a1ded;
+}
+
+.custom-card-d-3 {
+    background: #d6a28a;
+    color: #000a1ded;
+}
+
+.custom-card-d-4 {
+    background: #95d08d;
+    color: #000a1ded;
+}
+
+.custom-card-d-5 {
+    background: #b7ab98;
+    color: #000a1ded;
+}
+
+.custom-card-d-6 {
+    background: #89c7ca;
+    color: #000a1ded;
+}
+
+.custom-card-admin {
+    background: #9a2b2b;
+}
+
+.custom-card-staff {
+    background: #de8921;
+}
+
+.custom-card-student {
+    background: #2b9a7b;
+}
+
+.custom-card-mission {
+    background-color: #b24444
+}
+
+.custom-card-peo {
+    background-color: #1d9a69
+}
+
+.custom-card-plo {
+    background-color: #b96d4b
+}
+
+.custom-card-clo {
+    background-color: #146f8c
+}

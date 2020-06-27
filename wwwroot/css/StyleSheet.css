@@ -52,95 +52,6 @@
     margin-bottom: 10px;
 }
 
-.custom-card-d {
-    background: #000a1ded;
-    color: #ffd37a;
-}
-
-.custom-card-d-1 {
-    background:#ffffff;
-    color: #000a1ded;
-}
-
-.custom-card-d-2 {
-    background: #ffd37a;
-    color: #000a1ded;
-}
-.custom-card-d-3 {
-    background: #d6a28a;
-    color: #000a1ded;
-}
-.custom-card-d-4 {
-    background: #95d08d;
-    color: #000a1ded;
-}
-
-.custom-card-d-5 {
-    background: #b7ab98;
-    color: #000a1ded;
-}
-
-.custom-card-d-6 {
-    background: #89c7ca;
-    color: #000a1ded;
-}
-
-.custom-card-admin {
-    background: #9a2b2b;
-}
-.custom-card-staff {
-    background: #de8921;
-}
-
-.custom-card-student {
-    background: #2b9a7b;
-}
-
-.custom-card-mission {
-    background-color: #b24444
-}
-
-.custom-card-peo {
-    background-color: #1d9a69
-}
-
-.custom-card-plo {
-    background-color: #b96d4b
-}
-
-.custom-card-clo {
-    background-color: #146f8c
-}
-
-.custom-table-admin {
-    background-color: #daf1a3
-}
-.custom-table-user {
-    color: #000713;
-    background-color: #17a2b8b0
-}
-
-.custom-table-user-1 {
-    color: #b7ab98;
-    background-color: #070e1b;
-}
-
-.custom-table-vet {
-    background-color: #fbe39a
-}
-
-.custom-table-mapping{
-    background-color: #8cb1bd
-}
-
-.custom-table-course {
-    background-color: #dedede
-}
-
-.btn-custom-style {
-    font-size: 12px;
-    font-weight: 300;
-}
 
 .custom-btn-create {
     padding: 5px 8px 5px 8px;
@@ -172,16 +83,6 @@
 }
 
 
-
-.c-hr-green {
-    margin-bottom: .25rem;
-    border-top: 1px solid #daf1a3;
-}
-
-.c-hr-gray {
-    margin-bottom: .25rem;
-    border-top: 1px solid #ccc;
-}
 
 .custom-footer {
     background: #eee;
@@ -217,6 +118,12 @@
 }
 .custom-profile-front {
     font-size: 18px;
+}
+
+.custom-a {
+    color: #056372;
+    text-decoration: none;
+    background-color: transparent;
 }
 
 @media (max-width: 1440px) {

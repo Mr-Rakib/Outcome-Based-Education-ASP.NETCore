@@ -1,0 +1,62 @@
+﻿@model AcademicEvaluationLists
+@{
+    int count = 1;
+    float total = 0;
+    Model.Assessments.ForEach(ex => total += ex.Marks);
+}
+
+    <div class="pt-2">
+        <div>
+            <h4 class="font-weight-normal text-center">EVALUATION DETAILS</h4>
+        </div>
+        <hr class="c-hr-gray" />
+        <div class=" container">
+            <div class=" row pb-2 pt-1 ">
+                <div class=" form-group text-left col-md-6">
+                    <h5 class="font-weight-light"><i class="fab fa-artstation"></i>&nbsp;@Model.Course.Name </h5>
+                </div>
+                <div class=" form-group text-right col-md-6">
+                    <h5 class="font-weight-light"><i class="fas fa-hourglass-half"></i>&nbsp;SEMESTER: @Model.SemesterId</h5>
+                </div>
+            </div>
+
+            <div class="card mb-4 container-fluid">
+                <div class="card-body">
+                     <div class="pb-2">
+                         <h6 class="font-weight-normal text-center border-bottom pb-2">ASSESSMENTS</h6>
+                     </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr class="custom-table-user-1 text-center">
+                                    <th class="text-left">Sl No.</th>
+                                    <th>Assessment Name</th>
+                                    <th>Marks</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model.Assessments)
+                                {
+                                <tr>
+                                    <td>@(count++)</td>
+                                    <td class="text-center">
+                                        @Html.DisplayFor(modelItem => item.Assessment.Name)
+                                    </td>
+                                    <td class="text-center">
+                                        @Html.DisplayFor(modelItem => item.Marks)
+                                    </td>
+                                </tr>
+                                }
+                            <tr class="text-center">
+                                <td><strong>-</strong></td>
+                                <td><strong>TOTAL</strong></td>
+                                <td class="text-center"><strong>@total</strong></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
