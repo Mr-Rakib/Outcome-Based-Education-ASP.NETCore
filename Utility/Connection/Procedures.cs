@@ -62,11 +62,8 @@ namespace OBETools.Utility.Connection
         public static string UpdateAcademicEvaluation   = "sp_updateAcademicEvaluation";
         public static string DeleteAcademicEvaluation   = "sp_deleteAcademicEvaluation";
 
-        public static string UpdateAcademicEvaluationMapping { get; internal set; }
-        public static string SaveAcademicEvaluationMapping { get; internal set; }
-        public static string DeleteAcademicEvaluationMapping { get; internal set; }
-        public static string UpdateEvaluationtToCLOMapping { get; internal set; }
-        public static string SaveEvaluationtToCLOMapping { get; internal set; }
-        public static string DeleteEvaluationtToCLOMapping { get; internal set; }
+        public static string UpdateEvaluationtToCLOMapping = "sp_updateacademicevaluationttoclomapping";
+        public static string SaveEvaluationtToCLOMapping   = "sp_saveacademicevaluationttoclomapping";
+        public static string DeleteEvaluationtToCLOMapping = "sp_deleteacademicevaluationttoclomapping";
     }
 }

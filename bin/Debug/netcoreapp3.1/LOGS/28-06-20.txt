@@ -1,0 +1,527 @@
+-----------Exception Details on  6/28/2020 5:19:16 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:16 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  InvalidOperationException
+Exception Type  :  System.InvalidOperationException
+Error Location  :  Connection must be valid and open.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:16 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:16 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  InvalidOperationException
+Exception Type  :  System.InvalidOperationException
+Error Location  :  Connection must be valid and open.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:16 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:16 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:16 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:16 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:16 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:16 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  InvalidOperationException
+Exception Type  :  System.InvalidOperationException
+Error Location  :  Connection must be valid and open.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:17 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:17 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:17 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:17 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:17 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:17 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:17 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:17 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  InvalidOperationException
+Exception Type  :  System.InvalidOperationException
+Error Location  :  Connection must be valid and open.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:17 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:17 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:17 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:17 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  InvalidOperationException
+Exception Type  :  System.InvalidOperationException
+Error Location  :  Connection must be valid and open.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:17 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:17 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  InvalidOperationException
+Exception Type  :  System.InvalidOperationException
+Error Location  :  Connection must be valid and open.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:17 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:17 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  InvalidOperationException
+Exception Type  :  System.InvalidOperationException
+Error Location  :  Connection must be valid and open.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:17 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:17 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:17 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:17 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:17 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:17 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:17 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:17 PM
+
+File Name       :  E:\Bitbucket\Research\obetools\DAL\Repository\AssessmentRepository.cs
+Methods Name    :  FindAll
+Error Line No   :  32
+Coulumn Number  :  25
+Error Message   :  InvalidOperationException
+Exception Type  :  System.InvalidOperationException
+Error Location  :  Connection must be valid and open.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:36 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:36 PM
+
+File Name       :  
+Methods Name    :  FindAll
+Error Line No   :  0
+Coulumn Number  :  0
+Error Message   :  NullReferenceException
+Exception Type  :  System.NullReferenceException
+Error Location  :  Object reference not set to an instance of an object.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:36 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:36 PM
+
+File Name       :  
+Methods Name    :  FindAll
+Error Line No   :  0
+Coulumn Number  :  0
+Error Message   :  InvalidOperationException
+Exception Type  :  System.InvalidOperationException
+Error Location  :  Connection must be valid and open.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:36 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:36 PM
+
+File Name       :  
+Methods Name    :  FindAll
+Error Line No   :  0
+Coulumn Number  :  0
+Error Message   :  InvalidOperationException
+Exception Type  :  System.InvalidOperationException
+Error Location  :  Connection must be valid and open.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:47 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:47 PM
+
+File Name       :  
+Methods Name    :  FindAll
+Error Line No   :  0
+Coulumn Number  :  0
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:47 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:47 PM
+
+File Name       :  
+Methods Name    :  FindAll
+Error Line No   :  0
+Coulumn Number  :  0
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:47 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:47 PM
+
+File Name       :  
+Methods Name    :  FindAll
+Error Line No   :  0
+Coulumn Number  :  0
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:47 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:47 PM
+
+File Name       :  
+Methods Name    :  FindAll
+Error Line No   :  0
+Coulumn Number  :  0
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:47 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:47 PM
+
+File Name       :  
+Methods Name    :  FindAll
+Error Line No   :  0
+Coulumn Number  :  0
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:47 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:47 PM
+
+File Name       :  
+Methods Name    :  FindAll
+Error Line No   :  0
+Coulumn Number  :  0
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:47 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:47 PM
+
+File Name       :  
+Methods Name    :  FindAll
+Error Line No   :  0
+Coulumn Number  :  0
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:47 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:47 PM
+
+File Name       :  
+Methods Name    :  FindAll
+Error Line No   :  0
+Coulumn Number  :  0
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:47 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:47 PM
+
+File Name       :  
+Methods Name    :  FindAll
+Error Line No   :  0
+Coulumn Number  :  0
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:48 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:48 PM
+
+File Name       :  
+Methods Name    :  FindAll
+Error Line No   :  0
+Coulumn Number  :  0
+Error Message   :  MySqlException
+Exception Type  :  MySql.Data.MySqlClient.MySqlException
+Error Location  :  There is already an open DataReader associated with this Connection which must be closed first.
+
+--------------------------------*End*------------------------------------------
+
+
+-----------Exception Details on  6/28/2020 5:19:48 PM-----------------
+-------------------------------------------------------------------------------------
+
+
+Log Written Date:  6/28/2020 5:19:48 PM
+
+File Name       :  
+Methods Name    :  FindAll
+Error Line No   :  0
+Coulumn Number  :  0
+Error Message   :  InvalidOperationException
+Exception Type  :  System.InvalidOperationException
+Error Location  :  Connection must be valid and open.
+
+--------------------------------*End*------------------------------------------
+
+

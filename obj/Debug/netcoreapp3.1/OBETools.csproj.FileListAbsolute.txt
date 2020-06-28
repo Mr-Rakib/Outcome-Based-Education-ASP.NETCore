@@ -2702,7 +2702,6 @@ E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvalu
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\Edit.cshtml.g.cs
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\Index.cshtml.g.cs
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\Partial\AcademicEvaluations.cshtml.g.cs
-E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\Partial\Details.cshtml.g.cs
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\CreateCLO.cshtml.g.cs
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\CreateMission.cshtml.g.cs
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Academy\CreatePEO.cshtml.g.cs
@@ -2780,3 +2779,8 @@ E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\staticwebassets\OBETools.
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.dll
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.pdb
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.genruntimeconfig.cache
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\EvaluationToCLOMapping\Index.cshtml.g.cs
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\Partial\EvaluationToCLOMapping.cshtml.g.cs
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\CreateEvaluationToCLOMapping.cshtml.g.cs
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\Partial\EvaluationToCLODetails.cshtml.g.cs
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.csprojAssemblyReference.cache

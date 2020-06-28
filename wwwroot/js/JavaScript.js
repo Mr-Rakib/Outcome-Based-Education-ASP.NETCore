@@ -83,6 +83,13 @@ $('#view-clotoplo-modal').on('show.bs.modal',
     }
 );
 
+$('#view-evaluationmapping-modal').on('show.bs.modal',
+    function (e) {
+        var Id = $(e.relatedTarget).attr('data-id');
+        $('#viewevaluationmappingmodal').load('/AcademicEvaluation/EvaluationToCLODetails?id=' + Id);
+    }
+);
+
 var loadFile = function (event) {
     var output = document.getElementById('output');
     output.src = URL.createObjectURL(event.target.files[0]);
@@ -99,3 +106,67 @@ function getFilePath() {
         }
     );
 }
+
+$(document).ready(function () {
+    var x = $("#course_id");
+    var z = $("#semester_id");
+
+    var y = $("#evaluation_id");
+
+    y.prop('disabled', true);
+
+    z.change(function () {
+
+        if ($(this).val() == "0" && x.val() == "0")
+        {
+            y.prop('disabled', true);
+            y.val("0");
+        }
+        else
+        {
+            $.ajax({
+                url: "/Extra/FindEvaluationByCourseId/" + x.val() + "/" + z.val(),
+                nethod: "get",
+                success: function (data) {
+                    y.prop('disabled', false);
+                    y.empty();
+                    y.append($('<option/>', { value: '0', text: "Select-Semester-Marks" }));
+                    $(data).each(
+                        function (index, item) {
+                            y.append($('<option/>', { value: item.id, text: item.assessment.name + "-[Semester: " + item.semesterId + "]-(" + item.marks+")"}));
+                        });
+                }
+            });
+        }
+        
+    });
+});
+
+$(document).ready(function () {
+    var x = $("#evaluation_id");
+    var y = $("#clo_id");
+    y.prop('disabled', true);
+
+    x.change(function () {
+        if ($(this).val() == "0") {
+            y.prop('disabled', true);
+            y.val("0");
+        } else {
+
+            $.ajax({
+                url: "/Extra/FindByEvaluationId/" + x.val(),
+                nethod: "get",
+                success: function (data) {
+                    y.prop('disabled', false);
+                    y.empty();
+                    y.append($('<option/>', { value: '0', text: "Select" }));
+                    $(data).each(
+                        function (index, item) {
+                            y.append($('<option/>', { value: item.id, text: item.name }));
+                        });
+                }
+            });
+        }
+    });
+});
+

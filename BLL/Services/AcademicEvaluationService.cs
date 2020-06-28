@@ -85,7 +85,7 @@ namespace OBETools.BLL.Services
             return String.Concat(save, " Saved & ", remain, " Remains");
         }
 
-        public string UpdateAll(AcademicEvaluationLists academicEvaluationList, string name)
+        public string UpdateAll(AcademicEvaluationLists academicEvaluationList, string CurrentUsername)
         {
             int update = 0, remain = 0;
             foreach (var item in academicEvaluationList.Assessments)
@@ -104,7 +104,12 @@ namespace OBETools.BLL.Services
                     Marks = item.Marks,
                     SemesterId = academicEvaluationList.SemesterId
                 };
-                if (string.IsNullOrEmpty(Update(AcademicEvaluation, name)))
+
+                var x = FindAll(CurrentUsername);
+
+                AcademicEvaluation.Id = x.Find(ae => ae.Course.Id == AcademicEvaluation.Course.Id && ae.Assessment.Id == AcademicEvaluation.Assessment.Id && ae.SemesterId == AcademicEvaluation.SemesterId).Id;
+               
+                if (string.IsNullOrEmpty(Update(AcademicEvaluation, CurrentUsername)))
                 {
                     update++;
                 } else remain++;
@@ -186,9 +191,9 @@ namespace OBETools.BLL.Services
                 string message = CheckValidity(AcademicEvaluation, CurrentUsername);
                 if (string.IsNullOrEmpty(message))
                 {
-                    if (!IsExist(AcademicEvaluation, CurrentUsername))
+                    if (IsExist(AcademicEvaluation, CurrentUsername))
                     {
-                        FoundedAcademicEvaluation.EntryInformation = AcademicEvaluation.EntryInformation;
+                        AcademicEvaluation.EntryInformation = FoundedAcademicEvaluation.EntryInformation;
                         return AcademicEvaluationRepository.Update(AcademicEvaluation) ? null : Messages.IssueInDatabase;
                     }
                     else return Messages.Exist;

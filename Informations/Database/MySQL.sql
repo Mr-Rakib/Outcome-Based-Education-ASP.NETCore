@@ -31,7 +31,7 @@ CREATE TABLE `academicevaluation` (
   `EntryBy_Id` int NOT NULL,
   `EntryDate` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `academicevaluation` (
 
 LOCK TABLES `academicevaluation` WRITE;
 /*!40000 ALTER TABLE `academicevaluation` DISABLE KEYS */;
-INSERT INTO `academicevaluation` VALUES (21,1,1,1,8,1,'2020-06-27 12:35:32'),(22,1,1,2,7,1,'2020-06-27 12:35:32'),(23,1,1,3,0,1,'2020-06-27 12:35:32'),(24,1,1,4,5,1,'2020-06-27 12:35:32'),(25,1,1,5,5,1,'2020-06-27 12:35:32'),(26,1,1,6,0,1,'2020-06-27 12:35:32'),(27,1,1,8,0,1,'2020-06-27 12:35:32'),(28,1,1,9,5,1,'2020-06-27 12:35:32'),(29,6,1,1,10,1,'2020-06-27 12:37:32'),(30,6,1,2,10,1,'2020-06-27 12:37:32'),(31,6,1,3,0,1,'2020-06-27 12:37:32'),(32,6,1,4,5,1,'2020-06-27 12:37:32'),(33,6,1,5,0,1,'2020-06-27 12:37:32'),(34,6,1,6,0,1,'2020-06-27 12:37:32'),(35,6,1,8,0,1,'2020-06-27 12:37:32'),(36,6,1,9,5,1,'2020-06-27 12:37:32'),(37,2,1,1,10,1,'2020-06-27 12:48:06'),(38,2,1,2,10,1,'2020-06-27 12:48:06'),(39,2,1,3,0,1,'2020-06-27 12:48:06'),(40,2,1,4,0,1,'2020-06-27 12:48:06'),(41,2,1,5,0,1,'2020-06-27 12:48:06'),(42,2,1,6,0,1,'2020-06-27 12:48:06'),(43,2,1,8,0,1,'2020-06-27 12:48:06'),(44,2,1,9,10,1,'2020-06-27 12:48:07');
+INSERT INTO `academicevaluation` VALUES (21,1,1,1,8,1,'2020-06-27 12:35:32'),(22,1,1,2,7,1,'2020-06-27 12:35:32'),(23,1,1,3,0,1,'2020-06-27 12:35:32'),(24,1,1,4,5,1,'2020-06-27 12:35:32'),(25,1,1,5,5,1,'2020-06-27 12:35:32'),(26,1,1,6,0,1,'2020-06-27 12:35:32'),(27,1,1,8,0,1,'2020-06-27 12:35:32'),(28,1,1,9,5,1,'2020-06-27 12:35:32'),(29,6,1,1,10,1,'2020-06-27 12:37:32'),(30,6,1,2,10,1,'2020-06-27 12:37:32'),(31,6,1,3,0,1,'2020-06-27 12:37:32'),(32,6,1,4,5,1,'2020-06-27 12:37:32'),(33,6,1,5,0,1,'2020-06-27 12:37:32'),(34,6,1,6,0,1,'2020-06-27 12:37:32'),(35,6,1,8,0,1,'2020-06-27 12:37:32'),(36,6,1,9,5,1,'2020-06-27 12:37:32'),(37,2,1,1,10,1,'2020-06-27 12:48:06'),(38,2,1,2,10,1,'2020-06-27 12:48:06'),(39,2,1,3,0,1,'2020-06-27 12:48:06'),(40,2,1,4,0,1,'2020-06-27 12:48:06'),(41,2,1,5,0,1,'2020-06-27 12:48:06'),(42,2,1,6,0,1,'2020-06-27 12:48:06'),(43,2,1,8,0,1,'2020-06-27 12:48:06'),(44,2,1,9,10,1,'2020-06-27 12:48:07'),(45,3,2,1,10,1,'2020-06-28 15:38:03'),(46,3,2,2,10,1,'2020-06-28 15:38:03'),(47,3,2,3,0,1,'2020-06-28 15:38:03'),(48,3,2,4,0,1,'2020-06-28 15:38:03'),(49,3,2,5,0,1,'2020-06-28 15:38:03'),(50,3,2,6,0,1,'2020-06-28 15:38:03'),(51,3,2,8,5,1,'2020-06-28 15:38:03'),(52,3,2,9,5,1,'2020-06-28 15:38:03'),(53,1,2,1,7,1,'2020-06-28 15:46:49'),(54,1,2,2,8,1,'2020-06-28 15:46:49'),(55,1,2,3,0,1,'2020-06-28 15:46:49'),(56,1,2,4,5,1,'2020-06-28 15:46:49'),(57,1,2,5,5,1,'2020-06-28 15:46:49'),(58,1,2,6,0,1,'2020-06-28 15:46:49'),(59,1,2,8,0,1,'2020-06-28 15:46:49'),(60,1,2,9,5,1,'2020-06-28 15:46:50');
 /*!40000 ALTER TABLE `academicevaluation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -57,9 +57,9 @@ CREATE TABLE `academicevaluationttoclomapping` (
   `clo_id` int NOT NULL,
   `points` float NOT NULL,
   `EntryBy_id` int NOT NULL,
-  `EntryDate` date NOT NULL,
+  `EntryDate` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,6 +68,7 @@ CREATE TABLE `academicevaluationttoclomapping` (
 
 LOCK TABLES `academicevaluationttoclomapping` WRITE;
 /*!40000 ALTER TABLE `academicevaluationttoclomapping` DISABLE KEYS */;
+INSERT INTO `academicevaluationttoclomapping` VALUES (1,21,1,1,1,'2020-06-28 17:20:04'),(3,22,1,2,1,'2020-06-28 18:19:09'),(4,22,2,3,1,'2020-06-28 18:19:31');
 /*!40000 ALTER TABLE `academicevaluationttoclomapping` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -801,6 +802,23 @@ SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = @saved_cs_client;
 
 --
+-- Temporary view structure for view `vw_allacademicevaluationttoclomapping`
+--
+
+DROP TABLE IF EXISTS `vw_allacademicevaluationttoclomapping`;
+/*!50001 DROP VIEW IF EXISTS `vw_allacademicevaluationttoclomapping`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_allacademicevaluationttoclomapping` AS SELECT 
+ 1 AS `id`,
+ 1 AS `academicevaluation_id`,
+ 1 AS `clo_id`,
+ 1 AS `points`,
+ 1 AS `EntryBy_id`,
+ 1 AS `EntryDate`*/;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Temporary view structure for view `vw_allassessment`
 --
 
@@ -1093,6 +1111,28 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_deleteAcademicEvaluation`(
 BEGIN
 	DELETE FROM academicevaluation
     WHERE academicevaluation.id = Id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_deleteacademicevaluationttoclomapping` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_deleteacademicevaluationttoclomapping`(
+	IN Id INT
+)
+BEGIN
+	DELETE FROM academicevaluationttoclomapping
+    WHERE academicevaluationttoclomapping.id = Id;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -1401,6 +1441,46 @@ BEGIN
          Marks 		,
          EntryById 	,
          EntryDate 	
+    );
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_saveacademicevaluationttoclomapping` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_saveacademicevaluationttoclomapping`(
+	IN AcademicEvaluationId INT,
+    IN CLOId 				INT,
+    IN Points 				FLOAT,
+    IN EntryById 			INT,
+    IN EntryDate 			DATETIME
+)
+BEGIN
+	INSERT INTO academicevaluationttoclomapping
+    (
+		academicevaluationttoclomapping.academicevaluation_id,
+        academicevaluationttoclomapping.clo_id,
+        academicevaluationttoclomapping.points,
+        academicevaluationttoclomapping.EntryBy_id,
+        academicevaluationttoclomapping.EntryDate
+    )
+    VALUES
+    (
+		AcademicEvaluationId,
+        CLOId 				,
+        Points 				,
+        EntryById 			,
+        EntryDate 			
     );
 END ;;
 DELIMITER ;
@@ -2082,6 +2162,41 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_updateacademicevaluationttoclomapping` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updateacademicevaluationttoclomapping`(
+	IN Id 					INT,
+	IN AcademicEvaluationId INT,
+    IN CLOId 				INT,
+    IN Points 				FLOAT,
+    IN EntryById 			INT,
+    IN EntryDate 			DATETIME
+)
+BEGIN
+
+	UPDATE academicevaluationttoclomapping
+    SET
+		academicevaluationttoclomapping.academicevaluation_id 	= AcademicEvaluationId,
+        academicevaluationttoclomapping.clo_id 					= CLOId,
+        academicevaluationttoclomapping.points 					= Points,
+        academicevaluationttoclomapping.EntryBy_id 				= EntryById,
+        academicevaluationttoclomapping.EntryDate 				= EntryDate
+	WHERE 
+    academicevaluationttoclomapping.id = Id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `sp_updateAcademicGrading` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -2498,6 +2613,24 @@ DELIMITER ;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
+-- Final view structure for view `vw_allacademicevaluationttoclomapping`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_allacademicevaluationttoclomapping`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_allacademicevaluationttoclomapping` AS select `academicevaluationttoclomapping`.`id` AS `id`,`academicevaluationttoclomapping`.`academicevaluation_id` AS `academicevaluation_id`,`academicevaluationttoclomapping`.`clo_id` AS `clo_id`,`academicevaluationttoclomapping`.`points` AS `points`,`academicevaluationttoclomapping`.`EntryBy_id` AS `EntryBy_id`,`academicevaluationttoclomapping`.`EntryDate` AS `EntryDate` from `academicevaluationttoclomapping` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
 -- Final view structure for view `vw_allassessment`
 --
 
@@ -2794,4 +2927,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-27 18:14:39
+-- Dump completed on 2020-06-28 18:22:36

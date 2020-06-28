@@ -1,8 +1,12 @@
-﻿using OBETools.DAL.Repository;
+﻿using Microsoft.AspNetCore.Localization;
+using Microsoft.IdentityModel.Tokens;
+using OBETools.DAL.Repository;
 using OBETools.Models;
 using OBETools.Utility;
+using OBETools.Utility.Dependency;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -54,36 +58,84 @@ namespace OBETools.BLL.Services
 
         public string Save(EvaluationToCLOMapping EvaluationToCLOMapping, string CurrentUsername)
         {
+            string message = IsValidator(EvaluationToCLOMapping, CurrentUsername);
             if (FindById(EvaluationToCLOMapping.Id, CurrentUsername) == null)
             {
-                if (FindEvaluation(EvaluationToCLOMapping.AcademicEvaluation.Id, CurrentUsername) != null)
+                if (string.IsNullOrEmpty(message))
                 {
-                    if (FindCLO(EvaluationToCLOMapping.CLO.Id, CurrentUsername) != null)
+                    EvaluationToCLOMapping = SetValues(EvaluationToCLOMapping, CurrentUsername);
+                    if (! IsExist(EvaluationToCLOMapping, CurrentUsername))
                     {
+                        EvaluationToCLOMapping.EntryInformation = new EntryInformation()
+                        {
+                            EntryById = Authorization.GetCurrentUser(CurrentUsername).Id,
+                            EntryDate = DateTime.Now
+                        };
                         return EvaluationToCLOMappingRepository.Save(EvaluationToCLOMapping) ? null : Messages.IssueInDatabase;
                     }
-                    else return Messages.CLONotFound;
+                    else return Messages.Exist;
                 }
-                else return Messages.AssessmentNotFound;
+                else return message;
             }
             else return Messages.Exist;
         }
 
         public string Update(EvaluationToCLOMapping EvaluationToCLOMapping, string CurrentUsername)
         {
-            if (FindById(EvaluationToCLOMapping.Id, CurrentUsername) != null)
+            EvaluationToCLOMapping FoundedEvaluationToCLOMapping = FindById(EvaluationToCLOMapping.Id, CurrentUsername);
+            EvaluationToCLOMapping.EntryInformation = FoundedEvaluationToCLOMapping.EntryInformation;
+            string message = IsValidator(EvaluationToCLOMapping, CurrentUsername);
+
+            if (FoundedEvaluationToCLOMapping != null)
             {
-                if (FindEvaluation(EvaluationToCLOMapping.AcademicEvaluation.Id, CurrentUsername) != null)
+                if (string.IsNullOrEmpty(message))
                 {
-                    if (FindCLO(EvaluationToCLOMapping.CLO.Id, CurrentUsername) != null)
+                    EvaluationToCLOMapping = SetValues(EvaluationToCLOMapping, CurrentUsername);
+                    if (IsExist(EvaluationToCLOMapping, CurrentUsername))
                     {
                         return EvaluationToCLOMappingRepository.Save(EvaluationToCLOMapping) ? null : Messages.IssueInDatabase;
                     }
-                    else return Messages.CLONotFound;
+                    else return Messages.NotFound;
                 }
-                else return Messages.AssessmentNotFound;
+                else return message;
             }
             else return Messages.Exist;
         }
+
+        private string IsValidator(EvaluationToCLOMapping EvaluationToCLOMapping, string CurrentUsername)
+        {
+            if (FindEvaluation(EvaluationToCLOMapping.AcademicEvaluation.Id, CurrentUsername) != null)
+            {
+                if (FindCLO(EvaluationToCLOMapping.CLO.Id, CurrentUsername) != null)
+                {
+                    return null;
+                }
+                else return Messages.CLONotFound;
+            }
+            else return Messages.AssessmentNotFound;
+        }
+        private EvaluationToCLOMapping SetValues(EvaluationToCLOMapping evaluationToCLOMapping, string currentUsername)
+        {
+            evaluationToCLOMapping.AcademicEvaluation = AcademicEvaluationService.FindById(evaluationToCLOMapping.AcademicEvaluation.Id, currentUsername);
+            evaluationToCLOMapping.CLO = CLOService.FindById(evaluationToCLOMapping.CLO.Id, currentUsername);
+            
+            return evaluationToCLOMapping;
+        }
+
+        private bool IsExist(EvaluationToCLOMapping evaluationToCLOMapping, string currentUsername)
+        {
+            List<EvaluationToCLOMapping> EvaluationToCLOMappingLists = FindAll(currentUsername);
+            if (evaluationToCLOMapping != null)
+            {
+                EvaluationToCLOMappingLists = EvaluationToCLOMappingLists
+                    .FindAll(em => em.AcademicEvaluation.Id == evaluationToCLOMapping.AcademicEvaluation.Id &&
+                                    em.AcademicEvaluation.SemesterId == evaluationToCLOMapping.AcademicEvaluation.SemesterId &&
+                                    em.CLO.Id == evaluationToCLOMapping.CLO.Id
+                             );
+                return (EvaluationToCLOMappingLists.Count > 0) ? true : false;
+            }
+            else return false;
+        }
+
     }
 }
