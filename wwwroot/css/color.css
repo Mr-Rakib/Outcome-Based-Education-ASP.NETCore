@@ -16,7 +16,12 @@
 .c-b-white-1 {
     background: #efefef;
 }
- 
+
+.custom-table {
+    background-color: #f3f2f2cc;
+    color: #00505d;
+}
+
 .custom-table-admin {
     background-color: #daf1a3
 }

@@ -16,8 +16,6 @@ $(document).ready(function () {
     $('table.MultipleDataTable').dataTable();
 });
 
-
-
 $('#view-mission-modal').on('show.bs.modal',
     function (e) {
         var Id = $(e.relatedTarget).attr('data-id');
@@ -169,4 +167,3 @@ $(document).ready(function () {
         }
     });
 });
-

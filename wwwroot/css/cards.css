@@ -1,7 +1,7 @@
 ﻿
 .custom-card-d {
     background: #000a1ded;
-    color: #ffd37a;
+    color: #ffe1a5;
 }
 
 .custom-card-d-1 {
@@ -9,29 +9,51 @@
     color: #000a1ded;
 }
 
-.custom-card-d-2 {
+.custom-card-yellow {
     background: #ffd37a;
     color: #000a1ded;
 }
-
-.custom-card-d-3 {
-    background: #d6a28a;
+.custom-card-yellow-light {
+    background: #f1e9c3;
     color: #000a1ded;
 }
 
-.custom-card-d-4 {
+.custom-card-green {
     background: #95d08d;
     color: #000a1ded;
 }
-
-.custom-card-d-5 {
+.custom-card-green-light {
+    background: #549a94;
+    color: #f1e9c3;
+}
+.custom-card-orange {
+    background: #ffb365;
+    color: #000a1ded;
+}
+.custom-card-orange-light {
+    background: #d6a28a;
+    color: #000a1ded;
+}
+.custom-card-orange-lighter {
     background: #b7ab98;
     color: #000a1ded;
 }
 
-.custom-card-d-6 {
+
+.custom-card-skyblue-light {
     background: #89c7ca;
     color: #000a1ded;
+}
+
+.custom-card-skyblue {
+    background: #057d91;
+    color: #f1e9c3;
+}
+
+
+.custom-card-red {
+    background: #8d3232ed;
+    color: #f1e9c3;
 }
 
 .custom-card-admin {

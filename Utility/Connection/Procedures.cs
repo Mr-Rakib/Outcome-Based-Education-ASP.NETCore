@@ -65,5 +65,9 @@ namespace OBETools.Utility.Connection
         public static string UpdateEvaluationtToCLOMapping = "sp_updateacademicevaluationttoclomapping";
         public static string SaveEvaluationtToCLOMapping   = "sp_saveacademicevaluationttoclomapping";
         public static string DeleteEvaluationtToCLOMapping = "sp_deleteacademicevaluationttoclomapping";
+
+        public static string UpdateGradingSystem { get; internal set; }
+        public static string SaveGradingSystem { get; internal set; }
+        public static string DeleteGradingSystem { get; internal set; }
     }
 }

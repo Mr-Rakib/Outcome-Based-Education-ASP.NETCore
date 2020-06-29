@@ -109,7 +109,7 @@ namespace OBETools.Controllers
             if (id > 0)
             {
                 EvaluationToCLOMapping EvaluationToCLOMapping = EvaluationToCLOMappingService.FindById(id, User.Identity.Name);
-                return View("Partial/EvaluationToCLODetails", EvaluationToCLOMapping);
+                return PartialView("Partial/EvaluationToCLODetails", EvaluationToCLOMapping);
             }
             return View();
         }
@@ -163,7 +163,7 @@ namespace OBETools.Controllers
                 else ViewData["Warning"] = message;
             }
             else ViewData["Warning"] = Messages.InvalidField;
-            return View();
+            return View(EvaluationToCLOMapping);
         }
 
         public ActionResult DeleteEvaluationToCLOMapping(int id)

@@ -2784,3 +2784,7 @@ E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvalu
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\CreateEvaluationToCLOMapping.cshtml.g.cs
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\Partial\EvaluationToCLODetails.cshtml.g.cs
 E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\OBETools.csprojAssemblyReference.cache
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\AcademicEvaluation\EditEvaluationToCLOMapping.cshtml.g.cs
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Grading\Index.cshtml.g.cs
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Grading\Partial\GradingSystems.cshtml.g.cs
+E:\Bitbucket\Research\obetools\obj\Debug\netcoreapp3.1\Razor\Views\Grading\Partial\_Cards.cshtml.g.cs

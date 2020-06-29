@@ -1,0 +1,49 @@
+﻿@model IEnumerable<GradingSystem>
+@{
+    int count = 1;
+}
+
+<hr class="c-hr-gray" />
+<div class=" row pb-2 pt-1">
+    <div class="text-left col-md-6">
+        <h5 class="font-weight-light"><i class="fas fa-list p-1"></i>Grading System</h5>
+    </div>
+    <div class=" text-right col-md-6">
+        <a class="btn btn-info btn-custom-style" asp-action="Create" asp-controller="Grading"><i class="fas fa-plus-circle"></i>&nbsp;Create Grading System</a>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered display MultipleDataTable" id="dataTable_User" width="100%" cellspacing="0">
+                <thead>
+                    <tr class="custom-table-user text-center">
+                        <th class="text-left">Sl No.</th>
+                        <th>@Html.DisplayNameFor(model => model.SystemName)</th>
+                        <th>@Html.DisplayNameFor(model => model.EntryInformation.EntryDate)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>@(count++)</td>
+                        <td>@Html.DisplayFor(modelItem => item.SystemName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.EntryInformation.EntryDate)</td>
+                        <td class="text-center" style="font-size: .75em">
+                            <a class="p-1" title="Update" asp-action="Edit" asp-controller="Grading" asp-route-id="@item.Id"><i class="far fa-edit text-info"></i></a>
+                            <a class="p-1" title="View Details" data-toggle="modal" data-target="#view-gradingsyatem-modal" data-id="@item.Id"><i class="far fa-eye text-danger"></i></a>
+                            <!--
+             <a class="p-1" onclick="return confirm('Are you sure you want to delete?')" asp-action="DeleteMission" asp-controller="Academy" asp-route-id="@item.Id"><i class="far fa-trash-alt text-danger"></i></a>
+        -->
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

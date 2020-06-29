@@ -1,24 +1,53 @@
-﻿@model OBETools.Models.EvaluationToCLOMapping
+﻿@model EvaluationToCLOMapping
+    <div class="modal-content custom-profile-modal">
+        <div class="modal-header">
+            <div class="p-1">
+                <h4 class="mb-1 font-weight-light "><i class="fas fa-tasks"></i>&nbsp; MAPPING EVALUATION TO CLO</h4>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="fas fa-times text-dark"></i></span>
+            </button>
+        </div>
 
-<div>
-    <h4>EvaluationToCLOMapping</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Points)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Points)
-        </dd>
-    </dl>
-</div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
-</div>
+        <div class="modal-body">
+            <div class="container bootstrap snippet">
+                <div class="col-md-12 ">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-12 pb-3">
+                                    <div class="container-fluid ">
+
+                                        <div class="form-row">
+
+                                            <label class="form-group col-md-4" asp-for="@Model.AcademicEvaluation.Course.Name"> </label>
+                                            <label class="form-group border col-md-8"> @Model.AcademicEvaluation.Course.Name </label>
+
+                                            <label class="form-group col-md-4" asp-for="@Model.AcademicEvaluation.SemesterId">Semester ID</label>
+                                            <label class="form-group border col-md-8">@Model.AcademicEvaluation.SemesterId</label>
+
+                                            <label class="form-group col-md-4" asp-for="@Model.AcademicEvaluation.Assessment.Name"></label>
+                                            <label class="form-group border col-md-8">@Model.AcademicEvaluation.Assessment.Name</label>
+
+                                            <label class="form-group col-md-4" asp-for="@Model.AcademicEvaluation.Assessment.Type"></label>
+                                            <label class="form-group border col-md-8" >@Model.AcademicEvaluation.Assessment.Type </label>
+
+                                            <label class="form-group col-md-4" asp-for="@Model.CLO.Name"></label>
+                                            <label class="form-group border col-md-8">@Model.CLO.Name </label>
+
+                                            <label class="form-group  col-md-4" asp-for="@Model.EntryInformation.EntryById"></label>
+                                            <label class="form-group  border col-md-8"> @Model.EntryInformation.EntryById </label>
+
+                                            <label class="form-group  col-md-4" asp-for="@Model.EntryInformation.EntryDate"></label>
+                                            <label class="form-group border col-md-8"> @Model.EntryInformation.EntryDate</label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

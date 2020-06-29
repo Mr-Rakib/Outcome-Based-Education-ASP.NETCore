@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Localization;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.Net.Http.Headers;
 using OBETools.DAL.Repository;
 using OBETools.Models;
 using OBETools.Utility;
@@ -91,15 +92,30 @@ namespace OBETools.BLL.Services
                 if (string.IsNullOrEmpty(message))
                 {
                     EvaluationToCLOMapping = SetValues(EvaluationToCLOMapping, CurrentUsername);
-                    if (IsExist(EvaluationToCLOMapping, CurrentUsername))
+                    if (! IsExistUpdate(EvaluationToCLOMapping, CurrentUsername))
                     {
-                        return EvaluationToCLOMappingRepository.Save(EvaluationToCLOMapping) ? null : Messages.IssueInDatabase;
+                        return EvaluationToCLOMappingRepository.Update(EvaluationToCLOMapping) ? null : Messages.IssueInDatabase;
                     }
                     else return Messages.NotFound;
                 }
                 else return message;
             }
             else return Messages.Exist;
+        }
+
+        private bool IsExistUpdate(EvaluationToCLOMapping evaluationToCLOMapping, string currentUsername)
+        {
+            List<EvaluationToCLOMapping> EvaluationToCLOMappingLists = FindAll(currentUsername).Where(etc => etc.AcademicEvaluation.Id != evaluationToCLOMapping.Id).ToList();
+            if (evaluationToCLOMapping != null)
+            {
+                EvaluationToCLOMappingLists = EvaluationToCLOMappingLists
+                    .FindAll(em => em.AcademicEvaluation.Id == evaluationToCLOMapping.AcademicEvaluation.Id &&
+                                    em.AcademicEvaluation.SemesterId == evaluationToCLOMapping.AcademicEvaluation.SemesterId &&
+                                    em.CLO.Id == evaluationToCLOMapping.CLO.Id
+                             );
+                return (EvaluationToCLOMappingLists.Count > 0) ? true : false;
+            }
+            else return false;
         }
 
         private string IsValidator(EvaluationToCLOMapping EvaluationToCLOMapping, string CurrentUsername)

@@ -41,7 +41,6 @@
                                 @{
                                     ploindex = 1;
                                 }
-
                                 @foreach (var peo in item.MapPLOLists)
                                 {
                                     if (peo.Points > 0)
@@ -53,12 +52,11 @@
                                         }
                                     }
                                     ploindex++;
-
                                 }
                             </td>
                             <td class="text-center" style="font-size: .75em">
                                 <a class="p-1" asp-action="CLOToPLOEdit" asp-controller="Mapping" asp-route-id="@item.CLO.Id"><i class="far fa-edit text-info"></i></a>
-                                <a class="p-1" title="View Details" data-toggle="modal" data-target="#view-clotoplo-modal" data-id="@item.CLO.Id"><i class="far fa-eye text-secondery"></i></a>
+                                <a class="p-1" title="View Details" data-toggle="modal" data-target="#view-clotoplo-modal" data-id="@item.CLO.Id"><i class="far fa-eye text-danger"></i></a>
                             </td>
                         </tr>
                     }

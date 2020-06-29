@@ -59,7 +59,7 @@ CREATE TABLE `academicevaluationttoclomapping` (
   `EntryBy_id` int NOT NULL,
   `EntryDate` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,7 +68,7 @@ CREATE TABLE `academicevaluationttoclomapping` (
 
 LOCK TABLES `academicevaluationttoclomapping` WRITE;
 /*!40000 ALTER TABLE `academicevaluationttoclomapping` DISABLE KEYS */;
-INSERT INTO `academicevaluationttoclomapping` VALUES (1,21,1,1,1,'2020-06-28 17:20:04'),(3,22,1,2,1,'2020-06-28 18:19:09'),(4,22,2,3,1,'2020-06-28 18:19:31');
+INSERT INTO `academicevaluationttoclomapping` VALUES (1,21,1,1,1,'2020-06-28 17:20:04'),(3,22,1,2,1,'2020-06-28 18:19:09'),(6,24,4,3,1,'2020-06-29 15:14:10');
 /*!40000 ALTER TABLE `academicevaluationttoclomapping` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -154,34 +154,6 @@ LOCK TABLES `clo` WRITE;
 /*!40000 ALTER TABLE `clo` DISABLE KEYS */;
 INSERT INTO `clo` VALUES (1,1,'CLO 1','Understand management, functions, process of planning and the concept of C'),(2,1,'CLO 2','Analyze the structure'),(4,1,'CLO 3','Remember dynamics of C, the concept of accuracy and perception, values and attitude'),(5,1,'CLO 4','Apply case studies on functions and processes.'),(6,1,'CLO 5','Analyze Individual behavior and dynamics of groups and effective workflow and structure of C'),(7,2,'CLO 1','Understand management, functions, process of planning and the concept of Java');
 /*!40000 ALTER TABLE `clo` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `cloresult`
---
-
-DROP TABLE IF EXISTS `cloresult`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `cloresult` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `gradinfSystem_id` int NOT NULL,
-  `academicevaluation_id` int NOT NULL,
-  `student_id` int NOT NULL,
-  `Marks` float NOT NULL,
-  `EntryBy_id` int NOT NULL,
-  `EntryDate` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `cloresult`
---
-
-LOCK TABLES `cloresult` WRITE;
-/*!40000 ALTER TABLE `cloresult` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cloresult` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -349,7 +321,6 @@ DROP TABLE IF EXISTS `gradingsystem`;
 CREATE TABLE `gradingsystem` (
   `id` int NOT NULL AUTO_INCREMENT,
   `systemName` varchar(45) NOT NULL,
-  `IsActive` int NOT NULL,
   `EntryBy_id` int NOT NULL,
   `EntryDate` datetime NOT NULL,
   PRIMARY KEY (`id`)
@@ -362,7 +333,7 @@ CREATE TABLE `gradingsystem` (
 
 LOCK TABLES `gradingsystem` WRITE;
 /*!40000 ALTER TABLE `gradingsystem` DISABLE KEYS */;
-INSERT INTO `gradingsystem` VALUES (1,'Gpa Based Grading',2,2,'0000-00-00 00:00:00'),(3,'Gpa-4 Based Grading',2,2,'0000-00-00 00:00:00');
+INSERT INTO `gradingsystem` VALUES (1,'Gpa Based Grading',2,'2020-05-20 00:00:00'),(3,'Gpa-4 Based Grading',2,'2020-05-20 00:00:00');
 /*!40000 ALTER TABLE `gradingsystem` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -640,6 +611,34 @@ INSERT INTO `registrationinformation` VALUES (1,1,1,1,'Sunday, Tuesday','10:00:0
 UNLOCK TABLES;
 
 --
+-- Table structure for table `result`
+--
+
+DROP TABLE IF EXISTS `result`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `result` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `gradingSystem_id` int NOT NULL,
+  `academicevaluation_id` int NOT NULL,
+  `student_id` int NOT NULL,
+  `Marks` float NOT NULL,
+  `EntryBy_id` int NOT NULL,
+  `EntryDate` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `result`
+--
+
+LOCK TABLES `result` WRITE;
+/*!40000 ALTER TABLE `result` DISABLE KEYS */;
+/*!40000 ALTER TABLE `result` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `semesters`
 --
 
@@ -908,6 +907,21 @@ SET @saved_cs_client     = @@character_set_client;
  1 AS `id`,
  1 AS `name`,
  1 AS `descriptions`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_allgradingsystem`
+--
+
+DROP TABLE IF EXISTS `vw_allgradingsystem`;
+/*!50001 DROP VIEW IF EXISTS `vw_allgradingsystem`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vw_allgradingsystem` AS SELECT 
+ 1 AS `id`,
+ 1 AS `systemName`,
+ 1 AS `EntryBy_id`,
+ 1 AS `EntryDate`*/;
 SET character_set_client = @saved_cs_client;
 
 --
@@ -1711,21 +1725,21 @@ DELIMITER ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_saveGradingSystem`(
-	IN SystemName 		VARCHAR(45),
-    IN InstitutionId 	INT,
-    IN EntryBy_id 		INT
+	IN SystemName 	VARCHAR(45),
+    IN EntryById 	INT,
+    IN EntryDate 	DATETIME
 )
 BEGIN
 	INSERT INTO gradingSystem
     (
 		gradingSystem.SystemName,
-		gradingSystem.Institution_id,
-        gradingSystem.EntryBy_id 
+		gradingSystem.EntryBy_id,
+        gradingSystem.EntryDate 
     )VALUES
     (
 		SystemName,
-        InstitutionId,
-        EntryBy_id
+        EntryById,
+        EntryDate
     );
 END ;;
 DELIMITER ;
@@ -2365,15 +2379,16 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updateGradingSystem`(
 	IN Id 				INT,
 	IN SystemName 		VARCHAR(45),
-    IN InstitutionId 	INT,
-    IN EntryBy_id 		INT
+    IN EntryDate 		DATETIME,
+    IN EntryById 		INT
 )
 BEGIN
 	UPDATE gradingsystem
     SET
     gradingsystem.systemName 		= SystemName,
-    gradingsystem.institution_id 	= InstitutionId,
-    gradingsystem.EntryBy_id 		= EntryBy_id
+    gradingsystem.EntryBy_id 		= EntryById,
+    gradingsystem.EntryDate	= EntryDate
+    
     WHERE gradingsystem.id = Id;
 END ;;
 DELIMITER ;
@@ -2739,6 +2754,24 @@ DELIMITER ;
 /*!50001 SET collation_connection      = @saved_col_connection */;
 
 --
+-- Final view structure for view `vw_allgradingsystem`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_allgradingsystem`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_allgradingsystem` AS select `gradingsystem`.`id` AS `id`,`gradingsystem`.`systemName` AS `systemName`,`gradingsystem`.`EntryBy_id` AS `EntryBy_id`,`gradingsystem`.`EntryDate` AS `EntryDate` from `gradingsystem` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
 -- Final view structure for view `vw_alllogin`
 --
 
@@ -2927,4 +2960,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-28 18:22:36
+-- Dump completed on 2020-06-29 18:27:12

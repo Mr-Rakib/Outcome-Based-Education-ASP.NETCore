@@ -1,0 +1,34 @@
+﻿@model Grading
+
+@{ 
+    int totalGrade = Model.AcademicGradings.ToList().Count;
+    int totalGradingSystem = Model.GradingSystems.ToList().Count;
+}
+
+    <div class="row">
+        <div class="col-xl-6 col-md-6">
+            <div class="card custom-card-d-1  mb-4">
+                <div class="card-body d-flex align-items-center justify-content-between">
+                    <H4 class="font-weight-light"> <i class="fas fa-book"></i>&nbsp; GRADING SYSTEM</H4>
+                    <H1 class="font-weight-normal">
+                        @totalGradingSystem
+                    </H1>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-6">
+            <div class="card custom-card-d-1 mb-4">
+                <div class="card-body d-flex align-items-center justify-content-between">
+                    <H4 class="font-weight-light"> <i class="fas fa-columns"></i>&nbsp; TOTAL GRADES</H4>
+                    <H1 class="font-weight-normal">
+                        @totalGrade
+                    </H1>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+

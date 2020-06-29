@@ -38,8 +38,8 @@
                             <td>@Html.DisplayFor(modelItem => item.Course.Code)</td>
                             <td>@Html.DisplayFor(modelItem => item.Descriptions)</td>
                             <td class="text-center" style="font-size: .75em">
-                                <a class="p-1" asp-action="EditCLO" asp-controller="Academy" asp-route-id="@item.Id"><i class="far fa-edit text-info"></i></a>
-                                <a class="p-1" title="View Details" data-toggle="modal" data-target="#view-clo-modal" data-id="@item.Id"><i class="far fa-eye text-secondery"></i></a>
+                                <a class="p-1" title="Update" asp-action="EditCLO" asp-controller="Academy" asp-route-id="@item.Id"><i class="far fa-edit text-info"></i></a>
+                                <a class="p-1" title="View Details" data-toggle="modal" data-target="#view-clo-modal" data-id="@item.Id"><i class="far fa-eye text-danger"></i></a>
                                 <!--
                                     <a class="p-1" onclick="return confirm('Are you sure you want to delete?')" asp-action="DeletePLO" asp-controller="Academy" asp-route-id="@item.Id"><i class="far fa-trash-alt text-danger"></i></a>
                                 -->

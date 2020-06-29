@@ -31,5 +31,7 @@ namespace OBETools.Utility.Connection
         public static string ALLCourseRegistration = String.Concat(Select, "vw_allregistrationinformation");
 
         public static string ALLEvaluationtToCLOMapping = String.Concat(Select, "vw_allacademicevaluationttoclomapping");
+
+        public static string ALLGradingSystem = String.Concat(Select, "vw_ALLGradingSystem");
     }
 }
